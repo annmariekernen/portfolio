@@ -960,6 +960,54 @@ a:hover {
   );
 }
 
+.nb-case-image {
+  border: var(--border-default);
+  margin: 24px 0;
+  overflow: hidden;
+}
+
+.nb-case-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   DISCLOSURE CALLOUT (proprietary/recreation notice)
+   ============================================================ */
+.nb-disclosure {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  border: var(--border-default);
+  background: var(--lemon);
+  box-shadow: var(--shadow-sm);
+  padding: 22px 26px;
+}
+
+.nb-disclosure-icon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.nb-disclosure-label {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.nb-disclosure-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--ink);
+}
+
 /* ============================================================
    NEXT CASE CTA
    ============================================================ */

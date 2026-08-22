@@ -78,7 +78,13 @@
   <!-- Proprietary note -->
   <section class="nb-prose">
     <div class="nb-prose-inner">
-      <blockquote><em>This was proprietary internal work at a financial institution. Original files stayed at the bank — the screens here are faithful recreations.</em></blockquote>
+      <div class="nb-disclosure">
+        <span class="nb-disclosure-icon">🔒</span>
+        <div>
+          <p class="nb-disclosure-label">// Confidentiality Note</p>
+          <p class="nb-disclosure-text">This was proprietary internal work at a financial institution. The original files aren't mine to share — every screen shown below is a faithful recreation, rebuilt from memory and notes, not an export from the real product.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -136,7 +142,9 @@
       <p>Once the process was mapped, the wireframing took two days. That's not a flex — it's a reflection of how much clarity the discovery work had bought us.</p>
 
       <p><strong>The Feed</strong><br>A table-style landing page showing all procedures flagged for review: procedure name, owner, category, last updated date, status, and an AI confidence score giving users an at-a-glance read on which updates needed careful attention and which were routine.</p>
-      <div class="nb-image-placeholder">[ The Feed — table view of flagged procedures with AI confidence scores ]</div>
+      <div class="nb-case-image">
+        <img src="assets/images/procedures-updater-feed.png" alt="Recreation of the Procedures Updater review queue: a table of flagged procedures with owner, category, last updated date, status chip, and AI confidence score." />
+      </div>
 
       <p><strong>The Review View</strong><br>Clicking in opened a summary of changes first, then an optional full text view: side-by-side comparison of the existing and AI-recommended procedure, with removals in red strikethrough and additions in green underline.</p>
       <div class="nb-image-placeholder">[ Review View — side-by-side diff, existing vs. AI-recommended procedure ]</div>
