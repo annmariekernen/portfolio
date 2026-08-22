@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 28px;
+    width: 1180px;
+  }
+  .app-shell {
+    border: 1px solid #E1E4E8;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .app-header {
+    padding: 16px 22px;
+    border-bottom: 1px solid #E1E4E8;
+    background: #FAFBFC;
+  }
+  .breadcrumb {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-bottom: 8px;
+  }
+  .breadcrumb b { color: #6B7280; }
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .app-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1F27;
+  }
+  .app-subtitle {
+    font-size: 12px;
+    color: #6B7280;
+    margin-top: 3px;
+  }
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .confidence-pill {
+    font-size: 11px;
+    font-weight: 700;
+    background: #DCF2E3;
+    color: #1B6B3B;
+    padding: 5px 12px;
+    border-radius: 100px;
+  }
+  .btn {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #D8DBE0;
+    background: #fff;
+    color: #374151;
+  }
+  .btn--primary {
+    background: #1F6FEB;
+    border-color: #1F6FEB;
+    color: #fff;
+  }
+  .legend {
+    display: flex;
+    gap: 22px;
+    padding: 12px 22px;
+    background: #F6F7F9;
+    border-bottom: 1px solid #E1E4E8;
+    font-size: 11.5px;
+    color: #4B5568;
+  }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 10px; height: 10px; border-radius: 2px; }
+  .swatch--del { background: #F5C6C6; }
+  .swatch--add { background: #BFE8CC; }
+  .diff-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .diff-col {
+    padding: 20px 24px 26px;
+  }
+  .diff-col + .diff-col {
+    border-left: 1px solid #E1E4E8;
+  }
+  .diff-col-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .diff-col-label--old { color: #9C4141; }
+  .diff-col-label--new { color: #1B6B3B; }
+  .diff-col-meta {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-bottom: 16px;
+  }
+  .diff-heading {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #374151;
+    margin: 0 0 8px;
+  }
+  .diff-text {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #374151;
+    margin: 0 0 16px;
+  }
+  del {
+    text-decoration: line-through;
+    text-decoration-color: #C94F4F;
+    color: #9C4141;
+    background: #FCEBEB;
+    text-decoration-thickness: 1.5px;
+  }
+  ins {
+    text-decoration: underline;
+    text-decoration-color: #2E9E5B;
+    text-decoration-thickness: 1.5px;
+    color: #1B6B3B;
+    background: #E8F6EC;
+    font-weight: 600;
+    text-decoration-style: solid;
+  }
+  del, ins { text-decoration-skip-ink: none; padding: 0 1px; }
+</style>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-header">
+      <div class="breadcrumb">Review Queue <b>›</b> <b>PROC-10482</b></div>
+      <div class="header-row">
+        <div>
+          <div class="app-title">SBA 7(a) Loan Documentation Review</div>
+          <div class="app-subtitle">Flagged by release: Tax Transcript API integration &middot; v2.4.1</div>
+        </div>
+        <div class="header-actions">
+          <span class="confidence-pill">94% AI Confidence</span>
+          <button class="btn">Request Changes</button>
+          <button class="btn btn--primary">Approve &amp; Route</button>
+        </div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><span class="swatch swatch--del"></span> Removed</span>
+      <span><span class="swatch swatch--add"></span> Added</span>
+    </div>
+    <div class="diff-wrap">
+      <div class="diff-col">
+        <div class="diff-col-label diff-col-label--old">Current Procedure</div>
+        <div class="diff-col-meta">Effective 09/02/2023</div>
+        <p class="diff-heading">4.2 &nbsp;Document Verification</p>
+        <p class="diff-text">Loan officers must <del>manually verify borrower-submitted tax returns against IRS records using the legacy Tax Transcript Request Form (Form 4506-T), submitted via fax to the Compliance mailbox within 3 business days of application receipt</del>.</p>
+        <p class="diff-text">If a submitted transcript cannot be matched to IRS records, the loan officer must escalate to a Tier 2 underwriter for manual review before proceeding.</p>
+      </div>
+      <div class="diff-col">
+        <div class="diff-col-label diff-col-label--new">AI-Recommended Update</div>
+        <div class="diff-col-meta">Draft &middot; pending approval</div>
+        <p class="diff-heading">4.2 &nbsp;Document Verification</p>
+        <p class="diff-text">Loan officers must <ins>verify borrower-submitted tax returns against IRS records using the automated Tax Transcript API integration, which returns validated transcript data within 1 business day of application receipt. Manual Form 4506-T submission is only required if automated verification fails or returns an error</ins>.</p>
+        <p class="diff-text">If a submitted transcript cannot be matched to IRS records, the loan officer must escalate to a Tier 2 underwriter for manual review before proceeding.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 28px;
+    width: 1100px;
+  }
+  .app-shell {
+    border: 1px solid #E1E4E8;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #E1E4E8;
+    background: #FAFBFC;
+  }
+  .app-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1F27;
+  }
+  .app-subtitle {
+    font-size: 12px;
+    color: #6B7280;
+    margin-top: 2px;
+  }
+  .app-search {
+    font-size: 12px;
+    color: #9CA3AF;
+    border: 1px solid #D8DBE0;
+    border-radius: 4px;
+    padding: 6px 12px;
+    background: #fff;
+    min-width: 220px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead th {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #6B7280;
+    background: #F6F7F9;
+    padding: 10px 18px;
+    border-bottom: 1px solid #E1E4E8;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 14px 18px;
+    font-size: 13px;
+    color: #1F2937;
+    border-bottom: 1px solid #EEF0F2;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  .proc-name {
+    font-weight: 600;
+    color: #111827;
+  }
+  .proc-id {
+    font-size: 11px;
+    color: #9CA3AF;
+    margin-top: 2px;
+  }
+  .owner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .owner-avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #DCE3EA;
+    color: #4B5568;
+    font-size: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+  }
+  .chip--pending { background: #FDF2D8; color: #92650C; }
+  .chip--progress { background: #DCE8FB; color: #1E4E8C; }
+  .chip--approved { background: #DCF2E3; color: #1B6B3B; }
+  .confidence {
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .confidence--high { color: #1B6B3B; }
+  .confidence--mid { color: #92650C; }
+  .confidence--low { color: #B23A3A; }
+  .confidence-bar {
+    width: 52px;
+    height: 4px;
+    border-radius: 2px;
+    background: #EEF0F2;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+  .confidence-bar-fill { height: 100%; border-radius: 2px; }
+  .fill--high { background: #2E9E5B; }
+  .fill--mid { background: #D6A419; }
+  .fill--low { background: #D65A5A; }
+  .category {
+    color: #4B5568;
+  }
+  .updated {
+    color: #6B7280;
+  }
+</style>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-header">
+      <div>
+        <div class="app-title">Procedure Review Queue</div>
+        <div class="app-subtitle">4 procedures flagged for review</div>
+      </div>
+      <div class="app-search">🔍 Search procedures…</div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Procedure Name</th>
+          <th>Owner</th>
+          <th>Category</th>
+          <th>Last Updated</th>
+          <th>Status</th>
+          <th>AI Confidence</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="proc-name">SBA 7(a) Loan Documentation Review</div>
+            <div class="proc-id">PROC-10482</div>
+          </td>
+          <td>
+            <div class="owner">
+              <span class="owner-avatar">JA</span>
+              J. Alvarez
+            </div>
+          </td>
+          <td class="category">Lending Compliance</td>
+          <td class="updated">03/12/2025</td>
+          <td><span class="chip chip--pending">Pending Review</span></td>
+          <td>
+            <span class="confidence confidence--high">94%</span>
+            <div class="confidence-bar"><div class="confidence-bar-fill fill--high" style="width:94%"></div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="proc-name">Business Loan Application Intake</div>
+            <div class="proc-id">PROC-10391</div>
+          </td>
+          <td>
+            <div class="owner">
+              <span class="owner-avatar">MC</span>
+              M. Chen
+            </div>
+          </td>
+          <td class="category">Account Servicing</td>
+          <td class="updated">03/10/2025</td>
+          <td><span class="chip chip--progress">In Progress</span></td>
+          <td>
+            <span class="confidence confidence--mid">78%</span>
+            <div class="confidence-bar"><div class="confidence-bar-fill fill--mid" style="width:78%"></div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="proc-name">Small Business Account Opening Procedure</div>
+            <div class="proc-id">PROC-10276</div>
+          </td>
+          <td>
+            <div class="owner">
+              <span class="owner-avatar">RO</span>
+              R. Osei
+            </div>
+          </td>
+          <td class="category">Onboarding</td>
+          <td class="updated">03/07/2025</td>
+          <td><span class="chip chip--approved">Approved</span></td>
+          <td>
+            <span class="confidence confidence--high">97%</span>
+            <div class="confidence-bar"><div class="confidence-bar-fill fill--high" style="width:97%"></div></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="proc-name">Merchant Services Onboarding Checklist</div>
+            <div class="proc-id">PROC-10528</div>
+          </td>
+          <td>
+            <div class="owner">
+              <span class="owner-avatar">TN</span>
+              T. Nguyen
+            </div>
+          </td>
+          <td class="category">Merchant Services</td>
+          <td class="updated">03/14/2025</td>
+          <td><span class="chip chip--pending">Pending Review</span></td>
+          <td>
+            <span class="confidence confidence--low">61%</span>
+            <div class="confidence-bar"><div class="confidence-bar-fill fill--low" style="width:61%"></div></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

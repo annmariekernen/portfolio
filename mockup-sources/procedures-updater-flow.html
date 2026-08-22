@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 32px;
+    width: 1060px;
+  }
+  .diagram-shell {
+    border: 1px solid #E1E4E8;
+    border-radius: 6px;
+    background: #fff;
+    padding: 28px 32px 34px;
+  }
+  .diagram-title { font-size: 14px; font-weight: 700; color: #1A1F27; margin-bottom: 2px; }
+  .diagram-subtitle { font-size: 12px; color: #6B7280; margin-bottom: 22px; }
+  .legend { display: flex; gap: 22px; margin-bottom: 30px; padding-bottom: 18px; border-bottom: 1px solid #EEF0F2; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4B5568; }
+  .legend-swatch { width: 13px; height: 13px; border-radius: 3px; flex-shrink: 0; }
+  .legend-swatch--auto { background: #C6FF3D; border: 1px solid #8FBF1F; }
+  .legend-swatch--manual { background: #E5E7EB; border: 1px solid #C7CBD1; }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 34px 1fr 34px 1fr;
+    align-items: stretch;
+    position: relative;
+  }
+
+  .card {
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
+    background: #FAFBFC;
+    padding: 12px 14px;
+    position: relative;
+  }
+  .card-badge {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #F3F4F6;
+    border: 2px solid #C7CBD1;
+    color: #6B7280;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-title { font-size: 12.5px; font-weight: 700; color: #374151; margin: 4px 0 4px; }
+  .card-desc { font-size: 11.5px; color: #6B7280; line-height: 1.5; }
+
+  .card--auto { background: #F6FCE9; border-color: #A9D94A; }
+  .card--auto .card-badge { background: #C6FF3D; border-color: #7DA82A; color: #1A2E05; }
+  .card--auto .card-title { color: #33500C; }
+  .card--auto .card-desc { color: #4E6B1C; }
+
+  .h-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #B4BAC2;
+    font-size: 16px;
+  }
+  .h-arrow--auto { color: #7DA82A; }
+
+  .auto-wrap {
+    grid-column: 1 / span 3;
+    border: 1.5px dashed #7DA82A;
+    border-radius: 8px;
+    padding: 16px 12px 12px;
+    position: relative;
+    background: rgba(198, 255, 61, 0.06);
+    display: grid;
+    grid-template-columns: 1fr 30px 1fr;
+    align-items: stretch;
+    margin-right: 8px;
+  }
+  .auto-wrap-label {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    background: #C6FF3D;
+    color: #1A2E05;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid #7DA82A;
+    white-space: nowrap;
+  }
+
+  .snake-connector { display: block; margin: 4px 0; }
+  .snake-connector svg { display: block; }
+</style>
+</head>
+<body>
+  <div class="diagram-shell">
+    <div class="diagram-title">Procedure Update Process</div>
+    <div class="diagram-subtitle">End-to-end flow from release call to published procedure</div>
+
+    <div class="legend">
+      <div class="legend-item"><span class="legend-swatch legend-swatch--auto"></span>Automated by Procedures Updater</div>
+      <div class="legend-item"><span class="legend-swatch legend-swatch--manual"></span>Manual / outside tool scope</div>
+    </div>
+
+    <!-- ROW 1: 1 -> 2 -> 3 -->
+    <div class="row">
+      <div class="auto-wrap">
+        <div class="auto-wrap-label">⚡ Automated by Procedures Updater</div>
+        <div class="card card--auto">
+          <div class="card-badge">1</div>
+          <div class="card-title">Bi-Sprint Release Calls</div>
+          <div class="card-desc">Change management attends to track what's shipping.</div>
+        </div>
+        <div class="h-arrow h-arrow--auto">→</div>
+        <div class="card card--auto">
+          <div class="card-badge">2</div>
+          <div class="card-title">Flag Relevant Procedures</div>
+          <div class="card-desc">Summarizes changes and flags which procedures they affect.</div>
+        </div>
+      </div>
+      <div class="h-arrow">→</div>
+      <div class="card">
+        <div class="card-badge">3</div>
+        <div class="card-title">Update Procedure Doc</div>
+        <div class="card-desc">Procedure owner updates the doc in the internal procedures tool.</div>
+      </div>
+    </div>
+
+    <!-- angular elbow connector: 3 (right) down / across / down to 4 (left) -->
+    <div class="snake-connector">
+      <svg width="932" height="86" viewBox="0 0 932 86">
+        <defs>
+          <marker id="arrow1" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#AEB4BC" />
+          </marker>
+        </defs>
+        <path d="M 788,0 L 788,43 L 144,43 L 144,86" stroke="#CDD1D6" stroke-width="2" fill="none" marker-end="url(#arrow1)" />
+      </svg>
+    </div>
+
+    <!-- ROW 2: 4 -> 5 -> 6 -->
+    <div class="row">
+      <div class="card">
+        <div class="card-badge">4</div>
+        <div class="card-title">Submit for First Review</div>
+        <div class="card-desc">Submits a SharePoint form to the first-line reviewer (Small Business team).</div>
+      </div>
+      <div class="h-arrow">→</div>
+      <div class="card">
+        <div class="card-badge">5</div>
+        <div class="card-title">First-Line Review</div>
+        <div class="card-desc">Reviewer checks the update — may kick it back with questions.</div>
+      </div>
+      <div class="h-arrow">→</div>
+      <div class="card">
+        <div class="card-badge">6</div>
+        <div class="card-title">Route to Compliance</div>
+        <div class="card-desc">First-line reviewer emails the internal third-party compliance team.</div>
+      </div>
+    </div>
+
+    <!-- angular elbow connector: 6 (right) down / across / down to 7 (left) -->
+    <div class="snake-connector">
+      <svg width="932" height="86" viewBox="0 0 932 86">
+        <defs>
+          <marker id="arrow2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#AEB4BC" />
+          </marker>
+        </defs>
+        <path d="M 788,0 L 788,43 L 144,43 L 144,86" stroke="#CDD1D6" stroke-width="2" fill="none" marker-end="url(#arrow2)" />
+      </svg>
+    </div>
+
+    <!-- ROW 3: 7 -> 8 -->
+    <div class="row">
+      <div class="card">
+        <div class="card-badge">7</div>
+        <div class="card-title">Compliance Review</div>
+        <div class="card-desc">Third party reviews — may also kick back with questions or edits.</div>
+      </div>
+      <div class="h-arrow">→</div>
+      <div class="card">
+        <div class="card-badge">8</div>
+        <div class="card-title">Publish</div>
+        <div class="card-desc">Third party owns and publishes the final procedure.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
