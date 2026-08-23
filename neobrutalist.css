@@ -33,8 +33,8 @@
   --font-pixel:   'VT323', 'Courier New', monospace;
 
   --border-hairline: 1px solid var(--ink);
-  --border-default:  3px solid var(--ink);
-  --border-heavy:    4px solid var(--ink);
+  --border-default:  2px solid var(--ink);
+  --border-heavy:    2.5px solid var(--ink);
 
   --shadow-sm:    3px 3px 0 var(--ink);
   --shadow-md:    6px 6px 0 var(--ink);
@@ -347,7 +347,7 @@ a:hover {
 }
 
 .nb-work-card-image {
-  width: 38%;
+  width: 46%;
   flex-shrink: 0;
   border-right: 1.5px solid var(--gray-4);
   background-image: repeating-linear-gradient(
