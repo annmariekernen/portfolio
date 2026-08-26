@@ -649,6 +649,46 @@ a:hover {
 }
 
 /* ============================================================
+   CASE STUDY — SECTION SUB-NAV (sticky, sits under nb-case-header)
+   ============================================================ */
+.nb-case-subnav {
+  position: sticky;
+  top: 36px;
+  z-index: 9;
+  background: var(--paper);
+  border-bottom: var(--border-default);
+  display: flex;
+  overflow-x: auto;
+  padding: 0 32px;
+}
+
+.nb-case-subnav-link {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-2);
+  text-decoration: none;
+  padding: 7px 14px;
+  margin: 9px 4px;
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-snap), background var(--dur-fast) var(--ease-snap);
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=136368'), pointer;
+}
+
+.nb-case-subnav-link:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nb-case-subnav-link--active,
+.nb-case-subnav-link--active:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* ============================================================
    CASE STUDY — HERO
    ============================================================ */
 .nb-case-hero {
