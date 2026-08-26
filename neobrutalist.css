@@ -51,6 +51,10 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--paper);
@@ -656,7 +660,7 @@ a:hover {
   top: 36px;
   z-index: 9;
   background: var(--paper);
-  border-bottom: var(--border-default);
+  border-bottom: var(--border-hairline);
   display: flex;
   overflow-x: auto;
   padding: 0 32px;
@@ -686,6 +690,10 @@ a:hover {
 .nb-case-subnav-link--active:hover {
   background: var(--ink);
   color: var(--paper);
+}
+
+.nb-subnav-target {
+  scroll-margin-top: 116px;
 }
 
 /* ============================================================
