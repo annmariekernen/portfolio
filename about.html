@@ -5,18 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="neobrutalist.css" />
+  <link rel="stylesheet" href="styles-v2.css" />
 </head>
 <body>
 
   <nav class="nb-nav">
     <a href="work.html" class="nb-logo">AM_DZNS<span class="nb-logo-slash">//</span></a>
     <div class="nb-nav-links">
-      <a href="work.html" class="nb-nav-link">▸ WORK</a>
-      <a href="about.html" class="nb-nav-link nb-nav-link--active">ABOUT</a>
+      <a href="work.html" class="nb-nav-link">Work</a>
+      <a href="about.html" class="nb-nav-link nb-nav-link--active">About</a>
+      <a href="contact.html" class="nb-nav-cta">Contact</a>
     </div>
-    <div class="nb-nav-spacer"></div>
-    <a href="contact.html" class="nb-nav-cta">CONTACT</a>
   </nav>
 
   <!-- Bio -->
@@ -47,14 +46,14 @@
       <div>
         <h2 class="nb-experience-heading">Experience Overview_</h2>
         <div class="nb-resume-btns">
-          <a href="assets/resumes/Ann-Marie-Kernen-Resume-Colorful.pdf" target="_blank" class="nb-btn nb-btn--lemon">DOWNLOAD RESUME ▸</a>
-          <a href="assets/resumes/Ann-Marie-Kernen-Resume-Plain-Text.pdf" target="_blank" class="nb-btn nb-btn--ghost">TEXT-ONLY VERSION</a>
+          <a href="assets/resumes/Ann-Marie-Kernen-Resume-Colorful.pdf" target="_blank" class="nb-btn nb-btn--lemon">Download resume ▸</a>
+          <a href="assets/resumes/Ann-Marie-Kernen-Resume-Plain-Text.pdf" target="_blank" class="nb-btn nb-btn--ghost">Text-only version</a>
         </div>
       </div>
 
       <div>
         <div class="nb-accordion-controls">
-          <button class="nb-accordion-toggle" onclick="toggleAccordion(this)">EXPAND ALL ▸</button>
+          <button class="nb-accordion-toggle" onclick="toggleAccordion(this)">Expand all ▸</button>
         </div>
         <div class="nb-accordion">
         <details>
@@ -62,6 +61,7 @@
           <div class="nb-accordion-body">
             <ul>
               <li>Digital Product Designer - Oct 2025 - Present</li>
+            </ul>
           </div>
         </details>
         <details>
@@ -115,7 +115,7 @@
         <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
       </div>
       <div class="nb-footer-col">
-        <p class="nb-footer-col-title">// SITE MAP</p>
+        <p class="nb-footer-col-title">// Site map</p>
         <ul>
           <li><a href="work.html">Case Studies</a></li>
           <li><a href="about.html">About</a></li>
@@ -123,7 +123,7 @@
         </ul>
       </div>
       <div class="nb-footer-col">
-        <p class="nb-footer-col-title">// CONNECT</p>
+        <p class="nb-footer-col-title">// Connect</p>
         <ul>
           <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
           <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
@@ -231,9 +231,9 @@
       });
 
       window.toggleAccordion = function (btn) {
-        const isExpanded = btn.textContent.startsWith('COLLAPSE');
+        const isExpanded = btn.textContent.startsWith('Collapse');
         details.forEach(d => isExpanded ? closeItem(d) : openItem(d));
-        btn.textContent = isExpanded ? 'EXPAND ALL ▸' : 'COLLAPSE ALL ▸';
+        btn.textContent = isExpanded ? 'Expand all ▸' : 'Collapse all ▸';
       };
     })();
   </script>
