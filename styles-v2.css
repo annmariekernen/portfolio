@@ -329,7 +329,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
    CASE STUDY — STICKY HEADER + SUB-NAV
    ============================================================ */
 .nb-case-header {
-  border-bottom: var(--border-heavy);
+  border-bottom: var(--border-divider);
   background: var(--paper);
   padding: 0 32px 0 0;
   height: 44px;
@@ -338,7 +338,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 }
 .nb-case-back {
   display: flex; align-items: center; padding: 0 20px;
-  border-right: var(--border-default);
+  border-right: var(--border-divider);
   text-decoration: none; color: var(--fg-1);
   font-family: var(--font-display); font-variation-settings: 'wdth' var(--wdth-display);
   font-weight: 700; font-size: 16px; letter-spacing: -0.01em;
@@ -369,7 +369,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .nb-case-subnav {
   position: sticky; top: 44px; z-index: 9;
   background: var(--paper);
-  border-bottom: var(--border-hairline);
+  border-bottom: var(--border-divider);
   display: flex; overflow-x: auto;
   padding: 0 32px;
 }
