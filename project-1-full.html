@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLANR (Extended Write-Up) — Ann Marie Kernen</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="styles-v2.css" />
+</head>
+<body>
+
+  <!-- Sticky case header -->
+  <header class="nb-case-header">
+    <div class="nb-case-header-left">
+      <a href="work.html" class="nb-case-back">AM_DZNS<span style="color:var(--pink)">//</span></a>
+      <a href="project-1.html" class="nb-case-prev">◂ Quick look</a>
+    </div>
+    <div class="nb-case-progress">
+      <span class="nb-progress-dot"></span>
+      ▸ Extended write-up
+    </div>
+    <a href="work.html" class="nb-case-next">All work ▸</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="nb-case-hero">
+    <div class="nb-case-hero-inner">
+      <div class="nb-case-tags">
+        <span class="nb-case-tag nb-case-tag--pink">Case study</span>
+        <span class="nb-case-tag nb-case-tag--paper">▸ iOS app</span>
+        <span class="nb-case-tag nb-case-tag--paper">Springboard Bootcamp · 6 months</span>
+      </div>
+      <h1 class="nb-case-hero-title">PLANR: A Public Transit Planning App</h1>
+      <p class="nb-case-hero-sub">I led this 6-month Springboard (bootcamp) project as the "UX Lead," creating PLANR, a prototype iOS app that helps users easily plan and save public transit journeys, stops, and stations.</p>
+
+      <div class="nb-note" style="margin-top:26px;">
+        <span class="nb-note-icon">📖</span>
+        <div>
+          <p class="nb-note-label">// Extended write-up</p>
+          <p class="nb-note-text">This is the full research-and-process version of this case study. Prefer the quick, image-first look? <a href="project-1.html">See the short version →</a></p>
+        </div>
+      </div>
+
+      <div class="nb-case-facts">
+        <div class="nb-case-fact">
+          <div class="nb-case-fact-label">// Problem</div>
+          <div class="nb-case-fact-value">How can we improve the digital experiences involved in riding and navigating public transit?</div>
+        </div>
+        <div class="nb-case-fact">
+          <div class="nb-case-fact-label">// Target users</div>
+          <div class="nb-case-fact-value">People who ride public transportation at least once a week or more</div>
+        </div>
+        <div class="nb-case-fact">
+          <div class="nb-case-fact-label">// Outcome</div>
+          <div class="nb-case-fact-value">On final MVP prototype, users had a <strong>96% success rate</strong> (tested via Maze)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metric row -->
+  <section class="nb-metric-row">
+    <div class="nb-metric-row-inner">
+      <div class="nb-metric">
+        <div class="nb-metric-label">// Task success</div>
+        <div class="nb-metric-value nb-metric-value--lime">96%</div>
+        <div class="nb-metric-note">unmoderated Maze test, n=26</div>
+      </div>
+      <div class="nb-metric">
+        <div class="nb-metric-label">// User interviews</div>
+        <div class="nb-metric-value nb-metric-value--cyan">7</div>
+        <div class="nb-metric-note">DC residents + Springboard students</div>
+      </div>
+      <div class="nb-metric">
+        <div class="nb-metric-label">// Design phases</div>
+        <div class="nb-metric-value nb-metric-value--cyan">5</div>
+        <div class="nb-metric-note">empathize · define · ideate · design · test</div>
+      </div>
+      <div class="nb-metric">
+        <div class="nb-metric-label">// Notes synthesized</div>
+        <div class="nb-metric-value nb-metric-value--lemon">18pg</div>
+        <div class="nb-metric-note">from 3.5 hrs of interview recordings</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Phase 1: Empathize -->
+  <section class="nb-prose">
+    <div class="nb-prose-inner">
+      <div class="nb-section-marker">
+        <span class="nb-section-num">[01]</span>
+        <h2>Phase 1: Empathize (Research)</h2>
+      </div>
+
+      <h3 style="font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;margin:0 0 12px;">Secondary Research</h3>
+      <p>Initially my plan was to focus on the mobile payments experience for DC public transit, so I first reviewed similar apps in other cities like Portland and NYC. What were the basic features of these apps, and how did they look &amp; feel? What were app store reviews saying? <a href="#" target="_blank">Click here to see my secondary research presentation.</a></p>
+
+      <h3 style="font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;margin:24px 0 12px;">User Interviews</h3>
+      <p>But to get some real "user feedback," I interviewed 7 participants — 3 DC residents and 4 Springboard students — all of whom regularly used public transit. I even threw in a $15 Amazon gift card for people who participated :)</p>
+      <div class="nb-image-placeholder">[ Photo: Recruiting interview participants at metro station during rush hour ]</div>
+      <p>I found people to interview by passing out flyers at my local metro stop during rush hour.</p>
+    </div>
+  </section>
+
+  <!-- Phase 2: Define -->
+  <section class="nb-prose" style="background:var(--paper-2);">
+    <div class="nb-prose-inner">
+      <div class="nb-section-marker">
+        <span class="nb-section-num">[02]</span>
+        <h2>Phase 2: Define (Synthesize)</h2>
+      </div>
+      <p>After these interviews, I synthesized over 3.5 hours of interview recordings and 18 pages of notes into an affinity map.</p>
+      <p>From these conversations, I realized mobile payments weren't the issue at all — most users I spoke to had already switched to digital wallets, which the DC metro card supports. The real issue had to do with trip planning!</p>
+      <p>My affinity mapping exercise identified the following themes:</p>
+      <ul>
+        <li><strong>Planning vs. Mapping:</strong> Frequent transit users already knew how to get where they're going (mapping) — what they needed to know was the best time to leave (planning).</li>
+        <li><strong>Need for Real-time Updates:</strong> Nearly every user stressed the importance of accurate, real-time arrival and departure information.</li>
+        <li><strong>Multi-modal Transit:</strong> Many riders used more than one form of transportation, like switching between bus and metro, but existing apps didn't handle this well.</li>
+      </ul>
+      <div class="nb-image-placeholder">[ Image: Three personas — John (construction worker), Leslie (PR professional), Hayden (commuter student) ]</div>
+      <p>From the 7 transit riders I interviewed, I also created 3 personas to guide what the average user types for this app might be. These personas showcase the need to design for frequent high-stakes riders, frequent low-stakes riders, and suburban commuters.</p>
+    </div>
+  </section>
+
+  <!-- Phase 3: Ideate -->
+  <section class="nb-prose">
+    <div class="nb-prose-inner">
+      <div class="nb-section-marker">
+        <span class="nb-section-num">[03]</span>
+        <h2>Phase 3: Ideate + Refine</h2>
+      </div>
+      <p>These insights informed three "How Might We" (HMW) questions that guided my design:</p>
+      <ul>
+        <li>HMW plan efficient public transit journeys?</li>
+        <li>HMW provide real-time updates for transit users?</li>
+        <li>HMW support multi-modal transit trips?</li>
+      </ul>
+      <p>I brainstormed solutions to my HMW questions using the Now, Wow, How method, narrowing down features to focus on what was essential.</p>
+      <p>The four core features, or "red routes," were:</p>
+      <ul>
+        <li>Start a new journey</li>
+        <li>View saved journeys</li>
+        <li>Save stops or stations</li>
+        <li>Check arrivals at saved locations</li>
+      </ul>
+      <p>I sketched initial ideas and refined them based on feedback from my mentor.</p>
+      <div class="nb-image-placeholder">[ Wireframe: Mobile app journey planning screens ]</div>
+    </div>
+  </section>
+
+  <!-- Phase 4: Lo to Hi Fidelity -->
+  <section class="nb-prose" style="background:var(--paper-2);">
+    <div class="nb-prose-inner">
+      <div class="nb-section-marker">
+        <span class="nb-section-num">[04]</span>
+        <h2>Phase 4: Lo- to Hi-Fidelity</h2>
+      </div>
+      <p>I developed wireframes in Figma, focusing on minimizing clicks for users who are often on the go. Based on testing feedback, I ensured that users could:</p>
+      <ul>
+        <li>See all saved journeys right from the home page.</li>
+        <li>Access saved stops and stations with fewer clicks.</li>
+      </ul>
+      <p>In the hi-fidelity phase, I created a style guide with a vibrant blue palette and a sleek, modern UI. I also streamlined navigation by eliminating a lower nav bar, opting for an overlay with tabs for Saved Journeys and Stations. My goal was to simplify and modernize the user experience, reducing friction at key touchpoints.</p>
+      <div class="nb-image-placeholder">[ Image: Color palette — primary blue #44B6F6, accent greens, gradient blues, greys ]</div>
+      <div class="nb-image-placeholder">[ Image: Four smartphone screens showing the transit navigation app ]</div>
+    </div>
+  </section>
+
+  <!-- Phase 5: Test -->
+  <section class="nb-prose">
+    <div class="nb-prose-inner">
+      <div class="nb-section-marker">
+        <span class="nb-section-num">[05]</span>
+        <h2>Phase 5: Test + Iterate</h2>
+      </div>
+      <p>I conducted two rounds of usability testing. In the first round, I moderated tests via Zoom with 5 users. Key insights:</p>
+      <ul>
+        <li><strong>Task success:</strong> Users easily completed tasks like planning a trip and saving a station.</li>
+        <li><strong>Navigation tweaks:</strong> Based on feedback, I reduced the number of clicks for accessing saved journeys and stops.</li>
+      </ul>
+      <p>In the second round, 26 users completed unmoderated testing via Maze.co. Tasks had a <strong>96% success rate</strong>, and feedback was overwhelmingly positive. However, due to time constraints, I was unable to incorporate feedback from the second round.</p>
+    </div>
+  </section>
+
+  <!-- Conclusion -->
+  <section class="nb-prose" style="background:var(--paper-2);">
+    <div class="nb-prose-inner">
+      <div class="nb-section-marker">
+        <span class="nb-section-num">[06]</span>
+        <h2>Conclusion + Next Steps</h2>
+      </div>
+      <p>If I had more time, I'd prioritize developing an in-transit experience — features like trip notifications and dynamic directions that update during the journey.</p>
+      <p>I'd also revisit ideas from the ideation phase, such as scheduled journeys and third-party integrations (e.g., Uber, Lyft, bikeshare).</p>
+      <p>Overall, this was my first time designing an end-to-end digital experience, so this project will always have a special place in my heart!</p>
+      <p><a href="#" target="_blank">Click here to view the full prototype 📱</a> (This will open in a new tab.)</p>
+    </div>
+  </section>
+
+  <!-- Next case -->
+  <section class="nb-next-case">
+    <div class="nb-next-case-inner">
+      <div>
+        <p class="nb-next-label">// All done here</p>
+        <h3 class="nb-next-title">Back to all work →</h3>
+      </div>
+      <a href="work.html" class="nb-btn nb-btn--lemon">See all work ▸</a>
+    </div>
+  </section>
+
+  <footer class="nb-footer">
+    <div class="nb-footer-inner">
+      <div>
+        <a href="work.html" class="nb-footer-logo">AM_DZNS<span class="nb-footer-logo-slash">//</span></a>
+        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
+      </div>
+      <div class="nb-footer-col">
+        <p class="nb-footer-col-title">// Site map</p>
+        <ul>
+          <li><a href="work.html">Case Studies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="nb-footer-col">
+        <p class="nb-footer-col-title">// Connect</p>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
+          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
+          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
+        </ul>
+      </div>
+      <div class="nb-footer-bottom">
+        <span>// © 2026 · Ann Marie Kernen</span>
+        <span>Built with Claude Code &lt;3</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="nb-back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
+
+  <script>
+    (function(){
+      var btn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function(){
+        btn.classList.toggle('nb-visible', window.scrollY > 400);
+      });
+    })();
+  </script>
+</body>
+</html>

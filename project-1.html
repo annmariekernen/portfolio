@@ -22,168 +22,210 @@
     <a href="work.html" class="nb-case-next">All work ▸</a>
   </header>
 
+  <!-- Section sub-nav -->
+  <nav class="nb-case-subnav">
+    <a href="#summary" class="nb-case-subnav-link nb-case-subnav-link--active">Summary</a>
+    <a href="#research" class="nb-case-subnav-link">Research</a>
+    <a href="#sketch" class="nb-case-subnav-link">Sketch</a>
+    <a href="#flows" class="nb-case-subnav-link">Flows</a>
+    <a href="#screens" class="nb-case-subnav-link">Screens</a>
+    <a href="#outcome" class="nb-case-subnav-link">Outcome</a>
+  </nav>
+
   <!-- Hero -->
-  <section class="nb-case-hero">
+  <section class="nb-case-hero nb-case-hero--tight nb-subnav-target" id="summary">
     <div class="nb-case-hero-inner">
-      <div class="nb-case-tags">
-        <span class="nb-case-tag nb-case-tag--pink">Case study</span>
-        <span class="nb-case-tag nb-case-tag--paper">▸ iOS app</span>
-        <span class="nb-case-tag nb-case-tag--paper">Springboard Bootcamp · 6 months</span>
+      <div class="nb-case-hero-split">
+        <div>
+          <div class="nb-case-tags">
+            <span class="nb-case-tag nb-case-tag--paper">Springboard Bootcamp · 6 months</span>
+          </div>
+          <h1 class="nb-case-hero-title">PLANR: A Public Transit Planning App</h1>
+          <p class="nb-case-hero-sub">A prototype iOS app that helps DC commuters plan, save, and navigate public transit journeys — my first-ever UX case study, from a 6-month Springboard bootcamp project.</p>
+        </div>
+
+        <div class="nb-case-hero-media">
+          <img src="assets/images/planr-home.webp" alt="PLANR home screen — saved journeys and stations" class="nb-shot" />
+        </div>
       </div>
-      <h1 class="nb-case-hero-title">PLANR: A Public Transit Planning App</h1>
-      <p class="nb-case-hero-sub">I led this 6-month Springboard (bootcamp) project as the "UX Lead," creating PLANR, a prototype iOS app that helps users easily plan and save public transit journeys, stops, and stations.</p>
-      <div class="nb-case-facts">
-        <div class="nb-case-fact">
-          <div class="nb-case-fact-label">// Problem</div>
-          <div class="nb-case-fact-value">How can we improve the digital experiences involved in riding and navigating public transit?</div>
-        </div>
-        <div class="nb-case-fact">
-          <div class="nb-case-fact-label">// Target users</div>
-          <div class="nb-case-fact-value">People who ride public transportation at least once a week or more</div>
-        </div>
-        <div class="nb-case-fact">
-          <div class="nb-case-fact-label">// Outcome</div>
-          <div class="nb-case-fact-value">On final MVP prototype, users had a <strong>96% success rate</strong> (tested via Maze)</div>
+
+      <a href="#screens" class="nb-btn nb-btn--ghost nb-btn--small" style="margin-top:32px;">Skip to work ▸</a>
+
+      <div class="nb-note" style="margin-top:18px;">
+        <span class="nb-note-icon">⚡</span>
+        <div>
+          <p class="nb-note-label">// Quick look</p>
+          <p class="nb-note-text">This is the bare-bones, image-first version — this was my very first UX project, and there's a lot of process behind it most people won't read. Want the research, personas, and iteration? <a href="project-1-full.html">Read the full write-up →</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Metric row -->
-  <section class="nb-metric-row">
-    <div class="nb-metric-row-inner">
-      <div class="nb-metric">
-        <div class="nb-metric-label">// Task success</div>
-        <div class="nb-metric-value nb-metric-value--lime">96%</div>
-        <div class="nb-metric-note">unmoderated Maze test, n=26</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">// User interviews</div>
-        <div class="nb-metric-value nb-metric-value--cyan">7</div>
-        <div class="nb-metric-note">DC residents + Springboard students</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">// Design phases</div>
-        <div class="nb-metric-value nb-metric-value--cyan">5</div>
-        <div class="nb-metric-note">empathize · define · ideate · design · test</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">// Notes synthesized</div>
-        <div class="nb-metric-value nb-metric-value--lemon">18pg</div>
-        <div class="nb-metric-note">from 3.5 hrs of interview recordings</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Phase 1: Empathize -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
+  <!-- 01: Research -->
+  <section class="nb-prose nb-subnav-target" id="research">
+    <div class="nb-prose-inner" style="max-width:1100px;">
       <div class="nb-section-marker">
         <span class="nb-section-num">[01]</span>
-        <h2>Phase 1: Empathize (Research)</h2>
+        <h2>Research</h2>
+      </div>
+      <p>7 interviews. 1 metro station. A lot of sticky notes.</p>
+
+      <div class="nb-split-row">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Recruiting at the metro</h3>
+          <p>I recruited most of my 7 interview participants old-school — flyering my local metro stop during rush hour, gift card in hand. Turns out $15 to Amazon goes a long way when someone's just trying to catch a train.</p>
+        </div>
+        <div class="nb-split-media">
+          <img src="assets/images/planr-recruit.jpg" alt="Recruiting interview participants at the metro station during rush hour" class="nb-shot" />
+        </div>
       </div>
 
-      <h3 style="font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;margin:0 0 12px;">Secondary Research</h3>
-      <p>Initially my plan was to focus on the mobile payments experience for DC public transit, so I first reviewed similar apps in other cities like Portland and NYC. What were the basic features of these apps, and how did they look &amp; feel? What were app store reviews saying? <a href="#" target="_blank">Click here to see my secondary research presentation.</a></p>
+      <div class="nb-split-row nb-split-row--reverse">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Affinity mapping the interviews</h3>
+          <p>3.5 hours of interview recordings and 18 pages of notes, sorted onto a wall by hand. Planning kept coming up more than mapping — people already knew how to get somewhere, they just didn't know the best time to leave.</p>
+        </div>
+        <div class="nb-split-media">
+          <img src="assets/images/planr-affinity.jpg" alt="Affinity map of interview notes on sticky notes, grouped by theme" class="nb-shot" />
+        </div>
+      </div>
 
-      <h3 style="font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:20px;letter-spacing:-0.01em;margin:24px 0 12px;">User Interviews</h3>
-      <p>But to get some real "user feedback," I interviewed 7 participants — 3 DC residents and 4 Springboard students — all of whom regularly used public transit. I even threw in a $15 Amazon gift card for people who participated :)</p>
-      <div class="nb-image-placeholder">[ Photo: Recruiting interview participants at metro station during rush hour ]</div>
-      <p>I found people to interview by passing out flyers at my local metro stop during rush hour.</p>
+      <div class="nb-split-row">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Turning interviews into personas</h3>
+          <p>From the 7 people I talked to, I built 3 personas — John, Leslie, and Hayden — to represent frequent high-stakes riders, frequent low-stakes riders, and suburban commuters.</p>
+        </div>
+        <div class="nb-split-media">
+          <img src="assets/images/planr-personas.png" alt="Three personas — John, a healthcare worker; Leslie, a PR professional; and Hayden, a suburban commuter" class="nb-shot" />
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Phase 2: Define -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
+  <!-- 02: Sketch to system -->
+  <section class="nb-prose nb-subnav-target" id="sketch" style="background:var(--paper-2);">
+    <div class="nb-prose-inner" style="max-width:1100px;">
       <div class="nb-section-marker">
         <span class="nb-section-num">[02]</span>
-        <h2>Phase 2: Define (Synthesize)</h2>
+        <h2>Sketch to system</h2>
       </div>
-      <p>After these interviews, I synthesized over 3.5 hours of interview recordings and 18 pages of notes into an affinity map.</p>
-      <p>From these conversations, I realized mobile payments weren't the issue at all — most users I spoke to had already switched to digital wallets, which the DC metro card supports. The real issue had to do with trip planning!</p>
-      <p>My affinity mapping exercise identified the following themes:</p>
-      <ul>
-        <li><strong>Planning vs. Mapping:</strong> Frequent transit users already knew how to get where they're going (mapping) — what they needed to know was the best time to leave (planning).</li>
-        <li><strong>Need for Real-time Updates:</strong> Nearly every user stressed the importance of accurate, real-time arrival and departure information.</li>
-        <li><strong>Multi-modal Transit:</strong> Many riders used more than one form of transportation, like switching between bus and metro, but existing apps didn't handle this well.</li>
-      </ul>
-      <div class="nb-image-placeholder">[ Image: Three personas — John (construction worker), Leslie (PR professional), Hayden (commuter student) ]</div>
-      <p>From the 7 transit riders I interviewed, I also created 3 personas to guide what the average user types for this app might be. These personas showcase the need to design for frequent high-stakes riders, frequent low-stakes riders, and suburban commuters.</p>
+      <p>From paper to a working style guide, fast.</p>
+
+      <div class="nb-split-row nb-split-row--reverse">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Round one: paper</h3>
+          <p>The very first sketches — working out the core screens (saved stations, saved journeys, creating a new journey) with pencil and a notebook, before touching Figma.</p>
+        </div>
+        <div class="nb-split-media">
+          <div class="nb-stack">
+            <img src="assets/images/planr-sketch-v1-1.jpg" alt="Early paper sketch — creating and saving a new journey" class="nb-stack-img nb-stack-img--back" />
+            <img src="assets/images/planr-sketch-v1-2.jpg" alt="Early paper sketch — saved stations and saved journeys" class="nb-stack-img nb-stack-img--front" />
+          </div>
+        </div>
+      </div>
+
+      <div class="nb-split-row">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Round two: refining the flow</h3>
+          <p>A second pass on grid paper, tightening the navigation and mapping out how each screen actually connects to the next.</p>
+        </div>
+        <div class="nb-split-media">
+          <div class="nb-stack">
+            <img src="assets/images/planr-sketch-v2-1.jpg" alt="Refined paper sketch — home, saved journeys, and journey detail screens" class="nb-stack-img nb-stack-img--back" />
+            <img src="assets/images/planr-sketch-v2-2.jpg" alt="Refined paper sketch — add station and station detail screens" class="nb-stack-img nb-stack-img--front" />
+          </div>
+        </div>
+      </div>
+
+      <div class="nb-split-row nb-split-row--reverse">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Wireframes, digitized</h3>
+          <p>Once the core flows felt right on paper, I rebuilt them in Figma — same structure, now testable and shareable.</p>
+        </div>
+        <div class="nb-split-media">
+          <img src="assets/images/planr-wireframes.png" alt="Full set of PLANR wireframes built out in Figma" class="nb-shot" />
+        </div>
+      </div>
+
+      <div class="nb-split-row">
+        <div class="nb-split-text">
+          <h3 class="nb-split-heading">Locking in a style guide</h3>
+          <p>A simple color, type, and icon system kept the hi-fi screens consistent as I moved fast through iterations.</p>
+        </div>
+        <div class="nb-split-media">
+          <img src="assets/images/planr-font-system.png" alt="PLANR font system — headers and body text, light and dark" class="nb-shot" />
+        </div>
+      </div>
+
+      <div class="nb-gallery nb-gallery--2">
+        <div class="nb-gallery-item">
+          <img src="assets/images/planr-style-guide.png" alt="PLANR color palette — light and dark" class="nb-shot" />
+        </div>
+        <div class="nb-gallery-item">
+          <img src="assets/images/planr-iconography.png" alt="PLANR iconography — light and dark" class="nb-shot" />
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Phase 3: Ideate -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
+  <!-- 03: Mapping the flows -->
+  <section class="nb-prose nb-subnav-target" id="flows">
+    <div class="nb-prose-inner" style="max-width:1100px;">
       <div class="nb-section-marker">
         <span class="nb-section-num">[03]</span>
-        <h2>Phase 3: Ideate + Refine</h2>
+        <h2>Mapping the flows</h2>
       </div>
-      <p>These insights informed three "How Might We" (HMW) questions that guided my design:</p>
-      <ul>
-        <li>HMW plan efficient public transit journeys?</li>
-        <li>HMW provide real-time updates for transit users?</li>
-        <li>HMW support multi-modal transit trips?</li>
-      </ul>
-      <p>I brainstormed solutions to my HMW questions using the Now, Wow, How method, narrowing down features to focus on what was essential.</p>
-      <p>The four core features, or "red routes," were:</p>
-      <ul>
-        <li>Start a new journey</li>
-        <li>View saved journeys</li>
-        <li>Save stops or stations</li>
-        <li>Check arrivals at saved locations</li>
-      </ul>
-      <p>I sketched initial ideas and refined them based on feedback from my mentor.</p>
-      <div class="nb-image-placeholder">[ Wireframe: Mobile app journey planning screens ]</div>
+      <p>Before jumping into hi-fi screens, I mapped three core "red routes" — plan a journey, save a station, check saved journeys — screen by screen, to make sure the flows actually held together.</p>
+      <img src="assets/images/planr-flows.png" alt="Red route flow diagrams mapping the core PLANR user journeys across screens" class="nb-shot" style="margin:24px 0;" />
     </div>
   </section>
 
-  <!-- Phase 4: Lo to Hi Fidelity -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
+  <!-- 04: Final screens -->
+  <section class="nb-prose nb-subnav-target" id="screens" style="background:var(--paper-2);">
+    <div class="nb-prose-inner" style="max-width:1100px;">
       <div class="nb-section-marker">
         <span class="nb-section-num">[04]</span>
-        <h2>Phase 4: Lo- to Hi-Fidelity</h2>
+        <h2>The final product</h2>
       </div>
-      <p>I developed wireframes in Figma, focusing on minimizing clicks for users who are often on the go. Based on testing feedback, I ensured that users could:</p>
-      <ul>
-        <li>See all saved journeys right from the home page.</li>
-        <li>Access saved stops and stations with fewer clicks.</li>
-      </ul>
-      <p>In the hi-fidelity phase, I created a style guide with a vibrant blue palette and a sleek, modern UI. I also streamlined navigation by eliminating a lower nav bar, opting for an overlay with tabs for Saved Journeys and Stations. My goal was to simplify and modernize the user experience, reducing friction at key touchpoints.</p>
-      <div class="nb-image-placeholder">[ Image: Color palette — primary blue #44B6F6, accent greens, gradient blues, greys ]</div>
-      <div class="nb-image-placeholder">[ Image: Four smartphone screens showing the transit navigation app ]</div>
+      <p>Four core screens, from planning to riding.</p>
+
+      <div class="nb-gallery nb-gallery--4">
+        <div class="nb-gallery-item">
+          <img src="assets/images/planr-options.jpg" alt="Comparing route options, fastest first" class="nb-shot" />
+          <p class="nb-gallery-caption">Comparing route options</p>
+        </div>
+        <div class="nb-gallery-item">
+          <img src="assets/images/planr-directions.webp" alt="Turn-by-turn transfer directions with live arrival times" class="nb-shot" />
+          <p class="nb-gallery-caption">Turn-by-turn, with live arrivals</p>
+        </div>
+        <div class="nb-gallery-item">
+          <img src="assets/images/planr-intrip.jpg" alt="Live, in-trip walking directions on the map" class="nb-shot" />
+          <p class="nb-gallery-caption">Live, in-trip navigation</p>
+        </div>
+        <div class="nb-gallery-item">
+          <img src="assets/images/planr-streetview.jpg" alt="Live arrivals popup at a saved metro station" class="nb-shot" />
+          <p class="nb-gallery-caption">Live arrivals at a saved station</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Phase 5: Test -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
+  <!-- 05: Outcome -->
+  <section class="nb-prose nb-subnav-target" id="outcome">
+    <div class="nb-prose-inner" style="max-width:1100px;">
       <div class="nb-section-marker">
         <span class="nb-section-num">[05]</span>
-        <h2>Phase 5: Test + Iterate</h2>
+        <h2>Outcome</h2>
       </div>
-      <p>I conducted two rounds of usability testing. In the first round, I moderated tests via Zoom with 5 users. Key insights:</p>
-      <ul>
-        <li><strong>Task success:</strong> Users easily completed tasks like planning a trip and saving a station.</li>
-        <li><strong>Navigation tweaks:</strong> Based on feedback, I reduced the number of clicks for accessing saved journeys and stops.</li>
-      </ul>
-      <p>In the second round, 26 users completed unmoderated testing via Maze.co. Tasks had a <strong>96% success rate</strong>, and feedback was overwhelmingly positive. However, due to time constraints, I was unable to incorporate feedback from the second round.</p>
-    </div>
-  </section>
+      <p>On the final MVP prototype, users hit a <strong>96% success rate</strong> in unmoderated testing (Maze, n=26). It was my first time designing an end-to-end product, start to finish — and it's still the project that taught me the most.</p>
 
-  <!-- Conclusion -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <span class="nb-section-num">[06]</span>
-        <h2>Conclusion + Next Steps</h2>
+      <div class="nb-note">
+        <span class="nb-note-icon">📖</span>
+        <div>
+          <p class="nb-note-label">// Want more detail?</p>
+          <p class="nb-note-text">Curious about the research, personas, and iteration behind it? <a href="project-1-full.html">Read the full case study →</a></p>
+        </div>
       </div>
-      <p>If I had more time, I'd prioritize developing an in-transit experience — features like trip notifications and dynamic directions that update during the journey.</p>
-      <p>I'd also revisit ideas from the ideation phase, such as scheduled journeys and third-party integrations (e.g., Uber, Lyft, bikeshare).</p>
-      <p>Overall, this was my first time designing an end-to-end digital experience, so this project will always have a special place in my heart!</p>
-      <p><a href="#" target="_blank">Click here to view the full prototype 📱</a> (This will open in a new tab.)</p>
     </div>
   </section>
 
@@ -235,6 +277,35 @@
       window.addEventListener('scroll', function(){
         btn.classList.toggle('nb-visible', window.scrollY > 400);
       });
+    })();
+  </script>
+
+  <script>
+    (function(){
+      var links = Array.prototype.slice.call(document.querySelectorAll('.nb-case-subnav-link'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('.nb-subnav-target'));
+      if (!links.length || !sections.length || !('IntersectionObserver' in window)) return;
+
+      var linkMap = {};
+      links.forEach(function(link){
+        linkMap[link.getAttribute('href').slice(1)] = link;
+      });
+
+      function setActive(id){
+        links.forEach(function(link){ link.classList.remove('nb-case-subnav-link--active'); });
+        if (linkMap[id]) linkMap[id].classList.add('nb-case-subnav-link--active');
+      }
+
+      // Detection band starts just below the two sticky bars and covers
+      // the top ~30% of the remaining viewport — whichever section's top
+      // edge crosses into that band becomes "active."
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, { rootMargin: '-116px 0px -70% 0px', threshold: 0 });
+
+      sections.forEach(function(section){ observer.observe(section); });
     })();
   </script>
 </body>

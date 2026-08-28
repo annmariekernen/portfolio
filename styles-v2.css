@@ -398,7 +398,22 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
    CASE STUDY — HERO + METRIC ROW
    ============================================================ */
 .nb-case-hero { padding: 72px 48px 56px; border-bottom: var(--border-divider); background: var(--paper); }
+.nb-case-hero--tight { padding: 52px 48px 44px; border-bottom: none; }
 .nb-case-hero-inner { max-width: 1100px; margin: 0 auto; }
+
+.nb-case-hero-split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+.nb-case-hero-media { display: flex; justify-content: center; }
+.nb-case-hero-media .nb-image-placeholder {
+  width: 100%; max-width: 300px; aspect-ratio: 9 / 16; min-height: 0;
+  box-shadow: var(--ghost-soft); margin: 0;
+}
+.nb-case-hero-media .nb-shot { max-width: 300px; }
+@media (max-width: 860px) {
+  .nb-case-hero-split { grid-template-columns: 1fr; gap: 28px; }
+  .nb-case-hero-media { order: -1; }
+  .nb-case-hero-media .nb-image-placeholder,
+  .nb-case-hero-media .nb-shot { max-width: 200px; }
+}
 .nb-case-tags { display: flex; gap: 8px; margin-bottom: 26px; flex-wrap: wrap; }
 .nb-case-tag {
   display: inline-flex; align-items: center; gap: 8px;
@@ -485,6 +500,81 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .nb-disclosure-text { font-size: 15px; line-height: 1.6; margin: 0; color: var(--fg-1); }
 
 /* ============================================================
+   NOTE (generic notice box — cross-links, callouts, etc.)
+   Shares the disclosure box's visual language without implying
+   confidentiality specifically.
+   ============================================================ */
+.nb-note {
+  display: flex; gap: 18px; align-items: flex-start;
+  border: var(--border-divider);
+  background: var(--blue-pale);
+  padding: 22px 26px;
+}
+.nb-note-icon { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.nb-note-label {
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-weight: 700; font-size: 14px;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  margin: 0 0 6px; color: var(--fg-1);
+}
+.nb-note-text { font-size: 15px; line-height: 1.6; margin: 0; color: var(--fg-1); }
+.nb-note-text a { color: var(--blue-deep); font-weight: 600; }
+
+/* ============================================================
+   IMAGE GALLERY (bare-bones / image-heavy case study layouts)
+   ============================================================ */
+.nb-gallery { display: grid; gap: 20px; margin: 24px 0; align-items: start; }
+.nb-gallery--2 { grid-template-columns: repeat(2, 1fr); }
+.nb-gallery--3 { grid-template-columns: repeat(3, 1fr); }
+.nb-gallery--4 { grid-template-columns: repeat(4, 1fr); }
+.nb-gallery-item .nb-image-placeholder,
+.nb-gallery-item .nb-case-image { margin: 0; height: 100%; }
+.nb-gallery-caption {
+  margin: 10px 2px 0; font-size: 13px; line-height: 1.4; color: var(--fg-3);
+}
+
+/* A real photo/screenshot dropped into a placeholder's slot — same framed
+   treatment (border + ghost shadow), natural aspect ratio, no distortion. */
+.nb-shot { display: block; width: 100%; height: auto; }
+
+/* ============================================================
+   SPLIT ROW (blurb + image, alternating sides) — for showcasing
+   images of mixed size/aspect without cramming them into a rigid grid
+   ============================================================ */
+.nb-split-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;
+  margin: 0 0 56px;
+}
+.nb-split-row:last-child { margin-bottom: 0; }
+.nb-split-row--reverse .nb-split-text { order: 2; }
+.nb-split-row--reverse .nb-split-media { order: 1; }
+.nb-split-heading {
+  font-family: var(--font-display); font-variation-settings: 'wdth' var(--wdth-display);
+  font-weight: 700; font-size: 22px; letter-spacing: -0.01em; margin: 0 0 10px;
+}
+.nb-split-text p { font-size: 16px; line-height: 1.6; color: var(--fg-2); margin: 0; }
+@media (max-width: 720px) {
+  .nb-split-row { grid-template-columns: 1fr; gap: 18px; margin-bottom: 40px; }
+  /* Always image-above-text on mobile, regardless of --reverse */
+  .nb-split-media, .nb-split-row--reverse .nb-split-media { order: -1; }
+  .nb-split-text, .nb-split-row--reverse .nb-split-text { order: 0; }
+}
+
+/* Photo stack — two related images (e.g. two sketch iterations) layered
+   like snapshots on a desk, instead of forcing them side by side. */
+.nb-stack { position: relative; margin: 18px 10px; }
+.nb-stack-img { display: block; width: 100%; height: auto; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.nb-stack-img--back { position: absolute; top: 0; left: 0; transform: rotate(-4deg) translate(6%, 5%); z-index: 1; }
+.nb-stack-img--front { position: relative; z-index: 2; transform: rotate(3deg); }
+@media (max-width: 860px) {
+  .nb-gallery--3, .nb-gallery--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .nb-gallery--2, .nb-gallery--3, .nb-gallery--4 { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    PROSE + SECTION MARKER
    ============================================================ */
 .nb-prose { padding: 64px 48px; }
@@ -563,6 +653,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .nb-btn--pink { background: var(--blue-deep); border-color: var(--blue-deep); }
 .nb-btn--ghost { background: transparent; border-color: var(--ink); color: var(--fg-1); }
 .nb-btn--ghost:hover { background: var(--mist-pale); border-color: var(--ink); color: var(--fg-1); }
+.nb-btn--small { padding: 7px 14px; font-size: 13px; }
 /* On an ink surface, ink-colored border+text would vanish -- swap to mist/paper. */
 .nb-experience .nb-btn--ghost { border-color: var(--mist); color: var(--paper); }
 .nb-experience .nb-btn--ghost:hover { background: var(--ink-soft); border-color: var(--paper); color: var(--paper); }
