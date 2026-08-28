@@ -203,7 +203,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
    ============================================================ */
 .nb-nav {
   height: 66px;
-  border-bottom: var(--border-heavy);
+  border-bottom: var(--border-divider);
   display: flex; align-items: center; justify-content: space-between;
   background: var(--paper);
   padding: 0 40px;
