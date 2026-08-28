@@ -22,14 +22,14 @@
     <a href="project-1.html" class="nb-case-next">NEXT ▸</a>
   </header>
 
-  <!-- Section sub-nav (design test — not yet wired to scroll-spy or anchors) -->
+  <!-- Section sub-nav -->
   <nav class="nb-case-subnav">
     <a href="#summary" class="nb-case-subnav-link nb-case-subnav-link--active">Summary</a>
-    <a href="#discover" class="nb-case-subnav-link">Discover</a>
+    <a href="#discover" class="nb-case-subnav-link">Discovery</a>
     <a href="#define" class="nb-case-subnav-link">Define</a>
     <a href="#design" class="nb-case-subnav-link">Design</a>
     <a href="#iterate" class="nb-case-subnav-link">Iterate</a>
-    <a href="#handoff" class="nb-case-subnav-link">Handoff</a>
+    <a href="#outcome" class="nb-case-subnav-link">Outcome</a>
   </nav>
 
   <!-- Hero -->
@@ -40,6 +40,7 @@
       </div>
       <h1 class="nb-case-hero-title">Procedures Updater</h1>
       <p class="nb-case-hero-sub">For this project I was a UX “team of one,” leading discovery and design for an AI-powered tool that automated an ultra-tedious task in our enterprise environment.</p>
+      <a href="#design" class="nb-btn nb-btn--lemon" style="margin-top:8px;">Skip to the Work ▾</a>
     </div>
   </section>
 
@@ -88,27 +89,44 @@
       <div class="nb-section-marker">
         <span class="nb-section-num">// PROBLEM</span>
       </div>
-      <p>At Wells Fargo, every core job responsibility had to be documented in formal procedures, reviewed and approved by someone outside the team before any technology change could go to production.</p>
-      <p>That sounds manageable until you realize: technology changes constantly.</p>
-      <p>In practice, this meant change management employees were doing two things that ate enormous amounts of their time. First, sitting through every single tech release demo call — sometimes hours long — just to spot anything that might affect a procedure they owned. Then, once they'd identified a change, manually rewriting the relevant procedure documentation themselves. We estimated this was costing employees upwards of 8–10 hours a week. Every week.</p>
-      <p>Nobody had built anything to fix it. And there was no way technology could go to production until those procedures were updated and approved. The bottleneck was real, and it was expensive.</p>
-      <p><strong>How might we automate the detection of procedure changes so that the right people are notified with the right information, without disrupting the existing approval process?</strong></p>
+      <p><strong>8–10 hours wasted per week, per change management employee.</strong></p>
+      <p><strong>The question:</strong> Can we just… automate the procedures update process with AI?</p>
+      <p>For this project, our org's leadership asked us if we could use these new shiny AI tools to automate a painfully tedious process at the bank.</p>
+      <p>That process was: at Wells Fargo, every job function had to be documented in formal procedures, reviewed and approved before any technology change could ship.</p>
+      <p>The tricky part was staying on top of what was actually changing. Change management employees had no good way of knowing when a tech update might affect a procedure they owned.</p>
+      <p>So, they did the only thing they could: show up to every single release demo call and pay close attention. Sometimes those calls ran for hours. We estimated it was eating 8 to 10 hours a week per person, just to stay informed…. oof 😅</p>
+      <p><strong>Team:</strong> 5 developers, a PO, a Scrum master, and me, the UXer!</p>
     </div>
   </section>
 
-  <!-- Section 01: Empathize -->
+  <!-- Section 01: Discovery -->
   <section class="nb-prose nb-subnav-target" id="discover">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
         <span class="nb-section-num">[01]</span>
-        <h2>Empathize — The Labyrinth</h2>
+        <h2>Discovery</h2>
       </div>
-      <p>Before a single wireframe could be drawn, we had to understand the process we were designing for. That turned out to be the hardest part of the whole project.</p>
-      <p>On paper, the policy update process sounded straightforward. In reality it was a Russian nesting doll — every question we answered revealed three more layers underneath. <em>(The team nicknamed this phase White Rabbit. As in, follow it long enough and suddenly you're very far from where you started.)</em></p>
-      <p><strong>The core challenge: no one owned the full picture.</strong> The process touched multiple teams, multiple approval chains, and a web of forms and compliance requirements that had evolved organically over years. Nobody had ever mapped it end to end.</p>
-      <p>So we did.</p>
-      <p>I led the stakeholder interviews and process mapping sessions, leaning on my manager's two decades of institutional relationships to get us in the right rooms. My job was asking the right questions and synthesizing what we heard into something we could actually design against.</p>
-      <p>The goal was never to redesign the process. It was to work within it and remove the bottleneck without sidestepping a single compliance requirement. That distinction shaped every design decision that followed.</p>
+      <p><strong>7 stakeholder interviews:</strong> change management, the policy/regulatory team, and teams building internal tools.</p>
+      <p>Before a single wireframe could be drawn, we had to understand the process we were designing for.</p>
+      <p>So, as the solo UXer on the initiative, I led the stakeholder interviews that allowed us to map the process and scope our MVP.</p>
+      <ul>
+        <li>Seek buy-in</li>
+        <li>Map the process</li>
+        <li>Get technical input</li>
+      </ul>
+      <p>Meanwhile, on those discovery calls, my job was asking the right probing questions to understand how this work was being done. Afterwards, I'd synthesize what we heard into something we could actually design against.</p>
+
+      <div class="nb-case-image">
+        <img src="assets/images/procedures-updater-flow.png" alt="Diagram of the 8-step current-state procedure update process, mapped end-to-end during discovery, from bi-sprint release calls through final publication." />
+      </div>
+
+      <p>Some of our key findings were:</p>
+      <ul>
+        <li>→ The approval chain was more layered and regulated than anyone had briefed us on</li>
+        <li>→ The legacy procedures tool was on its way out — a new internal platform was in development</li>
+        <li>→ The existing workflow touched Jira, SharePoint forms, email, and the legacy tool</li>
+        <li>→ Nobody in Small Business had ever mapped this end to end before…</li>
+      </ul>
     </div>
   </section>
 
@@ -119,13 +137,17 @@
         <span class="nb-section-num">[02]</span>
         <h2>Define</h2>
       </div>
-      <p>From discovery, a few things became clear:</p>
-      <p><strong>The right person had to get the right notification.</strong> Routing had to be precise across multiple procedure owners and teams. When a procedure they owned was flagged, they'd receive an email with a direct link to their review queue.</p>
-      <p><strong>Trust was everything.</strong> Employees were being asked to rely on AI-generated edits to update procedure documentation. The tool had to make them feel confident, not anxious.</p>
-      <p><strong>The process couldn't change.</strong> Two levels of approval were non-negotiable. The tool had to route through both, not around them.</p>
-      <div class="nb-case-image">
-        <img src="assets/images/procedures-updater-flow.png" alt="Diagram of the 8-step procedure update process, from bi-sprint release calls through final publication, with steps 1 and 2 highlighted as the scope automated by Procedures Updater and steps 3 through 8 shown as the remaining manual approval chain." />
-      </div>
+      <p><strong>Given what we know now, how do we apply this to our product thinking?</strong></p>
+      <p><strong>Key takeaway:</strong> focus on what we can automate today vs. tomorrow.</p>
+      <p>Discovery made one thing clear: we couldn't automate the full process, and it wouldn't be strategic to try.</p>
+      <p>The approval chain was pretty heavily regulated, and the legacy tooling situation made deep integration impractical for MVP.</p>
+
+      <div class="nb-image-placeholder">[ Image: MVP scoping graphic — skateboard → scooter → bike → car ]</div>
+
+      <p>So we scoped to what we could actually impact: the monitoring and alerting layer. Catch the changes early, route them to the right person, give them something actionable. Everything downstream stays exactly as it was.</p>
+      <p>The process couldn't change, so we focused on what we could actually impact. Two levels of approval were non-negotiable, and it was unlikely we'd be able to automate this on day one. For MVP, we realized we should focus on monitoring &amp; alerting.</p>
+
+      <div class="nb-image-placeholder">[ Image: Future-state roadmap — placeholder, content TBD ]</div>
     </div>
   </section>
 
@@ -138,6 +160,9 @@
       </div>
       <p>Once the process was mapped, the wireframing took two days. That's not a flex — it's a reflection of how much clarity the discovery work had bought us.</p>
 
+      <p>Inspired by a Grammarly-like experience.</p>
+      <div class="nb-image-placeholder">[ Image: Grammarly-inspired interaction reference ]</div>
+
       <p><strong>The Feed</strong><br>A table-style landing page showing all procedures flagged for review: procedure name, owner, category, last updated date, status, and an AI confidence score giving users an at-a-glance read on which updates needed careful attention and which were routine.</p>
       <div class="nb-case-image">
         <img src="assets/images/procedures-updater-feed.png" alt="Recreation of the Procedures Updater review queue: a table of flagged procedures with owner, category, last updated date, status chip, and AI confidence score." />
@@ -147,45 +172,39 @@
       <div class="nb-case-image">
         <img src="assets/images/procedures-updater-review.png" alt="Recreation of the Procedures Updater review view: a side-by-side diff of a procedure, with removed text in red strikethrough on the left and AI-recommended additions in green underline on the right." />
       </div>
-
-      <p><strong>Edge case: one code change, multiple procedures</strong><br>When a single change impacted multiple procedures, the summary view surfaced each one with clear subheaders. The full text view used collapsible sections so users could work through them one at a time without losing context.</p>
-
-      <p><strong>The confidence score</strong><br>My idea, and one of the most well-received parts of the design. For a tool asking employees to trust machine-generated edits to procedure documentation, surfacing the model's uncertainty felt essential as a trust signal, not just a UX detail. Engineering complexity pushed it out of MVP, but the plan was always to ship it.</p>
     </div>
   </section>
 
-  <!-- Section 04: Iterate -->
+  <!-- Section 04: Handoff + Iterate -->
   <section class="nb-prose nb-subnav-target" id="iterate" style="background:var(--paper-2);">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
         <span class="nb-section-num">[04]</span>
-        <h2>Iterate</h2>
+        <h2>Handoff + Iterate</h2>
       </div>
-      <p>A few rounds of feedback from the engineering team shaped the approval routing details across both required sign-off levels. The tool handled the first round internally. For the second, a form had to be routed to the compliance team to kick off their process. Getting that handoff right in the UI took a few passes.</p>
+      <p>A few rounds of feedback from the engineering team shaped some of the details. Two design decisions that came up in this process:</p>
+
+      <p><strong>#1) What if one code change impacts multiple procedures? What if one procedure is impacted by multiple code changes?</strong></p>
+      <p>When a single change impacted multiple procedures, the summary view surfaced each one as a distinct row on the user's dashboard. This is because from the user's perspective, they care about what they need to do, not what's happening underneath.</p>
+      <div class="nb-image-placeholder">[ Image: Dashboard highlighting multiple flagged procedures from a single change ]</div>
+
+      <p><strong>#2) What if the same procedure is impacted by multiple code changes?</strong></p>
+      <p>From the user's perspective, they'll want to see any changes to a single procedure in one place — but they'll also need transparency as to what prompted the change and why. We added a tab design to show transparency: basically the “source code” that prompted the change. This could get complicated fast, but for MVP it was good enough!</p>
+      <div class="nb-image-placeholder">[ Image: Edge case — tabbed view showing source-code context for a procedure change ]</div>
     </div>
   </section>
 
-  <!-- Section 05: Handoff + Outcome -->
-  <section class="nb-prose nb-subnav-target" id="handoff">
+  <!-- Section 05: Outcome + Next Steps -->
+  <section class="nb-prose nb-subnav-target" id="outcome">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
         <span class="nb-section-num">[05]</span>
-        <h2>Handoff + Outcome</h2>
+        <h2>Outcome + Next Steps</h2>
       </div>
-      <p>I handed the wireframes to the junior engineering team — part of Wells Fargo Small Business Banking Tech's first AI rotation cohort, a program that embedded recent college grads on short-cycle internal AI tool projects.</p>
-      <p>They fed the wireframes into GitHub Copilot. A working first pass was done in under a week; full AI integration took closer to a month. The tool was socialized broadly and received overwhelmingly positive feedback, both for the UX and for what it represented: a working solution to a pain point that had frustrated the business for years. The projected time savings alone told the story — what had been eating 8–10 hours a week per employee was now closer to 30 minutes of reviewing AI-suggested changes. My manager called me an artist. It was a pretty minimal UI, but I'll take it.</p>
-    </div>
-  </section>
-
-  <!-- Conclusion -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <span class="nb-section-num">⌗</span>
-        <h2>Conclusion + Next Steps</h2>
-      </div>
-      <p>The biggest lesson: know where the real work is. The wireframe was two days. The discovery was months. And the discovery is what made the wireframe possible.</p>
-      <p>The natural next step was already on the roadmap: an agentic AI layer that could automatically fill out the compliance routing form on behalf of the user. That form was the last human-touched bottleneck in the process, and removing it felt like the logical conclusion of what we'd started. I moved on to a new role before the tool reached production — if I could go back, I'd want to run it with real users, measure the actual time savings, and find where the friction still lives.</p>
+      <p>This was the first AI-assisted internal tool we built in Small Business, so on those grounds alone it felt like a huge feat!</p>
+      <p>Early user feedback was positive, but I ended up being added to another project before being able to totally see it through.</p>
+      <p>If I had more time on the project — this was just an MVP, so there's a ton of direction to take the product. Here are some ideas I'd advocate for!</p>
+      <div class="nb-image-placeholder">[ List: future-direction ideas — placeholder, content TBD ]</div>
     </div>
   </section>
 
