@@ -271,7 +271,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .nb-work-card--b .nb-work-card-image { background: var(--bone); }
 
 .nb-work-card-image {
-  width: 42%; flex-shrink: 0;
+  width: 50%; flex-shrink: 0;
   border-right: var(--border-default);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
