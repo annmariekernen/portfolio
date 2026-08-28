@@ -200,6 +200,133 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .v2-btn.--ghost:hover { background: var(--mist-pale); border-color: var(--ink); color: var(--fg-1); }
 
 /* ============================================================
+   HOMEPAGE — TOP NAV
+   ============================================================ */
+.nb-nav {
+  height: 66px;
+  border-bottom: var(--border-heavy);
+  display: flex; align-items: center; justify-content: space-between;
+  background: var(--paper);
+  padding: 0 40px;
+  position: sticky; top: 0; z-index: 10;
+}
+.nb-logo {
+  display: flex; align-items: center;
+  text-decoration: none; color: var(--fg-1);
+  font-family: var(--font-display); font-variation-settings: 'wdth' var(--wdth-display);
+  font-weight: 700; font-size: 22px; letter-spacing: -0.01em;
+}
+.nb-logo:hover { color: var(--fg-1); text-decoration: none; background: none; }
+.nb-logo-slash { color: var(--blue-deep); }
+.nb-logo:hover .nb-logo-slash { color: var(--blue-deep); }
+
+.nb-nav-links { display: flex; align-items: center; gap: 28px; }
+.nb-nav-link {
+  display: flex; align-items: center;
+  padding-bottom: 3px;
+  border-bottom: 1.5px solid transparent;
+  text-decoration: none; background: transparent;
+  color: var(--fg-2);
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-weight: 600; font-size: 15px;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  white-space: nowrap;
+  transition: color var(--dur-fast) var(--ease-snap), border-color var(--dur-fast) var(--ease-snap);
+}
+.nb-nav-link:hover { color: var(--fg-1); background: none; text-decoration: none; }
+.nb-nav-link--active { color: var(--fg-1); border-bottom-color: var(--ink); background: none; }
+.nb-nav-spacer { display: none; }
+.nb-nav-cta {
+  display: inline-flex; align-items: center; margin-left: 8px;
+  padding: 9px 18px; background: var(--action); border: var(--border-default); border-color: var(--action);
+  color: var(--action-fg); text-decoration: none;
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-weight: 600; font-size: 14px;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  transition: background var(--dur-fast) var(--ease-snap), border-color var(--dur-fast) var(--ease-snap);
+}
+.nb-nav-cta:hover { background: var(--action-hover); border-color: var(--action-hover); color: var(--action-fg); text-decoration: none; }
+
+/* ============================================================
+   HOMEPAGE — WORK GRID
+   ============================================================ */
+.nb-work-section { padding: 72px 48px; background: var(--paper); }
+.nb-section-inner { max-width: 1200px; margin: 0 auto; }
+.nb-work-grid { display: flex; flex-direction: column; gap: 32px; }
+
+.nb-work-card {
+  border: var(--border-default);
+  box-shadow: none;
+  text-decoration: none; color: var(--fg-1);
+  display: flex; flex-direction: row;
+  min-height: 260px;
+  transition: box-shadow var(--dur-fast) var(--ease-snap);
+}
+.nb-work-card:hover { box-shadow: var(--ghost); text-decoration: none; color: var(--fg-1); }
+.nb-work-card--a { background: var(--bone); }
+.nb-work-card--b { background: var(--paper-2); }
+.nb-work-card--a .nb-work-card-image { background: var(--paper-2); }
+.nb-work-card--b .nb-work-card-image { background: var(--bone); }
+
+.nb-work-card-image {
+  width: 42%; flex-shrink: 0;
+  border-right: var(--border-default);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-size: 13px; font-weight: 500;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  color: var(--fg-3);
+  overflow: hidden;
+}
+.nb-work-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.nb-work-card-content { flex: 1; padding: 32px 36px; display: flex; flex-direction: column; }
+.nb-meta {
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-size: 13px; font-weight: 500;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  color: var(--fg-3);
+}
+.nb-work-card h3 {
+  margin: 10px 0 12px;
+  font-family: var(--font-display); font-variation-settings: 'wdth' var(--wdth-display);
+  font-weight: 700; font-size: 28px; line-height: 1.1; letter-spacing: var(--ls-tight);
+}
+.nb-work-card p { margin: 0; font-size: 16px; line-height: 1.5; max-width: 620px; color: var(--fg-2); }
+.nb-read-more {
+  margin-top: auto; padding-top: 18px;
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-size: 15px; font-weight: 600;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  color: var(--blue-deep);
+}
+.nb-work-tag {
+  display: inline-block;
+  font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body);
+  font-size: 13px; font-weight: 600;
+  font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features);
+  letter-spacing: var(--ls-caps);
+  padding: 3px 9px;
+  background: var(--ink); color: var(--paper);
+  margin-bottom: 2px;
+}
+
+@media (max-width: 720px) {
+  .nb-nav { padding: 0 20px; }
+  .nb-nav-links { gap: 16px; }
+  .nb-work-section { padding: 48px 24px; }
+  .nb-work-grid { gap: 24px; }
+  .nb-work-card { flex-direction: column; }
+  .nb-work-card-image { width: 100%; min-height: 180px; border-right: none; border-bottom: var(--border-default); }
+  .nb-work-card-content { padding: 24px; }
+}
+
+/* ============================================================
    CASE STUDY — STICKY HEADER + SUB-NAV
    ============================================================ */
 .nb-case-header {
