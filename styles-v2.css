@@ -112,6 +112,9 @@
   --ghost:        2px 2px 0 var(--paper),   3.5px 3.5px 0 var(--ink);
   --ghost-alt:    2px 2px 0 var(--paper-2), 3.5px 3.5px 0 var(--ink);
   --ghost-bright: 2px 2px 0 var(--bone),    3.5px 3.5px 0 var(--ink);
+  /* Softer variant for hover accents on the quiet-divider borders --
+     full ink reads too harsh right next to a --rule-colored resting state. */
+  --ghost-soft:   2px 2px 0 var(--paper),   3.5px 3.5px 0 var(--ink-soft);
 
   /* ============ MOTION ============ */
   --ease-snap: cubic-bezier(0.2, 0, 0, 1);
@@ -263,7 +266,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
   min-height: 260px;
   transition: box-shadow var(--dur-fast) var(--ease-snap), border-color var(--dur-fast) var(--ease-snap);
 }
-.nb-work-card:hover { border-color: var(--ink); box-shadow: var(--ghost); text-decoration: none; color: var(--fg-1); }
+.nb-work-card:hover { border-color: var(--ink-soft); box-shadow: var(--ghost-soft); text-decoration: none; color: var(--fg-1); }
 .nb-work-card--a { background: var(--bone); }
 .nb-work-card--b { background: var(--paper-2); }
 .nb-work-card--a .nb-work-card-image { background: var(--paper-2); }
