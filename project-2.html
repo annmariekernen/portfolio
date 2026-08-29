@@ -12,7 +12,7 @@
   <!-- Sticky case header -->
   <header class="nb-case-header">
     <div class="nb-case-header-left">
-      <a href="work.html" class="nb-case-back">AM_DZNS<span style="color:var(--pink)">//</span></a>
+      <a href="work.html" class="nb-case-back"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
       <a href="project-3.html" class="nb-case-prev">◂ Prev</a>
     </div>
     <div class="nb-case-progress">
@@ -26,9 +26,7 @@
   <nav class="nb-case-subnav">
     <a href="#summary" class="nb-case-subnav-link nb-case-subnav-link--active">Summary</a>
     <a href="#discover" class="nb-case-subnav-link">Discovery</a>
-    <a href="#define" class="nb-case-subnav-link">Define</a>
     <a href="#design" class="nb-case-subnav-link">Design</a>
-    <a href="#iterate" class="nb-case-subnav-link">Iterate</a>
     <a href="#outcome" class="nb-case-subnav-link">Outcome</a>
   </nav>
 
@@ -39,7 +37,7 @@
         <span class="nb-case-tag nb-case-tag--paper">Wells Fargo · Small Business Banking Tech</span>
       </div>
       <h1 class="nb-case-hero-title">Procedures Updater</h1>
-      <p class="nb-case-hero-sub">For this project I was a UX “team of one,” leading discovery and design for an AI-powered tool that automated an ultra-tedious task in our enterprise environment.</p>
+      <p class="nb-case-hero-sub">For this project I was a UX "team of one," leading discovery and design for an AI-powered tool that automated an ultra-tedious task in our enterprise environment.</p>
       <a href="#design" class="nb-btn nb-btn--lemon" style="margin-top:8px;">Skip to the Work ▾</a>
     </div>
   </section>
@@ -48,22 +46,22 @@
   <section class="nb-metric-row">
     <div class="nb-metric-row-inner">
       <div class="nb-metric">
-        <div class="nb-metric-label">// Time cost: before</div>
+        <div class="nb-metric-label">Time cost: before</div>
         <div class="nb-metric-value nb-metric-value--pink">8–10 hrs</div>
         <div class="nb-metric-note">per Change Management teammate, per week</div>
       </div>
       <div class="nb-metric">
-        <div class="nb-metric-label">// Time cost: after</div>
+        <div class="nb-metric-label">Time cost: after</div>
         <div class="nb-metric-value nb-metric-value--lime">~30 min</div>
         <div class="nb-metric-note">reviewing AI-suggested changes</div>
       </div>
       <div class="nb-metric">
-        <div class="nb-metric-label">// Wireframe</div>
+        <div class="nb-metric-label">Wireframe</div>
         <div class="nb-metric-value nb-metric-value--lemon">2 days</div>
         <div class="nb-metric-note">once the process was understood</div>
       </div>
       <div class="nb-metric">
-        <div class="nb-metric-label">// First build</div>
+        <div class="nb-metric-label">First build</div>
         <div class="nb-metric-value nb-metric-value--cyan">&lt;1 wk</div>
         <div class="nb-metric-note">working first pass via GitHub Copilot</div>
       </div>
@@ -76,7 +74,7 @@
       <div class="nb-disclosure">
         <span class="nb-disclosure-icon">🔒</span>
         <div>
-          <p class="nb-disclosure-label">// Confidentiality note</p>
+          <p class="nb-disclosure-label">Confidentiality note</p>
           <p class="nb-disclosure-text">This was proprietary internal work at a financial institution. The original files aren't mine to share — every screen shown below is a faithful recreation, rebuilt from memory and notes, not an export from the real product.</p>
         </div>
       </div>
@@ -87,15 +85,11 @@
   <section class="nb-prose" style="background:var(--paper-2);">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
-        <span class="nb-section-num">// Problem</span>
+        <span class="nb-section-num">Problem</span>
       </div>
       <p><strong>8–10 hours wasted per week, per change management employee.</strong></p>
-      <p><strong>The question:</strong> Can we just… automate the procedures update process with AI?</p>
-      <p>For this project, our org's leadership asked us if we could use these new shiny AI tools to automate a painfully tedious process at the bank.</p>
-      <p>That process was: at Wells Fargo, every job function had to be documented in formal procedures, reviewed and approved before any technology change could ship.</p>
-      <p>The tricky part was staying on top of what was actually changing. Change management employees had no good way of knowing when a tech update might affect a procedure they owned.</p>
-      <p>So, they did the only thing they could: show up to every single release demo call and pay close attention. Sometimes those calls ran for hours. We estimated it was eating 8 to 10 hours a week per person, just to stay informed…. oof 😅</p>
-      <p><strong>Team:</strong> 5 developers, a PO, a Scrum master, and me, the UXer!</p>
+      <p>At Wells Fargo, every job function had to be documented in a formal procedure, reviewed and approved before any tech change could ship. The problem: change management had no good way of knowing when an update might affect a procedure they owned — so they sat through every release call, sometimes for hours, just to catch it. Leadership asked: could AI automate this?</p>
+      <p><strong>Team:</strong> 5 developers, a PO, a Scrum master, and me, the UXer.</p>
     </div>
   </section>
 
@@ -103,107 +97,59 @@
   <section class="nb-prose nb-subnav-target" id="discover">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
-        <span class="nb-section-num">[01]</span>
         <h2>Discovery</h2>
       </div>
-      <p><strong>7 stakeholder interviews:</strong> change management, the policy/regulatory team, and teams building internal tools.</p>
-      <p>Before a single wireframe could be drawn, we had to understand the process we were designing for.</p>
-      <p>So, as the solo UXer on the initiative, I led the stakeholder interviews that allowed us to map the process and scope our MVP.</p>
+      <p><strong>7 stakeholder interviews</strong> — change management, the policy/regulatory team, and the teams building internal tools — to map a process nobody had ever documented end to end.</p>
       <ul>
-        <li>Seek buy-in</li>
-        <li>Map the process</li>
-        <li>Get technical input</li>
+        <li>→ The approval chain was more layered and regulated than we'd been briefed</li>
+        <li>→ The legacy procedures tool was on its way out, mid-migration to a new platform</li>
+        <li>→ The workflow touched Jira, SharePoint forms, email, and the legacy tool separately</li>
       </ul>
-      <p>Meanwhile, on those discovery calls, my job was asking the right probing questions to understand how this work was being done. Afterwards, I'd synthesize what we heard into something we could actually design against.</p>
 
       <div class="nb-case-image">
         <img src="assets/images/procedures-updater-flow.png" alt="Diagram of the 8-step current-state procedure update process, mapped end-to-end during discovery, from bi-sprint release calls through final publication." />
       </div>
 
-      <p>Some of our key findings were:</p>
-      <ul>
-        <li>→ The approval chain was more layered and regulated than anyone had briefed us on</li>
-        <li>→ The legacy procedures tool was on its way out — a new internal platform was in development</li>
-        <li>→ The existing workflow touched Jira, SharePoint forms, email, and the legacy tool</li>
-        <li>→ Nobody in Small Business had ever mapped this end to end before…</li>
-      </ul>
-    </div>
-  </section>
+      <p>Given those constraints, automating the full process wasn't realistic — or strategic. We scoped down to what we could actually move: the monitoring &amp; alerting layer. Catch changes early, route them to the right person, give them something actionable. Everything downstream stays exactly as it was.</p>
 
-  <!-- Section 02: Define -->
-  <section class="nb-prose nb-subnav-target" id="define" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <span class="nb-section-num">[02]</span>
-        <h2>Define</h2>
+      <div class="nb-case-image">
+        <img src="assets/images/procedures-updater-mvp-scope.png" alt="MVP scoping sketch — a skateboard, scooter, bike, motorbike, and car, each a complete usable product, versus building a car one wheel at a time." />
       </div>
-      <p><strong>Given what we know now, how do we apply this to our product thinking?</strong></p>
-      <p><strong>Key takeaway:</strong> focus on what we can automate today vs. tomorrow.</p>
-      <p>Discovery made one thing clear: we couldn't automate the full process, and it wouldn't be strategic to try.</p>
-      <p>The approval chain was pretty heavily regulated, and the legacy tooling situation made deep integration impractical for MVP.</p>
-
-      <div class="nb-image-placeholder">[ Image: MVP scoping graphic — skateboard → scooter → bike → car ]</div>
-
-      <p>So we scoped to what we could actually impact: the monitoring and alerting layer. Catch the changes early, route them to the right person, give them something actionable. Everything downstream stays exactly as it was.</p>
-      <p>The process couldn't change, so we focused on what we could actually impact. Two levels of approval were non-negotiable, and it was unlikely we'd be able to automate this on day one. For MVP, we realized we should focus on monitoring &amp; alerting.</p>
-
-      <div class="nb-image-placeholder">[ Image: Future-state roadmap — placeholder, content TBD ]</div>
     </div>
   </section>
 
-  <!-- Section 03: Design -->
-  <section class="nb-prose nb-subnav-target" id="design">
+  <!-- Section 02: Design -->
+  <section class="nb-prose nb-subnav-target" id="design" style="background:var(--paper-2);">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
-        <span class="nb-section-num">[03]</span>
         <h2>Design</h2>
       </div>
-      <p>Once the process was mapped, the wireframing took two days. That's not a flex — it's a reflection of how much clarity the discovery work had bought us.</p>
 
-      <p>Inspired by a Grammarly-like experience.</p>
-      <div class="nb-image-placeholder">[ Image: Grammarly-inspired interaction reference ]</div>
-
-      <p><strong>The Feed</strong><br>A table-style landing page showing all procedures flagged for review: procedure name, owner, category, last updated date, status, and an AI confidence score giving users an at-a-glance read on which updates needed careful attention and which were routine.</p>
+      <p><strong>The Feed</strong> — a table of every procedure flagged for review: owner, category, last updated, status, and an AI confidence score, so reviewers know at a glance what needs care vs. what's routine.</p>
       <div class="nb-case-image">
         <img src="assets/images/procedures-updater-feed.png" alt="Recreation of the Procedures Updater review queue: a table of flagged procedures with owner, category, last updated date, status chip, and AI confidence score." />
       </div>
 
-      <p><strong>The Review View</strong><br>Clicking in opened a summary of changes first, then an optional full text view: side-by-side comparison of the existing and AI-recommended procedure, with removals in red strikethrough and additions in green underline.</p>
+      <p><strong>The Review</strong> — click in for a side-by-side diff: removals in red strikethrough, AI-recommended additions in green underline.</p>
       <div class="nb-case-image">
         <img src="assets/images/procedures-updater-review.png" alt="Recreation of the Procedures Updater review view: a side-by-side diff of a procedure, with removed text in red strikethrough on the left and AI-recommended additions in green underline on the right." />
       </div>
-    </div>
-  </section>
 
-  <!-- Section 04: Handoff + Iterate -->
-  <section class="nb-prose nb-subnav-target" id="iterate" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <span class="nb-section-num">[04]</span>
-        <h2>Handoff + Iterate</h2>
-      </div>
-      <p>A few rounds of feedback from the engineering team shaped some of the details. Two design decisions that came up in this process:</p>
-
-      <p><strong>#1) What if one code change impacts multiple procedures? What if one procedure is impacted by multiple code changes?</strong></p>
-      <p>When a single change impacted multiple procedures, the summary view surfaced each one as a distinct row on the user's dashboard. This is because from the user's perspective, they care about what they need to do, not what's happening underneath.</p>
+      <p><strong>Edge case #1</strong> — one code change can flag multiple procedures, or one procedure can be touched by multiple changes. Each flagged procedure got its own row on the dashboard — users care about what they need to do, not what's happening underneath.</p>
       <div class="nb-image-placeholder">[ Image: Dashboard highlighting multiple flagged procedures from a single change ]</div>
 
-      <p><strong>#2) What if the same procedure is impacted by multiple code changes?</strong></p>
-      <p>From the user's perspective, they'll want to see any changes to a single procedure in one place — but they'll also need transparency as to what prompted the change and why. We added a tab design to show transparency: basically the “source code” that prompted the change. This could get complicated fast, but for MVP it was good enough!</p>
+      <p><strong>Edge case #2</strong> — when a procedure was touched by more than one change, we added a tabbed view showing the source context behind each. Not a perfect system, but enough transparency for MVP.</p>
       <div class="nb-image-placeholder">[ Image: Edge case — tabbed view showing source-code context for a procedure change ]</div>
     </div>
   </section>
 
-  <!-- Section 05: Outcome + Next Steps -->
+  <!-- Section 03: Outcome -->
   <section class="nb-prose nb-subnav-target" id="outcome">
     <div class="nb-prose-inner">
       <div class="nb-section-marker">
-        <span class="nb-section-num">[05]</span>
         <h2>Outcome + Next Steps</h2>
       </div>
-      <p>This was the first AI-assisted internal tool we built in Small Business, so on those grounds alone it felt like a huge feat!</p>
-      <p>Early user feedback was positive, but I ended up being added to another project before being able to totally see it through.</p>
-      <p>If I had more time on the project — this was just an MVP, so there's a ton of direction to take the product. Here are some ideas I'd advocate for!</p>
+      <p>This was the first AI-assisted internal tool built in Small Business — a real feat on its own. Early feedback was positive, though I moved to another project before seeing it all the way through. If I had more time, here's where I'd take it next:</p>
       <div class="nb-image-placeholder">[ List: future-direction ideas — placeholder, content TBD ]</div>
     </div>
   </section>
@@ -212,7 +158,7 @@
   <section class="nb-next-case">
     <div class="nb-next-case-inner">
       <div>
-        <p class="nb-next-label">// Case study</p>
+        <p class="nb-next-label">Case study</p>
         <h3 class="nb-next-title">PLANR →</h3>
       </div>
       <a href="project-1.html" class="nb-btn nb-btn--lemon">Read next ▸</a>
@@ -222,11 +168,11 @@
   <footer class="nb-footer">
     <div class="nb-footer-inner">
       <div>
-        <a href="work.html" class="nb-footer-logo">AM_DZNS<span class="nb-footer-logo-slash">//</span></a>
+        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
         <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
       </div>
       <div class="nb-footer-col">
-        <p class="nb-footer-col-title">// Site map</p>
+        <p class="nb-footer-col-title">Site map</p>
         <ul>
           <li><a href="work.html">Case Studies</a></li>
           <li><a href="about.html">About</a></li>
@@ -234,7 +180,7 @@
         </ul>
       </div>
       <div class="nb-footer-col">
-        <p class="nb-footer-col-title">// Connect</p>
+        <p class="nb-footer-col-title">Connect</p>
         <ul>
           <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
           <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
@@ -242,7 +188,7 @@
         </ul>
       </div>
       <div class="nb-footer-bottom">
-        <span>// © 2026 · Ann Marie Kernen</span>
+        <span>© 2026 · Ann Marie Kernen</span>
         <span>Built with Claude Code &lt;3</span>
       </div>
     </div>

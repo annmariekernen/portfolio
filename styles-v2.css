@@ -222,6 +222,9 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .nb-logo:hover { color: var(--fg-1); text-decoration: none; background: none; }
 .nb-logo-slash { color: var(--blue-deep); }
 .nb-logo:hover .nb-logo-slash { color: var(--blue-deep); }
+.nb-logo img { height: 26px; width: auto; display: block; }
+.nb-footer-logo img { height: 31px; width: auto; display: block; }
+.nb-case-back img { height: 20px; width: auto; display: block; }
 
 .nb-nav-links { display: flex; align-items: center; gap: 28px; }
 .nb-nav-link {
@@ -284,7 +287,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
   color: var(--fg-3);
   overflow: hidden;
 }
-.nb-work-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.nb-work-card-image img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .nb-work-card-content { flex: 1; padding: 32px 36px; display: flex; flex-direction: column; }
 .nb-meta {
@@ -606,7 +609,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 /* ============================================================
    IMAGES + PLACEHOLDERS
    ============================================================ */
-.nb-case-image { border: var(--border-divider); margin: 24px 0; overflow: hidden; box-shadow: var(--ghost-soft); }
+.nb-case-image { border: var(--border-divider); margin: 24px 0; overflow: hidden; }
 .nb-case-image img { display: block; width: 100%; height: auto; }
 
 .nb-image-placeholder {
