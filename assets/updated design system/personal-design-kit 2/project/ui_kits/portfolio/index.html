@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Portfolio" name="UI Kit · Portfolio" subtitle="Single centered 608px column, no fills" viewport="1280x900" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Ann Marie Kernen — Portfolio</title>
+<link rel="stylesheet" href="../../styles.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body style="margin:0;background:var(--paper)">
+<div id="root"></div>
+
+<script type="text/babel" src="primitives.jsx"></script>
+<script type="text/babel" src="chrome.jsx"></script>
+<script type="text/babel" src="hero.jsx"></script>
+<script type="text/babel" src="workgrid.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+
+<script type="text/babel">
+function CaseStudyOverlay({ id, onClose }) {
+  if (!id) return null;
+  return (
+    <div onClick={onClose} style={{
+      position:'fixed', inset:0, background:'rgba(36,33,29,0.72)', zIndex:100,
+      display:'flex', alignItems:'flex-start', justifyContent:'center', padding:'60px 24px', overflow:'auto'
+    }}>
+      <div onClick={(e)=>e.stopPropagation()} style={{
+        background:'var(--bone)', border:'var(--border-default)',
+        maxWidth:720, width:'100%', padding:'36px 40px'
+      }}>
+        <MetaLine>Case study</MetaLine>
+        <h2 style={{
+          margin:'12px 0 16px', fontFamily:'var(--font-display)',
+          fontVariationSettings:"'wdth' var(--wdth-display)", fontWeight:700,
+          fontSize:'var(--fs-h2)', lineHeight:1.15, letterSpacing:'-0.02em'
+        }}>
+          This case study is on its way.
+        </h2>
+        <p style={{fontSize:16, lineHeight:1.55, color:'var(--fg-2)'}}>
+          This is a placeholder. On the live site, this opens the full case study page. You can close it to keep browsing.
+        </p>
+        <div style={{marginTop:24}}>
+          <Button onClick={onClose}>Close ✕</Button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [active, setActive] = React.useState('work');
+  const [openCase, setOpenCase] = React.useState(null);
+  return (
+    <>
+      <TopNav active={active} onNav={setActive}/>
+      <Hero/>
+      <WorkGrid onOpen={setOpenCase}/>
+      <PrincipleStrip/>
+      <NowPlaying/>
+      <ContactCTA/>
+      <Footer/>
+      <CaseStudyOverlay id={openCase} onClose={()=>setOpenCase(null)}/>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

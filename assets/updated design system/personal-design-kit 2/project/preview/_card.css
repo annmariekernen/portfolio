@@ -1,0 +1,21 @@
+/* Shared styling for preview cards (700xN) */
+@import url('../styles.css');
+
+html, body { margin: 0; padding: 0; background: var(--paper); width: 700px; overflow: hidden; }
+.card { padding: 22px 24px; width: 700px; box-sizing: border-box; }
+.row { display: flex; gap: 12px; align-items: stretch; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+
+/* The swatch fill is a colour sample, not a text surface: the name sits on the
+   fill (14px/700 clears large-text AA on every fill in the system) and the hex
+   caption sits in a bone footer strip below it, off the fill entirely, so its
+   contrast never depends on which colour it labels. */
+.sw-grid { display: grid; gap: 0; border: var(--border-default); }
+.sw { display: flex; flex-direction: column; border-right: 1px solid var(--ink); }
+.sw:last-child { border-right: 0; }
+.sw .n { flex: 1; display: flex; align-items: flex-end; min-height: 68px; padding: 7px 9px; font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none; font-size: 14px; font-weight: 700; }
+.sw .h { display: block; padding: 5px 9px; background: var(--bone); color: var(--fg-2); border-top: 1px solid var(--ink); font-family: var(--font-mono); font-size: 11px; letter-spacing: .04em; }
+.sw.on-dark .n { color: var(--bone); }
+
+.tk { font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none; font-size: 13px; font-weight: 500; color: var(--fg-3); }
+.kick { font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none; font-size: 14px; font-weight: 700; color: var(--fg-3); margin-bottom: 14px; }

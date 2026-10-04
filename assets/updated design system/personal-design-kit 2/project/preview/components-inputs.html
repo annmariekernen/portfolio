@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Inputs" subtitle="Fields, select, checkbox · zero radius, hairline border" viewport="700x260" -->
+<html lang="en"><head><meta charset="UTF-8"/><link rel="stylesheet" href="_card.css"/><style>label{display:block;font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:14px;font-weight:700;color:var(--fg-2);margin-bottom:6px}
+input[type=text],select,textarea{font-family:var(--font-body);font-size:15px;padding:9px 11px;border:var(--border-default);background:var(--bone);color:var(--fg-1);width:100%;box-sizing:border-box}
+input:focus,select:focus{outline:2px solid var(--focus);outline-offset:2px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.err{border-color:var(--rust)!important}
+.hint{font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:13px;font-weight:500;margin-top:5px;color:var(--fg-3)}
+.hint.--err{color:var(--rust)}
+.chk{display:flex;align-items:center;gap:9px;font-size:14px;margin-top:4px}
+.box{width:16px;height:16px;border:var(--border-default);background:var(--bone);display:inline-block}
+.box.on{background:var(--green-deep);border-color:var(--green-deep)}</style></head><body>
+<div class="card"><div class="grid">
+  <div><label>Your name</label><input type="text" value="Ada"/><div class="hint">Required</div></div>
+  <div><label>Email</label><input type="text" class="err" value="ada@"/><div class="hint --err">▸ That address looks incomplete</div></div>
+  <div><label>Project type</label><select><option>Case study</option><option>Prototype</option></select></div>
+  <div><label>Options</label><div class="chk"><span class="box on"></span> Send me the deck</div><div class="chk"><span class="box"></span> Add me to field notes</div></div>
+</div></div>
+</body></html>

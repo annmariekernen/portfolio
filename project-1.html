@@ -5,274 +5,235 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PLANR — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link rel="stylesheet" href="styles-v3.css" />
 </head>
 <body>
 
-  <!-- Sticky case header -->
-  <header class="nb-case-header">
-    <div class="nb-case-header-inner">
-      <div class="nb-case-header-left">
-        <a href="work.html" class="nb-case-back"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
-        <a href="project-2.html" class="nb-case-prev">◂ Prev</a>
+  <header class="case-header">
+    <div class="case-header-inner">
+      <div class="case-header-row">
+        <a href="work.html" class="case-logo">Ann Marie Kernen</a>
+        <div class="case-header-nav">
+          <a href="project-2.html">◂ Prev</a>
+          <span class="case-position"><span class="case-position-dot"></span>Case 03 / 03</span>
+          <a href="work.html">All work ▸</a>
+        </div>
       </div>
-      <div class="nb-case-progress">
-        <span class="nb-progress-dot"></span>
-        ▸ Case 03 / 03
-      </div>
-      <a href="work.html" class="nb-case-next">All work ▸</a>
+      <nav class="case-subnav">
+        <a href="#summary" class="is-active" data-section="summary">Summary</a>
+        <a href="#research" data-section="research">Research</a>
+        <a href="#sketch" data-section="sketch">Sketch</a>
+        <a href="#flows" data-section="flows">Flows</a>
+        <a href="#screens" data-section="screens">Screens</a>
+        <a href="#outcome" data-section="outcome">Outcome</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Section sub-nav -->
-  <nav class="nb-case-subnav">
-    <div class="nb-case-subnav-inner">
-      <a href="#summary" class="nb-case-subnav-link nb-case-subnav-link--active">Summary</a>
-      <a href="#research" class="nb-case-subnav-link">Research</a>
-      <a href="#sketch" class="nb-case-subnav-link">Sketch</a>
-      <a href="#flows" class="nb-case-subnav-link">Flows</a>
-      <a href="#screens" class="nb-case-subnav-link">Screens</a>
-      <a href="#outcome" class="nb-case-subnav-link">Outcome</a>
-    </div>
-  </nav>
-
   <!-- Hero -->
-  <section class="nb-case-hero nb-case-hero--tight nb-subnav-target" id="summary">
-    <div class="nb-case-hero-inner">
-      <div class="nb-case-hero-split">
+  <section class="band reveal" id="summary">
+    <div class="band-inner band-inner--breakout band-inner--tight">
+      <div class="hero-split">
         <div>
-          <div class="nb-case-tags">
-            <span class="nb-case-tag nb-case-tag--paper">Springboard Bootcamp · 6 months</span>
+          <div class="case-tags">
+            <span class="tag">Springboard Bootcamp · 6 months</span>
           </div>
-          <h1 class="nb-case-hero-title">PLANR: A Public Transit Planning App</h1>
-          <p class="nb-case-hero-sub">A prototype iOS app that helps DC commuters plan, save, and navigate public transit journeys — my first-ever UX case study, from a 6-month Springboard bootcamp project.</p>
+          <h1 class="case-hero-title">PLANR: A Public Transit Planning App</h1>
+          <p class="case-hero-sub">A prototype iOS app that helps DC commuters plan, save, and navigate public transit journeys — my first-ever UX case study, from a 6-month Springboard bootcamp project.</p>
+          <a href="#screens" class="btn btn--ghost" style="margin-top:24px;">Skip to work ▸</a>
         </div>
-
-        <div class="nb-case-hero-media">
-          <img src="assets/images/planr-home.webp" alt="PLANR home screen — saved journeys and stations" class="nb-shot" />
+        <div class="hero-split-media">
+          <img src="assets/images/planr-home.webp" alt="PLANR home screen — saved journeys and stations" class="shot" />
         </div>
       </div>
-
-      <a href="#screens" class="nb-btn nb-btn--ghost nb-btn--small" style="margin-top:32px;">Skip to work ▸</a>
     </div>
   </section>
 
-  <!-- 01: Research -->
-  <section class="nb-prose nb-subnav-target" id="research">
-    <div class="nb-prose-inner" style="max-width:1100px;">
-      <div class="nb-section-marker">
+  <!-- Research -->
+  <section class="band reveal" id="research">
+    <div class="band-inner band-inner--breakout">
+      <div class="section-marker">
         <h2>Research</h2>
       </div>
-      <p>7 interviews. 1 metro station. A lot of sticky notes.</p>
+      <p style="font-size:17px; color:var(--fg-2); margin-bottom:32px;">7 interviews. 1 metro station. A lot of sticky notes.</p>
 
-      <div class="nb-split-row">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Recruiting at the metro</h3>
+      <div class="split-row">
+        <div class="split-text">
+          <h3 class="split-heading">Recruiting at the metro</h3>
           <p>I recruited most of my 7 interview participants old-school — flyering my local metro stop during rush hour, gift card in hand. Turns out $15 to Amazon goes a long way when someone's just trying to catch a train.</p>
         </div>
-        <div class="nb-split-media">
-          <img src="assets/images/planr-recruit.jpg" alt="Recruiting interview participants at the metro station during rush hour" class="nb-shot" />
+        <div class="split-media">
+          <img src="assets/images/planr-recruit.jpg" alt="Recruiting interview participants at the metro station during rush hour" class="shot" />
         </div>
       </div>
 
-      <div class="nb-split-row nb-split-row--reverse">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Affinity mapping the interviews</h3>
+      <div class="split-row split-row--reverse">
+        <div class="split-text">
+          <h3 class="split-heading">Affinity mapping the interviews</h3>
           <p>3.5 hours of interview recordings and 18 pages of notes, sorted onto a wall by hand. Planning kept coming up more than mapping — people already knew how to get somewhere, they just didn't know the best time to leave.</p>
         </div>
-        <div class="nb-split-media">
-          <img src="assets/images/planr-affinity.jpg" alt="Affinity map of interview notes on sticky notes, grouped by theme" class="nb-shot" />
+        <div class="split-media">
+          <img src="assets/images/planr-affinity.jpg" alt="Affinity map of interview notes on sticky notes, grouped by theme" class="shot" />
         </div>
       </div>
 
-      <div class="nb-split-row">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Turning interviews into personas</h3>
+      <div class="split-row">
+        <div class="split-text">
+          <h3 class="split-heading">Turning interviews into personas</h3>
           <p>From the 7 people I talked to, I built 3 personas — John, Leslie, and Hayden — to represent frequent high-stakes riders, frequent low-stakes riders, and suburban commuters.</p>
         </div>
-        <div class="nb-split-media">
-          <img src="assets/images/planr-personas.png" alt="Three personas — John, a healthcare worker; Leslie, a PR professional; and Hayden, a suburban commuter" class="nb-shot" />
+        <div class="split-media">
+          <img src="assets/images/planr-personas.png" alt="Three personas — John, a healthcare worker; Leslie, a PR professional; and Hayden, a suburban commuter" class="shot" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 02: Sketch to system -->
-  <section class="nb-prose nb-subnav-target" id="sketch" style="background:var(--paper-2);">
-    <div class="nb-prose-inner" style="max-width:1100px;">
-      <div class="nb-section-marker">
+  <!-- Sketch to system -->
+  <section class="band reveal" id="sketch">
+    <div class="band-inner band-inner--breakout">
+      <div class="section-marker">
         <h2>Sketch to system</h2>
       </div>
-      <p>From paper to a working style guide, fast.</p>
+      <p style="font-size:17px; color:var(--fg-2); margin-bottom:32px;">From paper to a working style guide, fast.</p>
 
-      <div class="nb-split-row nb-split-row--reverse">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Round one: paper</h3>
+      <div class="split-row split-row--reverse">
+        <div class="split-text">
+          <h3 class="split-heading">Round one: paper</h3>
           <p>The very first sketches — working out the core screens (saved stations, saved journeys, creating a new journey) with pencil and a notebook, before touching Figma.</p>
         </div>
-        <div class="nb-split-media">
-          <div class="nb-stack">
-            <img src="assets/images/planr-sketch-v1-1.jpg" alt="Early paper sketch — creating and saving a new journey" class="nb-stack-img nb-stack-img--back" />
-            <img src="assets/images/planr-sketch-v1-2.jpg" alt="Early paper sketch — saved stations and saved journeys" class="nb-stack-img nb-stack-img--front" />
+        <div class="split-media">
+          <div class="stack">
+            <img src="assets/images/planr-sketch-v1-1.jpg" alt="Early paper sketch — creating and saving a new journey" class="stack-img stack-img--back" />
+            <img src="assets/images/planr-sketch-v1-2.jpg" alt="Early paper sketch — saved stations and saved journeys" class="stack-img stack-img--front" />
           </div>
         </div>
       </div>
 
-      <div class="nb-split-row">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Round two: refining the flow</h3>
+      <div class="split-row">
+        <div class="split-text">
+          <h3 class="split-heading">Round two: refining the flow</h3>
           <p>A second pass on grid paper, tightening the navigation and mapping out how each screen actually connects to the next.</p>
         </div>
-        <div class="nb-split-media">
-          <div class="nb-stack">
-            <img src="assets/images/planr-sketch-v2-1.jpg" alt="Refined paper sketch — home, saved journeys, and journey detail screens" class="nb-stack-img nb-stack-img--back" />
-            <img src="assets/images/planr-sketch-v2-2.jpg" alt="Refined paper sketch — add station and station detail screens" class="nb-stack-img nb-stack-img--front" />
+        <div class="split-media">
+          <div class="stack">
+            <img src="assets/images/planr-sketch-v2-1.jpg" alt="Refined paper sketch — home, saved journeys, and journey detail screens" class="stack-img stack-img--back" />
+            <img src="assets/images/planr-sketch-v2-2.jpg" alt="Refined paper sketch — add station and station detail screens" class="stack-img stack-img--front" />
           </div>
         </div>
       </div>
 
-      <div class="nb-split-row nb-split-row--reverse">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Wireframes, digitized</h3>
+      <div class="split-row split-row--reverse">
+        <div class="split-text">
+          <h3 class="split-heading">Wireframes, digitized</h3>
           <p>Once the core flows felt right on paper, I rebuilt them in Figma — same structure, now testable and shareable.</p>
         </div>
-        <div class="nb-split-media">
-          <img src="assets/images/planr-wireframes.png" alt="Full set of PLANR wireframes built out in Figma" class="nb-shot" />
+        <div class="split-media">
+          <img src="assets/images/planr-wireframes.png" alt="Full set of PLANR wireframes built out in Figma" class="shot" />
         </div>
       </div>
 
-      <div class="nb-split-row">
-        <div class="nb-split-text">
-          <h3 class="nb-split-heading">Locking in a style guide</h3>
+      <div class="split-row">
+        <div class="split-text">
+          <h3 class="split-heading">Locking in a style guide</h3>
           <p>A simple color, type, and icon system kept the hi-fi screens consistent as I moved fast through iterations.</p>
         </div>
-        <div class="nb-split-media">
-          <img src="assets/images/planr-font-system.png" alt="PLANR font system — headers and body text, light and dark" class="nb-shot" />
+        <div class="split-media">
+          <img src="assets/images/planr-font-system.png" alt="PLANR font system — headers and body text, light and dark" class="shot" />
         </div>
       </div>
 
-      <div class="nb-gallery nb-gallery--2">
-        <div class="nb-gallery-item">
-          <img src="assets/images/planr-style-guide.png" alt="PLANR color palette — light and dark" class="nb-shot" />
-        </div>
-        <div class="nb-gallery-item">
-          <img src="assets/images/planr-iconography.png" alt="PLANR iconography — light and dark" class="nb-shot" />
-        </div>
+      <div class="gallery">
+        <img src="assets/images/planr-style-guide.png" alt="PLANR color palette — light and dark" class="shot" />
+        <img src="assets/images/planr-iconography.png" alt="PLANR iconography — light and dark" class="shot" />
       </div>
     </div>
   </section>
 
-  <!-- 03: Mapping the flows -->
-  <section class="nb-prose nb-subnav-target" id="flows">
-    <div class="nb-prose-inner" style="max-width:1100px;">
-      <div class="nb-section-marker">
+  <!-- Mapping the flows -->
+  <section class="band reveal" id="flows">
+    <div class="band-inner band-inner--breakout">
+      <div class="section-marker">
         <h2>Mapping the flows</h2>
       </div>
-      <p>Before jumping into hi-fi screens, I mapped three core "red routes" — plan a journey, save a station, check saved journeys — screen by screen, to make sure the flows actually held together.</p>
-      <img src="assets/images/planr-flows.png" alt="Red route flow diagrams mapping the core PLANR user journeys across screens" class="nb-shot" style="margin:24px 0;" />
+      <p style="font-size:17px; color:var(--fg-2);">Before jumping into hi-fi screens, I mapped three core "red routes" — plan a journey, save a station, check saved journeys — screen by screen, to make sure the flows actually held together.</p>
+      <img src="assets/images/planr-flows.png" alt="Red route flow diagrams mapping the core PLANR user journeys across screens" class="shot" style="margin-top:24px;" />
     </div>
   </section>
 
-  <!-- 04: Final screens -->
-  <section class="nb-prose nb-subnav-target" id="screens" style="background:var(--paper-2);">
-    <div class="nb-prose-inner" style="max-width:1100px;">
-      <div class="nb-section-marker">
+  <!-- Final screens -->
+  <section class="band reveal" id="screens">
+    <div class="band-inner band-inner--breakout">
+      <div class="section-marker">
         <h2>The final product</h2>
       </div>
-      <p>Four core screens, from planning to riding.</p>
-
-      <img src="assets/images/planr-finalmocks.png" alt="All four final PLANR screens shown together" class="nb-shot" style="margin:24px 0;" />
+      <p style="font-size:17px; color:var(--fg-2);">Four core screens, from planning to riding.</p>
+      <img src="assets/images/planr-finalmocks.png" alt="All four final PLANR screens shown together" class="shot" style="margin-top:24px;" />
     </div>
   </section>
 
-  <!-- 05: Outcome -->
-  <section class="nb-prose nb-subnav-target" id="outcome">
-    <div class="nb-prose-inner" style="max-width:1100px;">
-      <div class="nb-section-marker">
+  <!-- Outcome -->
+  <section class="band reveal" id="outcome">
+    <div class="band-inner">
+      <div class="section-marker">
         <h2>Outcome</h2>
       </div>
-      <p>On the final MVP prototype, users hit a <strong>96% success rate</strong> in unmoderated testing (Maze, n=26). It was my first time designing an end-to-end product, start to finish — and it's still the project that taught me the most.</p>
+      <div class="prose">
+        <p>On the final MVP prototype, users hit a <strong>96% success rate</strong> in unmoderated testing (Maze, n=26). It was my first time designing an end-to-end product, start to finish — and it's still the project that taught me the most.</p>
+      </div>
     </div>
   </section>
 
   <!-- Next case -->
-  <section class="nb-next-case">
-    <div class="nb-next-case-inner">
-      <div>
-        <p class="nb-next-label">All done here</p>
-        <h3 class="nb-next-title">Back to all work →</h3>
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-bottom" style="padding-bottom:56px;">
+      <div class="next-case-row">
+        <div>
+          <div class="next-case-label caps">All done here</div>
+          <h3 class="next-case-title">Back to all work →</h3>
+        </div>
+        <a href="work.html" class="btn btn--green">See all work ▸</a>
       </div>
-      <a href="work.html" class="nb-btn nb-btn--lemon">See all work ▸</a>
     </div>
   </section>
 
-  <footer class="nb-footer">
-    <div class="nb-footer-inner">
-      <div>
-        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
-        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Site map</p>
-        <ul>
-          <li><a href="work.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Connect</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
-          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
-          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-bottom">
-        <span>© 2026 · Ann Marie Kernen</span>
-        <span>Built with Claude Code &lt;3</span>
-      </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Ann Marie Kernen</span>
+      <span class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a>
+      </span>
     </div>
   </footer>
 
-  <button class="nb-back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
-
   <script>
     (function(){
-      var btn = document.getElementById('backToTop');
-      window.addEventListener('scroll', function(){
-        btn.classList.toggle('nb-visible', window.scrollY > 400);
-      });
-    })();
-  </script>
-
-  <script>
-    (function(){
-      var links = Array.prototype.slice.call(document.querySelectorAll('.nb-case-subnav-link'));
-      var sections = Array.prototype.slice.call(document.querySelectorAll('.nb-subnav-target'));
+      var links = Array.prototype.slice.call(document.querySelectorAll('.case-subnav a'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('.band[id]'));
       if (!links.length || !sections.length || !('IntersectionObserver' in window)) return;
 
       var linkMap = {};
-      links.forEach(function(link){
-        linkMap[link.getAttribute('href').slice(1)] = link;
-      });
+      links.forEach(function(link){ linkMap[link.dataset.section] = link; });
 
       function setActive(id){
-        links.forEach(function(link){ link.classList.remove('nb-case-subnav-link--active'); });
-        if (linkMap[id]) linkMap[id].classList.add('nb-case-subnav-link--active');
+        links.forEach(function(link){ link.classList.remove('is-active'); });
+        if (linkMap[id]) linkMap[id].classList.add('is-active');
       }
 
-      // Detection band starts just below the two sticky bars and covers
-      // the top ~30% of the remaining viewport — whichever section's top
-      // edge crosses into that band becomes "active."
       var observer = new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
           if (entry.isIntersecting) setActive(entry.target.id);
         });
-      }, { rootMargin: '-116px 0px -70% 0px', threshold: 0 });
+      }, { rootMargin: '-140px 0px -70% 0px', threshold: 0 });
 
       sections.forEach(function(section){ observer.observe(section); });
     })();
   </script>
+  <script src="site.js"></script>
+
 </body>
 </html>

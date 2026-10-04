@@ -5,126 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link rel="stylesheet" href="styles-v3.css" />
 </head>
 <body>
 
-  <nav class="nb-nav">
-    <div class="nb-nav-inner">
-      <a href="work.html" class="nb-logo"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
-      <div class="nb-nav-links">
-        <a href="work.html" class="nb-nav-link">Case Studies</a>
-        <a href="about.html" class="nb-nav-link">About</a>
-        <a href="contact.html" class="nb-nav-cta">Contact</a>
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="work.html" class="top-nav-logo">Ann Marie Kernen</a>
+      <div class="top-nav-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="is-active">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Body: info + form -->
-  <section class="nb-contact-body">
-    <div class="nb-contact-body-inner">
-
-      <div class="nb-section-marker" style="grid-column: 1 / -1; margin-bottom: 0;">
+  <section class="band reveal">
+    <div class="band-inner" style="padding-top:48px;">
+      <div class="section-marker">
         <h2>Contact</h2>
       </div>
 
-      <!-- Left: direct contact -->
-      <div>
-        <div>
-          <p class="nb-contact-info-label">LinkedIn</p>
-          <p class="nb-contact-info-value">
-            <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">Let's Connect! ↗</a>
-          </p>
-        </div>
-
-        <div>
-          <p class="nb-contact-info-label">Instagram</p>
-          <p class="nb-contact-info-value">
-            <a href="https://www.instagram.com/annmariedzns" target="_blank">@annmariedzns ↗</a>
-          </p>
-        </div>
-
-        <div>
-          <p class="nb-contact-info-label">GitHub</p>
-          <p class="nb-contact-info-value">
-            <a href="https://github.com/annmariekernen" target="_blank">annmariekernen ↗</a>
-          </p>
-        </div>
-
-        <div>
-          <p class="nb-contact-info-label">Resume</p>
-          <p class="nb-contact-info-value">
-            <a href="assets/resumes/Ann-Marie-Kernen-Resume-Colorful.pdf" target="_blank">Download PDF ↗</a>
-          </p>
-        </div>
-
-        <p class="nb-contact-note">Slide decks for case studies are available upon request.</p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank" class="icon-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <line x1="8" y1="11" x2="8" y2="16"/>
+            <circle cx="8" cy="8" r="0.6" fill="currentColor"/>
+            <path d="M12 16v-3a2 2 0 0 1 4 0v3"/>
+            <line x1="12" y1="11" x2="12" y2="16"/>
+          </svg>
+          LinkedIn ↗
+        </a>
+        <a href="https://github.com/annmariekernen" target="_blank" class="icon-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="8 6 3 12 8 18"/>
+            <polyline points="16 6 21 12 16 18"/>
+          </svg>
+          GitHub ↗
+        </a>
+        <a href="assets/resumes/Ann-Marie-Kernen-Resume.pdf" target="_blank" class="icon-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/>
+            <polyline points="14 3 14 8 19 8"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="15" y2="17"/>
+          </svg>
+          Resume ↗
+        </a>
       </div>
+      <p style="font-size:15px; color:var(--fg-3); margin-top:20px;">Slide decks for case studies are available upon request.</p>
 
-      <!-- Right: form -->
-      <div>
-        <p class="nb-form-heading">Or send a note directly</p>
+      <div style="border-top:var(--border-default); margin-top:40px; padding-top:40px;">
+        <p class="meta caps" style="margin-bottom:20px;">Or send a note directly</p>
 
         <form id="contactForm" onsubmit="handleSubmit(event)">
-          <div class="nb-form-group">
-            <label class="nb-label" for="name">Your name</label>
-            <input class="nb-input" type="text" id="name" name="name" placeholder="First Last" required />
+          <div class="field">
+            <label class="meta caps" for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="First Last" required />
           </div>
-
-          <div class="nb-form-group">
-            <label class="nb-label" for="email">Email</label>
-            <input class="nb-input" type="email" id="email" name="email" placeholder="you@email.com" required />
+          <div class="field">
+            <label class="meta caps" for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
           </div>
-
-          <div class="nb-form-group">
-            <label class="nb-label" for="subject">What's this about?</label>
-            <input class="nb-input" type="text" id="subject" name="subject" placeholder="Freelance / Full-time / Just saying hi" />
+          <div class="field">
+            <label class="meta caps" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me what you're working on..." required></textarea>
           </div>
-
-          <div class="nb-form-group">
-            <label class="nb-label" for="message">Message</label>
-            <textarea class="nb-textarea" id="message" name="message" placeholder="Tell me what you're working on..." required></textarea>
-          </div>
-
-          <div class="nb-form-submit">
-            <button type="submit" class="nb-btn nb-btn--pink">Send it ▸</button>
-          </div>
+          <button type="submit" class="btn btn--green">Send it ▸</button>
         </form>
 
-        <div class="nb-form-success" id="formSuccess">
+        <div class="form-success" id="formSuccess">
           ✦ Message sent — I'll be in touch soon.
         </div>
       </div>
-
     </div>
   </section>
 
-  <footer class="nb-footer">
-    <div class="nb-footer-inner">
-      <div>
-        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
-        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Site map</p>
-        <ul>
-          <li><a href="work.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Connect</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
-          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
-          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-bottom">
-        <span>© 2026 · Ann Marie Kernen</span>
-        <span>Built with Claude Code &lt;3</span>
-      </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Ann Marie Kernen</span>
+      <span class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a>
+      </span>
     </div>
   </footer>
 
@@ -137,6 +104,8 @@
       success.style.display = 'block';
     }
   </script>
+
+  <script src="site.js"></script>
 
 </body>
 </html>

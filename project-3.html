@@ -5,194 +5,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Personas Library — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link rel="stylesheet" href="styles-v3.css" />
 </head>
 <body>
 
-  <!-- Sticky case header -->
-  <header class="nb-case-header">
-    <div class="nb-case-header-inner">
-      <a href="work.html" class="nb-case-back"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
-      <div class="nb-case-progress">
-        <span class="nb-progress-dot"></span>
-        ▸ Case 01 / 03
+  <header class="case-header">
+    <div class="case-header-inner">
+      <div class="case-header-row">
+        <a href="work.html" class="case-logo">Ann Marie Kernen</a>
+        <div class="case-header-nav">
+          <span class="case-position"><span class="case-position-dot"></span>Case 01 / 03</span>
+          <a href="project-2.html">Next ▸</a>
+        </div>
       </div>
-      <a href="project-2.html" class="nb-case-next">Next ▸</a>
+      <nav class="case-subnav">
+        <a href="#summary" class="is-active" data-section="summary">Summary</a>
+        <a href="#define" data-section="define">Define</a>
+        <a href="#research" data-section="research">Research</a>
+        <a href="#build" data-section="build">Build</a>
+        <a href="#stands" data-section="stands">Next steps</a>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="nb-case-hero">
-    <div class="nb-case-hero-inner">
-      <div class="nb-case-tags">
-        <span class="nb-case-tag nb-case-tag--pink">Case study</span>
-        <span class="nb-case-tag nb-case-tag--paper">▸ Ongoing initiative</span>
-        <span class="nb-case-tag nb-case-tag--paper">Freddie Mac · Multifamily Product Design</span>
+  <section class="band reveal" id="summary">
+    <div class="band-inner band-inner--tight">
+      <div class="case-tags">
+        <span class="tag tag--blue">Ongoing initiative</span>
+        <span class="tag">Freddie Mac · Multifamily Product Design</span>
       </div>
-      <h1 class="nb-case-hero-title">The Personas Library</h1>
-      <p class="nb-case-hero-sub">I designed and built a living personas library for the myOptigo platform — replacing a five-year-old set of static persona sheets with a structured, AI-readable schema that anyone on the product team can actually use.</p>
-      <div class="nb-case-facts">
-        <div class="nb-case-fact">
-          <div class="nb-case-fact-label">Role</div>
-          <div class="nb-case-fact-value">UX Designer — research, schema design, facilitation</div>
+      <h1 class="case-hero-title">The Personas Library</h1>
+      <p class="case-hero-sub">I designed and built a living personas library for the myOptigo platform — replacing a five-year-old set of static persona sheets with a structured, AI-readable schema that anyone on the product team can actually use.</p>
+      <div class="case-facts">
+        <div>
+          <div class="case-fact-label caps">Role</div>
+          <div class="case-fact-value">UX Designer — research, schema design, facilitation</div>
         </div>
-        <div class="nb-case-fact">
-          <div class="nb-case-fact-label">Timeline</div>
-          <div class="nb-case-fact-value">Ongoing — schema built and library in beta, user validation in progress</div>
+        <div>
+          <div class="case-fact-label caps">Timeline</div>
+          <div class="case-fact-value">Ongoing — schema built and library in beta, user validation in progress</div>
         </div>
-        <div class="nb-case-fact">
-          <div class="nb-case-fact-label">Team</div>
-          <div class="nb-case-fact-value">2 UX managers, 1 design system manager, broader product org</div>
+        <div>
+          <div class="case-fact-label caps">Team</div>
+          <div class="case-fact-value">2 UX managers, 1 design system manager, broader product org</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Metric row -->
-  <section class="nb-metric-row">
-    <div class="nb-metric-row-inner">
-      <div class="nb-metric">
-        <div class="nb-metric-label">User types</div>
-        <div class="nb-metric-value nb-metric-value--cyan">30+</div>
-        <div class="nb-metric-note">distinct personas in the myOptigo ecosystem</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">Old library</div>
-        <div class="nb-metric-value nb-metric-value--pink">5 yrs</div>
-        <div class="nb-metric-note">static sheets, untouched since 2020</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">In beta</div>
-        <div class="nb-metric-value nb-metric-value--lime">~50%</div>
-        <div class="nb-metric-note">personas live and queryable today</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">Format</div>
-        <div class="nb-metric-value nb-metric-value--lemon">YAML</div>
-        <div class="nb-metric-note">human-readable, AI-queryable, maintainable</div>
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-top">
+      <div class="metric-row">
+        <div>
+          <div class="metric-label">User types</div>
+          <div class="metric-value metric-value--blue">30+</div>
+          <div class="metric-note">distinct personas in the myOptigo ecosystem</div>
+        </div>
+        <div>
+          <div class="metric-label">Old library</div>
+          <div class="metric-value metric-value--rust">5 yrs</div>
+          <div class="metric-note">static sheets, untouched since 2020</div>
+        </div>
+        <div>
+          <div class="metric-label">In beta</div>
+          <div class="metric-value metric-value--green">~50%</div>
+          <div class="metric-note">personas live and queryable today</div>
+        </div>
+        <div>
+          <div class="metric-label">Format</div>
+          <div class="metric-value metric-value--ink">YAML</div>
+          <div class="metric-note">human-readable, AI-queryable, maintainable</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Problem -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <span class="nb-section-num">Problem</span>
+  <section class="band reveal">
+    <div class="band-inner">
+      <div class="section-marker">
+        <h2>Problem</h2>
       </div>
-      <p>When I joined Freddie Mac in late 2025, the team had a personas library. Technically.</p>
-      <p>In practice, it was a set of static graphic sheets created by a third-party consulting firm in 2020. Five years old, incomplete, and largely untouched. The kind of thing a new hire might scan on their first week, then never open again. Traditional personas in the classic sense: stock photo, name, age, job title, a little fictional vignette. Carly, 36, Underwriting Analyst. That sort of thing.</p>
-      <p>The myOptigo platform serves Freddie Mac Multifamily and has more than 30 distinct user types. 30 personas is a lot to keep current, consistent, and actually used.</p>
-      <p>When the team set their 2026 goals, updating the personas library was near the top of the list. The question was: update them into what?</p>
-      <p><strong>The real problem wasn't that the personas were old. It was that the format itself made them almost impossible to actually use.</strong></p>
+      <div class="prose">
+        <p>When I joined Freddie Mac in late 2025, the team had a personas library. Technically.</p>
+        <p>In practice, it was a set of static graphic sheets created by a third-party consulting firm in 2020. Five years old, incomplete, and largely untouched. The kind of thing a new hire might scan on their first week, then never open again. Traditional personas in the classic sense: stock photo, name, age, job title, a little fictional vignette. Carly, 36, Underwriting Analyst. That sort of thing.</p>
+        <p>The myOptigo platform serves Freddie Mac Multifamily and has more than 30 distinct user types. 30 personas is a lot to keep current, consistent, and actually used.</p>
+        <p>When the team set their 2026 goals, updating the personas library was near the top of the list. The question was: update them into what?</p>
+        <p><strong>The real problem wasn't that the personas were old. It was that the format itself made them almost impossible to actually use.</strong></p>
+      </div>
     </div>
   </section>
 
-  <!-- Section 01: Define -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
+  <!-- Define -->
+  <section class="band reveal" id="define">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[01]</span>
         <h2>Define</h2>
       </div>
-      <p>A refreshed set of static sheets would have the same problem in another five years.</p>
-      <p>I came to my manager with a different thesis: what if the personas weren't a designed artifact at all, but a structured data library — readable by a human, queryable by an AI, and maintainable over time without starting from scratch every few years?</p>
-      <p>The format I proposed was YAML. Plain text, structured enough for an AI to parse, simple enough for a designer to update. Each persona would live as its own README-style file following a standardized schema. Feed those files into a Copilot Notebook, and anyone on the team — designers, POs, developers, even business stakeholders — could query the library in plain language. "What are the main pain points for an Underwriting Analyst?" Done.</p>
-      <p>My manager liked it. The design system manager liked it. They asked me to present it to the broader team.</p>
-      <div class="nb-image-placeholder">[ YAML schema example — structured persona file ]</div>
+      <div class="prose">
+        <p>A refreshed set of static sheets would have the same problem in another five years.</p>
+        <p>I came to my manager with a different thesis: what if the personas weren't a designed artifact at all, but a structured data library — readable by a human, queryable by an AI, and maintainable over time without starting from scratch every few years?</p>
+        <p>The format I proposed was YAML. Plain text, structured enough for an AI to parse, simple enough for a designer to update. Each persona would live as its own README-style file following a standardized schema. Feed those files into a Copilot Notebook, and anyone on the team — designers, POs, developers, even business stakeholders — could query the library in plain language. "What are the main pain points for an Underwriting Analyst?" Done.</p>
+        <p>My manager liked it. The design system manager liked it. They asked me to present it to the broader team.</p>
+      </div>
+      <div class="breakout" style="border:var(--border-default); background:var(--paper-2); padding:48px 24px;">
+        <span class="meta caps">YAML schema example — structured persona file</span>
+      </div>
     </div>
   </section>
 
-  <!-- Section 02: Research -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <h2>Research — Building the Schema</h2>
+  <!-- Research -->
+  <section class="band reveal" id="research">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[02]</span>
+        <h2>Research — building the schema</h2>
       </div>
-      <p>I drafted an initial schema myself, drawing on the standard building blocks of a traditional persona: job responsibilities, pain points, goals, tools used, key workflows. Then I brought it to the team.</p>
-      <p>We ran a FigJam whiteboarding session where I presented the vision and asked a simple question: if you could query a persona, what would you want to know? The feedback shaped the final schema — by the end, it reflected what the team actually needed, not just what I'd assumed.</p>
-      <div class="nb-image-placeholder">[ FigJam session — schema co-design whiteboard ]</div>
-      <p>For the research itself, I used Microsoft Teams Copilot, which has access to internal documentation available across the organization. I used a consistent prompt for every persona — same structure, same questions — asking Copilot to generate a research report covering core responsibilities, pain points, goals, and role context. The persona list itself came from my manager through her own stakeholder conversations.</p>
-      <p>The Copilot reports were dense. The YAML files are not. That compression was intentional — the schema keeps only what someone would actually need when making a design or product decision.</p>
+      <div class="prose">
+        <p>I drafted an initial schema myself, drawing on the standard building blocks of a traditional persona: job responsibilities, pain points, goals, tools used, key workflows. Then I brought it to the team.</p>
+        <p>We ran a FigJam whiteboarding session where I presented the vision and asked a simple question: if you could query a persona, what would you want to know? The feedback shaped the final schema — by the end, it reflected what the team actually needed, not just what I'd assumed.</p>
+      </div>
+      <div class="breakout" style="border:var(--border-default); background:var(--paper-2); padding:48px 24px;">
+        <span class="meta caps">FigJam session — schema co-design whiteboard</span>
+      </div>
+      <div class="prose" style="margin-top:24px;">
+        <p>For the research itself, I used Microsoft Teams Copilot, which has access to internal documentation available across the organization. I used a consistent prompt for every persona — same structure, same questions — asking Copilot to generate a research report covering core responsibilities, pain points, goals, and role context. The persona list itself came from my manager through her own stakeholder conversations.</p>
+        <p>The Copilot reports were dense. The YAML files are not. That compression was intentional — the schema keeps only what someone would actually need when making a design or product decision.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Section 03: Build -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <h2>Build — The Library in Beta</h2>
+  <!-- Build -->
+  <section class="band reveal" id="build">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[03]</span>
+        <h2>Build — the library in beta</h2>
       </div>
-      <p>The library currently covers roughly half of the 30+ personas in the myOptigo ecosystem. Each lives as a structured YAML file, and together they're loaded into a Copilot Notebook that any team member can query today.</p>
-      <p>It's in beta. It works. People can use it.</p>
-      <p>The next phase is validation — user interviews with people from each represented role to verify that what Copilot surfaced actually reflects their day-to-day reality. The schemas will be updated based on what we learn.</p>
+      <div class="prose">
+        <p>The library currently covers roughly half of the 30+ personas in the myOptigo ecosystem. Each lives as a structured YAML file, and together they're loaded into a Copilot Notebook that any team member can query today.</p>
+        <p>It's in beta. It works. People can use it.</p>
+        <p>The next phase is validation — user interviews with people from each represented role to verify that what Copilot surfaced actually reflects their day-to-day reality. The schemas will be updated based on what we learn.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Conclusion: Where It Stands -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <h2>Where It Stands + What's Next</h2>
+  <!-- Where it stands -->
+  <section class="band reveal" id="stands">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[04]</span>
+        <h2>Where it stands + what's next</h2>
       </div>
-      <ul>
-        <li><strong>User validation interviews</strong> — the most important next step. Real conversations will catch the gaps that no internal document captures.</li>
-        <li><strong>Completing the full library</strong> — the schema and process are established; it's a matter of working through the remaining personas.</li>
-        <li><strong>Broader rollout</strong> — the longer-term vision is opening the library to POs, developers, and business stakeholders across the platform.</li>
-        <li><strong>Maintenance model</strong> — establishing a lightweight process for keeping schemas current as the platform evolves.</li>
-      </ul>
-      <p>The goal was never to produce a prettier version of what existed before. It was to build something the team would actually reach for.</p>
-    </div>
-  </section>
-
-  <!-- Back to work -->
-  <section class="nb-next-case">
-    <div class="nb-next-case-inner">
-      <div>
-        <p class="nb-next-label">Case study</p>
-        <h3 class="nb-next-title">Procedures Updater →</h3>
-      </div>
-      <a href="project-2.html" class="nb-btn nb-btn--lemon">Read next ▸</a>
-    </div>
-  </section>
-
-  <footer class="nb-footer">
-    <div class="nb-footer-inner">
-      <div>
-        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
-        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Site map</p>
+      <div class="prose">
         <ul>
-          <li><a href="work.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><strong>User validation interviews</strong> — the most important next step. Real conversations will catch the gaps that no internal document captures.</li>
+          <li><strong>Completing the full library</strong> — the schema and process are established; it's a matter of working through the remaining personas.</li>
+          <li><strong>Broader rollout</strong> — the longer-term vision is opening the library to POs, developers, and business stakeholders across the platform.</li>
+          <li><strong>Maintenance model</strong> — establishing a lightweight process for keeping schemas current as the platform evolves.</li>
         </ul>
+        <p>The goal was never to produce a prettier version of what existed before. It was to build something the team would actually reach for.</p>
       </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Connect</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
-          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
-          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
-        </ul>
+    </div>
+  </section>
+
+  <!-- Next case -->
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-bottom" style="padding-bottom:56px;">
+      <div class="next-case-row">
+        <div>
+          <div class="next-case-label caps">Case study</div>
+          <h3 class="next-case-title">Procedures Updater →</h3>
+        </div>
+        <a href="project-2.html" class="btn btn--green">Read next ▸</a>
       </div>
-      <div class="nb-footer-bottom">
-        <span>© 2026 · Ann Marie Kernen</span>
-        <span>Built with Claude Code &lt;3</span>
-      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Ann Marie Kernen</span>
+      <span class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a>
+      </span>
     </div>
   </footer>
 
-  <button class="nb-back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
-
   <script>
     (function(){
-      var btn = document.getElementById('backToTop');
-      window.addEventListener('scroll', function(){
-        btn.classList.toggle('nb-visible', window.scrollY > 400);
-      });
+      var links = Array.prototype.slice.call(document.querySelectorAll('.case-subnav a'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('.band[id]'));
+      if (!links.length || !sections.length || !('IntersectionObserver' in window)) return;
+
+      var linkMap = {};
+      links.forEach(function(link){ linkMap[link.dataset.section] = link; });
+
+      function setActive(id){
+        links.forEach(function(link){ link.classList.remove('is-active'); });
+        if (linkMap[id]) linkMap[id].classList.add('is-active');
+      }
+
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      }, { rootMargin: '-140px 0px -70% 0px', threshold: 0 });
+
+      sections.forEach(function(section){ observer.observe(section); });
     })();
   </script>
+  <script src="site.js"></script>
+
 </body>
 </html>

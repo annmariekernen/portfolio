@@ -5,84 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Case Studies — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link rel="stylesheet" href="styles-v3.css" />
 </head>
 <body>
 
-  <nav class="nb-nav">
-    <div class="nb-nav-inner">
-      <a href="work.html" class="nb-logo"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
-      <div class="nb-nav-links">
-        <a href="work.html" class="nb-nav-link nb-nav-link--active">Case Studies</a>
-        <a href="about.html" class="nb-nav-link">About</a>
-        <a href="contact.html" class="nb-nav-cta">Contact</a>
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="work.html" class="top-nav-logo">Ann Marie Kernen</a>
+      <div class="top-nav-links">
+        <a href="#work" class="is-active">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
 
-  <section class="nb-work-section" id="work">
-    <div class="nb-section-inner">
-      <div class="nb-section-marker">
-        <h2>UX Case Studies</h2>
+  <!-- Hero -->
+  <section class="band reveal">
+    <div class="band-inner" style="padding-top:48px;">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        <span class="caps">Product designer at Freddie Mac · Washington DC</span>
       </div>
-      <div class="nb-caption-grid">
+      <h1 class="hero-lead">I design UX to make complex tools feel a bit more human.</h1>
+      <p class="hero-intro">I'm a Product Designer at Freddie Mac, previously Wells Fargo and FutureSight. I'm picky about the details, comfortable in code, and happiest when my work actually ships. Four years in, I still love making tools that feel obvious to use, even when what's underneath isn't.</p>
+      <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
+        <a href="#work" class="btn btn--green">See my work ▸</a>
+        <a href="contact.html" class="btn btn--ghost">Get in touch ▸</a>
+      </div>
+    </div>
+  </section>
 
-        <a href="project-3.html" class="nb-caption-card">
-          <div class="nb-caption-card-image">
-            <div class="nb-caption-card-image-fallback">[ Image ]</div>
+  <!-- Selected work -->
+  <section class="band reveal" id="work">
+    <div class="band-inner band-inner--no-top">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[01]</span>
+        <h2>Selected work</h2>
+      </div>
+      <div class="work-list">
+
+        <a href="project-3.html" class="work-row">
+          <div class="meta caps">2025 · Freddie Mac</div>
+          <div class="work-row-title">
+            <h3>The Personas Library ▸</h3>
+            <span class="tag tag--ink">Ongoing</span>
           </div>
-          <div class="nb-caption-meta">2025 · Freddie Mac</div>
-          <h3>The Personas Library <span class="nb-work-tag" style="margin:0; vertical-align:middle;">Ongoing</span> <span class="nb-caption-arrow">▸</span></h3>
         </a>
 
-        <a href="project-2.html" class="nb-caption-card">
-          <div class="nb-caption-card-image">
-            <img src="assets/images/procedures-updater-review.png" alt="Procedures Updater — AI-suggested review diff" />
+        <a href="project-2.html" class="work-row">
+          <div class="meta caps">2024 · Wells Fargo</div>
+          <div class="work-row-title">
+            <h3>Procedures Updater ▸</h3>
           </div>
-          <div class="nb-caption-meta">2024 · Wells Fargo</div>
-          <h3>Procedures Updater <span class="nb-caption-arrow">▸</span></h3>
         </a>
 
-        <a href="project-1.html" class="nb-caption-card">
-          <div class="nb-caption-card-image">
-            <img src="assets/images/planr-finalmocks.png" alt="PLANR — final screens shown together" />
+        <a href="project-1.html" class="work-row">
+          <div class="meta caps">2023 · Springboard</div>
+          <div class="work-row-title">
+            <h3>PLANR: Transit Planning App ▸</h3>
           </div>
-          <div class="nb-caption-meta">2023 · Springboard</div>
-          <h3>PLANR: Transit Planning App <span class="nb-caption-arrow">▸</span></h3>
         </a>
 
       </div>
     </div>
   </section>
 
-  <footer class="nb-footer">
-    <div class="nb-footer-inner">
-      <div>
-        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
-        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
+  <!-- How I work / skills -->
+  <section class="band reveal" id="how-i-work">
+    <div class="band-inner band-inner--no-top">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[02]</span>
+        <h2>How I work</h2>
       </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Site map</p>
-        <ul>
-          <li><a href="work.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <div class="skills-group">
+        <div class="meta caps skills-label">Design &amp; research</div>
+        <div class="skills-tags">
+          <span class="tag">Wireframing</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Usability testing</span>
+          <span class="tag">Qualitative research synthesis</span>
+          <span class="tag">Affinity mapping</span>
+          <span class="tag">Persona development</span>
+          <span class="tag">Accessibility (WCAG)</span>
+          <span class="tag">Design systems (Figma and code)</span>
+        </div>
       </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Connect</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
-          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
-          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
-        </ul>
+      <div class="skills-group">
+        <div class="meta caps skills-label">AI &amp; prototyping</div>
+        <div class="skills-tags">
+          <span class="tag">AI-coded prototyping</span>
+          <span class="tag">Agentic development in Angular</span>
+          <span class="tag">AI-powered workflow design</span>
+          <span class="tag">AI agent skills &amp; context files</span>
+          <span class="tag">Figma-to-code (API-based)</span>
+        </div>
       </div>
-      <div class="nb-footer-bottom">
-        <span>© 2026 · Ann Marie Kernen</span>
-        <span>Built with Claude Code &lt;3</span>
+      <div class="skills-group">
+        <div class="meta caps skills-label">Tools</div>
+        <div class="skills-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Figma Make</span>
+          <span class="tag">Kiro</span>
+          <span class="tag">Amazon Q</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">CLI</span>
+          <span class="tag">Local dev environment setup</span>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Side projects -->
+  <section class="band reveal" id="side">
+    <div class="band-inner band-inner--no-top">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[03]</span>
+        <h2>Side projects</h2>
+      </div>
+      <div class="now-list">
+        <div class="now-row">
+          <div class="now-row-status"><span class="now-row-status-dot" style="background:var(--blue-deep);"></span><span class="caps" style="font-size:13px; font-weight:600; color:var(--blue-deep);">Exploring</span></div>
+          <div class="now-row-label">Midjourney</div>
+        </div>
+        <div class="now-row">
+          <div class="now-row-status"><span class="now-row-status-dot" style="background:var(--green-deep);"></span><span class="caps" style="font-size:13px; font-weight:600; color:var(--green-deep);">Designing</span></div>
+          <div class="now-row-label">Physical product design</div>
+        </div>
+        <div class="now-row">
+          <div class="now-row-status"><span class="now-row-status-dot" style="background:var(--fg-3);"></span><span class="caps" style="font-size:13px; font-weight:600; color:var(--fg-3);">Learning</span></div>
+          <div class="now-row-label">3D explorations</div>
+        </div>
+        <div class="now-row">
+          <div class="now-row-status"><span class="now-row-status-dot" style="background:var(--fg-3);"></span><span class="caps" style="font-size:13px; font-weight:600; color:var(--fg-3);">Learning</span></div>
+          <div class="now-row-label">Vibe coding</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work with me -->
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-top">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[04]</span>
+        <h2>Work with me</h2>
+      </div>
+      <h2 style="font-size:var(--fs-h2); line-height:1.15; letter-spacing:-0.02em;">Have a complex design problem? I'd love to hear about it.</h2>
+      <p style="margin:14px 0 0; font-size:17px; line-height:1.6; color:var(--fg-2);">Send me the details, even if they're messy — happy to tell you honestly whether I'm the right person for it.</p>
+      <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn--green">Get in touch ▸</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Ann Marie Kernen</span>
+      <span class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a>
+      </span>
+    </div>
   </footer>
+
+  <script src="site.js"></script>
 
 </body>
 </html>

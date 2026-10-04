@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Overview" name="The whole kit" subtitle="Every token in situ" viewport="1280x3800" -->
+<html lang="en"><head><meta charset="UTF-8"/><title>Personal Design Kit — v2</title>
+<link rel="stylesheet" href="tokens_v2.css"/>
+<style>
+body{width:1280px;overflow-x:hidden}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.band{padding:56px 0;border-bottom:var(--border-default)}
+.band.--alt{background:var(--paper-2)}
+.kicker{font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:15px;font-weight:700;color:var(--fg-3);margin-bottom:20px}
+.sw-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;border:var(--border-default)}
+.sw{display:flex;flex-direction:column;border-right:var(--border-hairline)}
+.sw:last-child{border-right:0}
+.sw .n{flex:1;display:flex;align-items:flex-end;min-height:80px;padding:8px 10px;font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:14px;font-weight:700}
+.sw .h{display:block;padding:6px 10px;background:var(--bone);color:var(--fg-2);border-top:var(--border-hairline);font-family:var(--font-mono);font-size:11px;letter-spacing:.04em}
+.ladder{display:flex;flex-direction:column;gap:18px}
+.ladder .row{display:grid;grid-template-columns:168px 1fr;gap:24px;align-items:baseline;border-bottom:var(--border-divider);padding-bottom:14px}
+.ladder .tk{white-space:nowrap;font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:14px;font-weight:500;color:var(--fg-3)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.stack{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.work{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.metastrip{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;padding-top:14px;border-top:var(--border-divider)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 40px;border-bottom:var(--border-default);max-width:1200px;margin:0 auto}
+.navlinks{display:flex;gap:28px}
+.navlinks a{font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:15px;font-weight:600;text-decoration:none;color:var(--fg-2)}
+.navlinks a.on{color:var(--fg-1);border-bottom:var(--border-default);padding-bottom:2px}
+.metric{border:var(--border-default);box-shadow:var(--ghost-alt);background:var(--bone);padding:20px}
+.metric .v{font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:34px;letter-spacing:-.02em;line-height:1}
+</style></head><body>
+
+<div class="nav">
+  <div class="display-narrow" style="font-size:22px">STUDIO<span style="color:var(--blue-deep)">//</span></div>
+  <div class="navlinks"><a href="#work" class="on">Work</a><a href="#notes">Field notes</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+</div>
+
+<div class="band"><div class="wrap">
+  <div class="kicker">▸ Portfolio hero · v2</div>
+  <h1 class="hero-display" style="max-width:16ch">Systems that hold up under pressure.</h1>
+  <p class="lead" style="margin-top:24px">hi! i design and build the unglamorous parts — the admin tools, the data models, the twelve dashboards that should have been one. pull up a chair.</p>
+  <div class="stack" style="margin-top:32px"><a class="btn" href="#work">See the work ▸</a><a class="btn --ghost" href="#resume">Resume [.pdf]</a></div>
+</div></div>
+
+<div class="band"><div class="wrap">
+  <div class="kicker">▸ Foundation</div>
+  <div class="sw-grid" style="margin-bottom:0">
+    <div class="sw" style="background:var(--paper)"><span class="n">Paper</span><span class="h">#FBF9F6</span></div>
+    <div class="sw" style="background:var(--paper-2)"><span class="n">Paper 2</span><span class="h">#F4F1EB</span></div>
+    <div class="sw" style="background:var(--bone)"><span class="n">Bone</span><span class="h">#FFFEFC</span></div>
+    <div class="sw" style="background:var(--mist-pale)"><span class="n">Mist pale</span><span class="h">#DFE6F0</span></div>
+    <div class="sw" style="background:var(--mist);color:var(--ink)"><span class="n">Mist</span><span class="h">#8FA5C4</span></div>
+    <div class="sw" style="background:var(--ink);color:var(--paper)"><span class="n">Ink</span><span class="h">#221F1C</span></div>
+  </div>
+  <div class="kicker" style="margin:36px 0 20px">▸ Accents — bright azure and emerald, flat</div>
+  <div class="sw-grid">
+    <div class="sw" style="background:var(--blue-pale)"><span class="n">Blue pale</span><span class="h">#DEE9F6</span></div>
+    <div class="sw" style="background:var(--blue)"><span class="n">Blue · fills</span><span class="h">#1E86EE</span></div>
+    <div class="sw" style="background:var(--blue-deep);color:var(--bone)"><span class="n">Blue deep · action</span><span class="h">#0B6BD6</span></div>
+    <div class="sw" style="background:var(--green-pale)"><span class="n">Green pale</span><span class="h">#D9EDE3</span></div>
+    <div class="sw" style="background:var(--green)"><span class="n">Green · fills</span><span class="h">#16B37E</span></div>
+    <div class="sw" style="background:var(--green-deep);color:var(--bone)"><span class="n">Green deep · alt · ok</span><span class="h">#08815A</span></div>
+  </div>
+  <p class="small" style="margin-top:16px;max-width:76ch">Deep blue carries the primary action and links. Green is the secondary action and system-OK. The light steps (<code>--blue</code>, <code>--green</code>) are large-fill colors — figures, panels, big type; anything filled with text at 14px or below uses the deep step, which clears AA on bone. Rust (<code>#C2603F</code>) is the only warm value in the system and is functional only: validation, warnings, errors. Never decorative, never a brand accent.</p>
+</div></div>
+
+<div class="band --alt"><div class="wrap">
+  <div class="kicker">▸ Type — Archivo, two widths. Sentence case headings, small caps for labels</div>
+  <div class="ladder">
+    <div class="row"><span class="tk">hero · 72 · wdth 82</span><span class="hero-display">Admin, reimagined</span></div>
+    <div class="row"><span class="tk">h1 · 44 · wdth 82</span><h1>Twelve dashboards became one</h1></div>
+    <div class="row"><span class="tk">h2 · 32 · wdth 82</span><h2>The problem was findability</h2></div>
+    <div class="row"><span class="tk">h3 · 26 · wdth 82</span><h3>What I'd do differently</h3></div>
+    <div class="row"><span class="tk">button · small caps</span><span style="font-family:var(--font-body);font-weight:600;font-size:16px;font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps)">See the work · Resume [.pdf] · Say hello</span></div>
+    <div class="row"><span class="tk">h5 · small caps</span><h5>▸ 2024 · Case study · 6 min read</h5></div>
+    <div class="row"><span class="tk">lead · 18 · wdth 100</span><p class="lead" style="margin:0">they had a shared spreadsheet just to remember which dashboard had which thing.</p></div>
+    <div class="row"><span class="tk">body · 16 · wdth 100</span><p style="margin:0">i shadowed six ops people for a week. that's the kind of detail you can't see in figma — and the reason the palette went from twelve links to one command line.</p></div>
+    <div class="row"><span class="tk">meta · 14 · small caps</span><span class="meta">// last updated 2026.08.27 · v0.2</span></div>
+  </div>
+</div></div>
+
+<div class="band"><div class="wrap">
+  <div class="kicker">▸ Primitives — 1px hairlines, ghost outline, zero radius</div>
+  <div class="cols">
+    <div>
+      <h5 style="margin-bottom:16px">Buttons</h5>
+      <div class="stack"><button class="btn">Primary</button><button class="btn --green">Secondary</button><button class="btn --ghost">Tertiary</button><button class="btn --ink">$ run_</button><button class="btn" disabled>Disabled</button></div>
+      <h5 style="margin:32px 0 16px">Tags</h5>
+      <div class="stack"><span class="tag">Default</span><span class="tag --blue">Case study</span><span class="tag --green">Shipped</span><span class="tag --blue-pale">In progress</span><span class="tag --green-pale">Prototype</span><span class="tag --ink">2024</span></div>
+      <h5 style="margin:32px 0 16px">Links</h5>
+      <p style="margin:0">read the <a href="#notes">field notes</a>, or <a href="#contact">say hello</a> — tea's on.</p>
+    </div>
+    <div>
+      <h5 style="margin-bottom:16px">Surfaces</h5>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div class="card"><h5 style="margin-bottom:8px">▸ Ghost outline</h5><h4>Default card</h4><p class="small" style="margin:8px 0 0">1px soft-ink border, a 2px offset hairline where the shadow used to be.</p></div>
+        <div class="card --quiet"><h5 style="margin-bottom:8px">▸ Flat</h5><h4>Quiet card</h4><p class="small" style="margin:8px 0 0">Paper 2 fill, no outline. For dense lists and long content.</p></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="band --alt"><div class="wrap">
+  <div class="kicker">▸ Work grid — one screen's worth</div>
+  <div class="work">
+    <div class="card" style="box-shadow:var(--ghost-alt)"><h5 style="margin-bottom:10px">▸ 2024 · Case study</h5><h3>Admin, reimagined</h3><p class="small" style="margin:10px 0 0">twelve dashboards, one command palette. ops time-to-task dropped 71%.</p><div class="metastrip"><span class="meta">Lead UX</span><span class="meta">14 weeks</span><span class="meta">2 designers · 4 eng</span></div></div>
+    <div class="card" style="box-shadow:var(--ghost-alt)"><h5 style="margin-bottom:10px">▸ 2025 · In progress</h5><h3>Notes app, v0.3</h3><p class="small" style="margin:10px 0 0">finally fixing the graph layer i broke in v0.2 — close!</p><div class="metastrip"><span class="meta">Solo</span><span class="meta">Ongoing</span><span class="meta">Design eng</span></div></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:32px">
+    <div class="metric"><h5 style="margin-bottom:10px">Time to task</h5><div class="v" style="color:var(--green-deep)">−71%</div><p class="meta" style="margin:8px 0 0">avg ops worker, n=18</p></div>
+    <div class="metric"><h5 style="margin-bottom:10px">Dashboards</h5><div class="v" style="color:var(--blue-deep)">12 → 1</div><p class="meta" style="margin:8px 0 0">consolidated</p></div>
+    <div class="metric"><h5 style="margin-bottom:10px">Tickets / week</h5><div class="v" style="color:var(--blue)">−44%</div><p class="meta" style="margin:8px 0 0">"i can't find x"</p></div>
+    <div class="metric"><h5 style="margin-bottom:10px">NPS (ops)</h5><div class="v">+38</div><p class="meta" style="margin:8px 0 0">first positive in 3yr</p></div>
+  </div>
+</div></div>
+
+<div class="band" style="background:var(--ink);color:var(--paper);border-bottom:0"><div class="wrap">
+  <div class="kicker" style="color:var(--mist)">▸ On ink</div>
+  <h2 style="max-width:22ch">The same kit on a dark surface.</h2>
+  <p class="lead" style="color:var(--mist);margin-top:20px">Sharp corners, visible rules, small-caps markers and flat colour all hold up on ink.</p>  <div class="stack" style="margin-top:28px"><a class="btn" href="#contact">Say hello</a><a class="btn --ghost --on-ink" href="#resume">Resume [.pdf]</a></div>
+</div></div>
+
+</body></html>

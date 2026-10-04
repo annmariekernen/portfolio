@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Colors" name="Roles" subtitle="Which token to reach for, and the AA rule" viewport="700x330" -->
+<html lang="en"><head><meta charset="UTF-8"/><link rel="stylesheet" href="_card.css"/><style>table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-family:var(--font-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);text-transform:none;font-size:14px;font-weight:700;color:var(--fg-3);padding:0 0 8px;border-bottom:var(--border-default)}
+td{padding:7px 0;border-bottom:1px solid var(--rule);vertical-align:middle}
+td:first-child{font-family:var(--font-mono);font-size:11px;width:150px}
+td:nth-child(2){width:34px}
+.chip{width:20px;height:20px;border:1px solid var(--ink);display:block}
+.note{margin-top:14px;font-size:12px;color:var(--fg-2);line-height:1.5}</style></head><body>
+<div class="card"><table>
+<tr><th>Token</th><th></th><th>Role</th></tr>
+<tr><td>--action</td><td><span class="chip" style="background:var(--action)"></span></td><td>Primary buttons. Deep blue.</td></tr>
+<tr><td>--link</td><td><span class="chip" style="background:var(--link)"></span></td><td>Links at rest; lifts to <code>--blue</code> on hover.</td></tr>
+<tr><td>--success</td><td><span class="chip" style="background:var(--success)"></span></td><td>System-OK, shipped, validated.</td></tr>
+<tr><td>--warning</td><td><span class="chip" style="background:var(--warning)"></span></td><td>Validation and errors. The only warm value.</td></tr>
+<tr><td>--info</td><td><span class="chip" style="background:var(--info)"></span></td><td>Data, charts, neutral notices.</td></tr>
+<tr><td>--focus</td><td><span class="chip" style="background:var(--focus)"></span></td><td>2px outline, 2px offset. Never removed.</td></tr>
+</table>
+<p class="note">The lifted steps (<code>--blue</code>, <code>--green</code>) are large-fill colours: figures, panels, big type. Anything filled with text at 14px or below uses the deep step, which clears AA on bone. One accent family per screen.</p></div>
+</body></html>

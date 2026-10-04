@@ -5,237 +5,227 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Procedures Updater — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link rel="stylesheet" href="styles-v3.css" />
 </head>
 <body>
 
-  <!-- Sticky case header -->
-  <header class="nb-case-header">
-    <div class="nb-case-header-inner">
-      <div class="nb-case-header-left">
-        <a href="work.html" class="nb-case-back"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
-        <a href="project-3.html" class="nb-case-prev">◂ Prev</a>
+  <!-- Case nav + section nav, sticky, merged into one bar -->
+  <header class="case-header">
+    <div class="case-header-inner">
+      <div class="case-header-row">
+        <a href="work.html" class="case-logo">Ann Marie Kernen</a>
+        <div class="case-header-nav">
+          <a href="project-3.html">◂ Prev</a>
+          <span class="case-position"><span class="case-position-dot"></span>Case 02 / 03</span>
+          <a href="project-1.html">Next ▸</a>
+        </div>
       </div>
-      <div class="nb-case-progress">
-        <span class="nb-progress-dot"></span>
-        ▸ Case 02 / 03
-      </div>
-      <a href="project-1.html" class="nb-case-next">Next ▸</a>
+      <nav class="case-subnav">
+        <a href="#summary" class="is-active" data-section="summary">Summary</a>
+        <a href="#discover" data-section="discover">Discovery</a>
+        <a href="#design" data-section="design">Design</a>
+        <a href="#outcome" data-section="outcome">Outcome</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Section sub-nav -->
-  <nav class="nb-case-subnav">
-    <div class="nb-case-subnav-inner">
-      <a href="#summary" class="nb-case-subnav-link nb-case-subnav-link--active">Summary</a>
-      <a href="#discover" class="nb-case-subnav-link">Discovery</a>
-      <a href="#design" class="nb-case-subnav-link">Design</a>
-      <a href="#outcome" class="nb-case-subnav-link">Outcome</a>
-    </div>
-  </nav>
-
   <!-- Hero -->
-  <section class="nb-case-hero nb-subnav-target" id="summary">
-    <div class="nb-case-hero-inner">
-      <div class="nb-case-tags">
-        <span class="nb-case-tag nb-case-tag--paper">Wells Fargo · Small Business Banking Tech</span>
+  <section class="band reveal" id="summary">
+    <div class="band-inner band-inner--tight">
+      <div class="case-tags">
+        <span class="tag">Wells Fargo · Small Business Banking Tech</span>
       </div>
-      <h1 class="nb-case-hero-title">Procedures Updater</h1>
-      <p class="nb-case-hero-sub">For this project I was a UX "team of one," leading discovery and design for an AI-powered tool that automated an ultra-tedious task in our enterprise environment.</p>
-      <a href="#design" class="nb-btn nb-btn--lemon" style="margin-top:8px;">Skip to the Work ▾</a>
+      <h1 class="case-hero-title">Procedures Updater</h1>
+      <p class="case-hero-sub">For this project I was a UX "team of one," leading discovery and design for an AI-powered tool that automated an ultra-tedious task in our enterprise environment.</p>
+      <a href="#design" class="btn btn--green" style="margin-top:24px;">Skip to the work ▾</a>
     </div>
   </section>
 
   <!-- Metric row -->
-  <section class="nb-metric-row">
-    <div class="nb-metric-row-inner">
-      <div class="nb-metric">
-        <div class="nb-metric-label">Time cost: before</div>
-        <div class="nb-metric-value nb-metric-value--pink">8–10 hrs</div>
-        <div class="nb-metric-note">per Change Management teammate, per week</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">Time cost: after</div>
-        <div class="nb-metric-value nb-metric-value--lime">~30 min</div>
-        <div class="nb-metric-note">reviewing AI-suggested changes</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">Wireframe</div>
-        <div class="nb-metric-value nb-metric-value--lemon">2 days</div>
-        <div class="nb-metric-note">once the process was understood</div>
-      </div>
-      <div class="nb-metric">
-        <div class="nb-metric-label">First build</div>
-        <div class="nb-metric-value nb-metric-value--cyan">&lt;1 wk</div>
-        <div class="nb-metric-note">working first pass via GitHub Copilot</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Proprietary note -->
-  <section class="nb-prose">
-    <div class="nb-prose-inner">
-      <div class="nb-disclosure">
-        <span class="nb-disclosure-icon">🔒</span>
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-top">
+      <div class="metric-row">
         <div>
-          <p class="nb-disclosure-label">Confidentiality note</p>
-          <p class="nb-disclosure-text">This was proprietary internal work at a financial institution. The original files aren't mine to share — every screen shown below is a faithful recreation, rebuilt from memory and notes, not an export from the real product.</p>
+          <div class="metric-label">Time cost: before</div>
+          <div class="metric-value metric-value--rust">8–10 hrs</div>
+          <div class="metric-note">per Change Management teammate, per week</div>
+        </div>
+        <div>
+          <div class="metric-label">Time cost: after</div>
+          <div class="metric-value metric-value--green">~30 min</div>
+          <div class="metric-note">reviewing AI-suggested changes</div>
+        </div>
+        <div>
+          <div class="metric-label">Wireframe</div>
+          <div class="metric-value metric-value--ink">2 days</div>
+          <div class="metric-note">once the process was understood</div>
+        </div>
+        <div>
+          <div class="metric-label">First build</div>
+          <div class="metric-value metric-value--blue">&lt;1 wk</div>
+          <div class="metric-note">working first pass via GitHub Copilot</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Problem -->
-  <section class="nb-prose" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <span class="nb-section-num">Problem</span>
+  <!-- Confidentiality note -->
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-top band-inner--no-bottom">
+      <div class="note">
+        <p class="note-label caps">◆ Confidentiality note</p>
+        <p class="note-text">This was proprietary internal work at a financial institution. The original files aren't mine to share — every screen shown below is a faithful recreation, rebuilt from memory and notes, not an export from the real product.</p>
       </div>
-      <p><strong>8–10 hours wasted per week, per change management employee.</strong></p>
-      <p>At Wells Fargo, every job function had to be documented in a formal procedure, reviewed and approved before any tech change could ship. The problem: change management had no good way of knowing when an update might affect a procedure they owned — so they sat through every release call, sometimes for hours, just to catch it. Leadership asked: could AI automate this?</p>
-      <p><strong>Team:</strong> 5 developers, a PO, a Scrum master, and me, the UXer.</p>
     </div>
   </section>
 
-  <!-- Section 01: Discovery -->
-  <section class="nb-prose nb-subnav-target" id="discover">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
+  <!-- Problem -->
+  <section class="band reveal">
+    <div class="band-inner">
+      <div class="section-marker">
+        <h2>Problem</h2>
+      </div>
+      <div class="prose">
+        <p><strong>8–10 hours wasted per week, per change management employee.</strong></p>
+        <p>At Wells Fargo, every job function had to be documented in a formal procedure, reviewed and approved before any tech change could ship. The problem: change management had no good way of knowing when an update might affect a procedure they owned — so they sat through every release call, sometimes for hours, just to catch it. Leadership asked: could AI automate this?</p>
+        <p><strong>Team:</strong> 5 developers, a PO, a Scrum master, and me, the UXer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discovery -->
+  <section class="band reveal" id="discover">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[01]</span>
         <h2>Discovery</h2>
       </div>
-      <p><strong>7 stakeholder interviews</strong> — change management, the policy/regulatory team, and the teams building internal tools — to map a process nobody had ever documented end to end.</p>
-      <ul>
-        <li>→ The approval chain was more layered and regulated than we'd been briefed</li>
-        <li>→ The legacy procedures tool was on its way out, mid-migration to a new platform</li>
-        <li>→ The workflow touched Jira, SharePoint forms, email, and the legacy tool separately</li>
-      </ul>
+      <div class="prose">
+        <p><strong>7 stakeholder interviews</strong> — change management, the policy/regulatory team, and the teams building internal tools — to map a process nobody had ever documented end to end.</p>
+        <ul>
+          <li>The approval chain was more layered and regulated than we'd been briefed</li>
+          <li>The legacy procedures tool was on its way out, mid-migration to a new platform</li>
+          <li>The workflow touched Jira, SharePoint forms, email, and the legacy tool separately</li>
+        </ul>
+      </div>
 
-      <div class="nb-case-image">
+      <div class="breakout">
         <img src="assets/images/procedures-updater-flow.png" alt="Diagram of the 8-step current-state procedure update process, mapped end-to-end during discovery, from bi-sprint release calls through final publication." />
       </div>
 
-      <p>Given those constraints, automating the full process wasn't realistic — or strategic. We scoped down to what we could actually move: the monitoring &amp; alerting layer. Catch changes early, route them to the right person, give them something actionable. Everything downstream stays exactly as it was.</p>
+      <div class="prose">
+        <p>Given those constraints, automating the full process wasn't realistic — or strategic. We scoped down to what we could actually move: the monitoring &amp; alerting layer. Catch changes early, route them to the right person, give them something actionable. Everything downstream stays exactly as it was.</p>
+      </div>
 
-      <div class="nb-case-image">
+      <div class="breakout">
         <img src="assets/images/procedures-updater-mvp-scope.png" alt="MVP scoping sketch — a skateboard, scooter, bike, motorbike, and car, each a complete usable product, versus building a car one wheel at a time." />
       </div>
     </div>
   </section>
 
-  <!-- Section 02: Design -->
-  <section class="nb-prose nb-subnav-target" id="design" style="background:var(--paper-2);">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
+  <!-- Design -->
+  <section class="band reveal" id="design">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[02]</span>
         <h2>Design</h2>
       </div>
 
-      <p><strong>The Feed</strong> — a table of every procedure flagged for review: owner, category, last updated, status, and an AI confidence score, so reviewers know at a glance what needs care vs. what's routine.</p>
-      <div class="nb-case-image">
+      <div class="prose">
+        <p><strong>The Feed</strong> — a table of every procedure flagged for review: owner, category, last updated, status, and an AI confidence score, so reviewers know at a glance what needs care vs. what's routine.</p>
+      </div>
+      <div class="breakout">
         <img src="assets/images/procedures-updater-feed.png" alt="Recreation of the Procedures Updater review queue: a table of flagged procedures with owner, category, last updated date, status chip, and AI confidence score." />
       </div>
 
-      <p><strong>The Review</strong> — click in for a side-by-side diff: removals in red strikethrough, AI-recommended additions in green underline.</p>
-      <div class="nb-case-image">
+      <div class="prose">
+        <p><strong>The Review</strong> — click in for a side-by-side diff: removals in red strikethrough, AI-recommended additions in green underline.</p>
+      </div>
+      <div class="breakout">
         <img src="assets/images/procedures-updater-review.png" alt="Recreation of the Procedures Updater review view: a side-by-side diff of a procedure, with removed text in red strikethrough on the left and AI-recommended additions in green underline on the right." />
       </div>
 
-      <p><strong>Edge case #1</strong> — one code change can flag multiple procedures, or one procedure can be touched by multiple changes. Each flagged procedure got its own row on the dashboard — users care about what they need to do, not what's happening underneath.</p>
-      <div class="nb-image-placeholder">[ Image: Dashboard highlighting multiple flagged procedures from a single change ]</div>
+      <div class="prose">
+        <p><strong>Edge case #1</strong> — one code change can flag multiple procedures, or one procedure can be touched by multiple changes. Each flagged procedure got its own row on the dashboard — users care about what they need to do, not what's happening underneath.</p>
+      </div>
+      <div class="breakout" style="border:var(--border-default); background:var(--paper-2); padding:48px 24px;">
+        <span class="meta caps">Dashboard highlighting multiple flagged procedures from a single change</span>
+      </div>
 
-      <p><strong>Edge case #2</strong> — when a procedure was touched by more than one change, we added a tabbed view showing the source context behind each. Not a perfect system, but enough transparency for MVP.</p>
-      <div class="nb-image-placeholder">[ Image: Edge case — tabbed view showing source-code context for a procedure change ]</div>
+      <div class="prose">
+        <p><strong>Edge case #2</strong> — when a procedure was touched by more than one change, we added a tabbed view showing the source context behind each. Not a perfect system, but enough transparency for MVP.</p>
+      </div>
+      <div class="breakout" style="border:var(--border-default); background:var(--paper-2); padding:48px 24px;">
+        <span class="meta caps">Edge case — tabbed view showing source-code context for a procedure change</span>
+      </div>
     </div>
   </section>
 
-  <!-- Section 03: Outcome -->
-  <section class="nb-prose nb-subnav-target" id="outcome">
-    <div class="nb-prose-inner">
-      <div class="nb-section-marker">
-        <h2>Outcome + Next Steps</h2>
+  <!-- Outcome -->
+  <section class="band reveal" id="outcome">
+    <div class="band-inner">
+      <div class="section-marker">
+        <span class="section-marker-num caps">[03]</span>
+        <h2>Outcome + next steps</h2>
       </div>
-      <p>This was the first AI-assisted internal tool built in Small Business — a real feat on its own. Early feedback was positive, though I moved to another project before seeing it all the way through. If I had more time, here's where I'd take it next:</p>
-      <div class="nb-image-placeholder">[ List: future-direction ideas — placeholder, content TBD ]</div>
+      <div class="prose">
+        <p>This was the first AI-assisted internal tool built in Small Business — a real feat on its own. Early feedback was positive, though I moved to another project before seeing it all the way through. If I had more time, here's where I'd take it next:</p>
+      </div>
+      <div class="note" style="margin-top:20px;">
+        <span class="meta caps">List: future-direction ideas — placeholder, content TBD</span>
+      </div>
     </div>
   </section>
 
   <!-- Next case -->
-  <section class="nb-next-case">
-    <div class="nb-next-case-inner">
-      <div>
-        <p class="nb-next-label">Case study</p>
-        <h3 class="nb-next-title">PLANR →</h3>
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-bottom" style="padding-bottom:56px;">
+      <div class="next-case-row">
+        <div>
+          <div class="next-case-label caps">Case study</div>
+          <h3 class="next-case-title">PLANR →</h3>
+        </div>
+        <a href="project-1.html" class="btn btn--green">Read next ▸</a>
       </div>
-      <a href="project-1.html" class="nb-btn nb-btn--lemon">Read next ▸</a>
     </div>
   </section>
 
-  <footer class="nb-footer">
-    <div class="nb-footer-inner">
-      <div>
-        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
-        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Site map</p>
-        <ul>
-          <li><a href="work.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Connect</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
-          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
-          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-bottom">
-        <span>© 2026 · Ann Marie Kernen</span>
-        <span>Built with Claude Code &lt;3</span>
-      </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Ann Marie Kernen</span>
+      <span class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a>
+      </span>
     </div>
   </footer>
 
-  <button class="nb-back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
-
   <script>
     (function(){
-      var btn = document.getElementById('backToTop');
-      window.addEventListener('scroll', function(){
-        btn.classList.toggle('nb-visible', window.scrollY > 400);
-      });
-    })();
-  </script>
-
-  <script>
-    (function(){
-      var links = Array.prototype.slice.call(document.querySelectorAll('.nb-case-subnav-link'));
-      var sections = Array.prototype.slice.call(document.querySelectorAll('.nb-subnav-target'));
+      var links = Array.prototype.slice.call(document.querySelectorAll('.case-subnav a'));
+      var sections = Array.prototype.slice.call(document.querySelectorAll('.band[id]'));
       if (!links.length || !sections.length || !('IntersectionObserver' in window)) return;
 
       var linkMap = {};
-      links.forEach(function(link){
-        linkMap[link.getAttribute('href').slice(1)] = link;
-      });
+      links.forEach(function(link){ linkMap[link.dataset.section] = link; });
 
       function setActive(id){
-        links.forEach(function(link){ link.classList.remove('nb-case-subnav-link--active'); });
-        if (linkMap[id]) linkMap[id].classList.add('nb-case-subnav-link--active');
+        links.forEach(function(link){ link.classList.remove('is-active'); });
+        if (linkMap[id]) linkMap[id].classList.add('is-active');
       }
 
-      // Detection band starts just below the two sticky bars and covers
-      // the top ~30% of the remaining viewport — whichever section's top
-      // edge crosses into that band becomes "active."
       var observer = new IntersectionObserver(function(entries){
         entries.forEach(function(entry){
           if (entry.isIntersecting) setActive(entry.target.id);
         });
-      }, { rootMargin: '-116px 0px -70% 0px', threshold: 0 });
+      }, { rootMargin: '-140px 0px -70% 0px', threshold: 0 });
 
       sections.forEach(function(section){ observer.observe(section); });
     })();
   </script>
+  <script src="site.js"></script>
+
 </body>
 </html>

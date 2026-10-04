@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- @dsCard group="UI Kit — Case Study" name="UI Kit · Case Study" subtitle="Single 608px column, case nav + section nav" viewport="1280x1200" -->
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>One admin tool instead of twelve — Ann Marie Kernen</title>
+<link rel="stylesheet" href="../../styles.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body style="margin:0;background:var(--paper)">
+<div id="root"></div>
+
+<script type="text/babel" src="../portfolio/primitives.jsx"></script>
+<script type="text/babel" src="../portfolio/chrome.jsx"></script>
+<script type="text/babel" src="header.jsx"></script>
+<script type="text/babel" src="sections.jsx"></script>
+
+<script type="text/babel">
+const SECTIONS = [
+  { id:'summary', label:'Summary' },
+  { id:'problem', label:'Problem' },
+  { id:'insight', label:'Insight' },
+  { id:'before-after', label:'Before and after' },
+  { id:'process', label:'Process' },
+  { id:'reflection', label:'Reflection' },
+];
+
+function App() {
+  return (
+    <>
+      <CaseHeader sections={SECTIONS}/>
+      <CaseHero
+        id="summary"
+        tag="Case study"
+        year="2024–2025"
+        title="One admin tool instead of twelve"
+        sub="Our ops team was working across 12 dashboards and couldn't find what they needed. We replaced them with a single command palette, and time to task dropped 71%."
+        role="Lead UX and design engineering"
+        team="2 designers, 4 engineers"
+        duration="14 weeks"
+      />
+      <MetricRow items={[
+        { label:'Time to task', value:'\u221271%', color:'var(--green-deep)', note:'Average across 18 ops staff.' },
+        { label:'Dashboards', value:'12 \u2192 1', note:'Consolidated into one tool.' },
+        { label:'Support tickets', value:'\u221244%', color:'var(--blue-deep)', note:'Fewer "I can\'t find X" requests each week.' },
+        { label:'Ops team NPS', value:'+38', note:'Positive for the first time in three years.' },
+      ]}/>
+      <Prose id="problem" kicker="[01]" heading="The problem">
+        <p style={{margin:0}}>Every new feature had come with its own dashboard. By year three there were twelve. They overlapped, they used three different definitions of "user", and search only worked inside one dashboard at a time.</p>
+        <p style={{margin:0}}>I shadowed six ops people for a week. They kept a shared spreadsheet just to <em>remember which dashboard had which thing</em>. You don't find details like that in a design file.</p>
+      </Prose>
+      <QuoteBlock attrib="Ops lead, first week of research">
+        Every Monday I train new hires by sending them a tab group with twelve links. I feel like a librarian for software I didn't write.
+      </QuoteBlock>
+      <Prose id="insight" kicker="[02]" heading="The insight">
+        <p style={{margin:0}}>The team didn't need more interface. They needed less, and a faster way to reach what was already there. Half their work was the same five tasks, repeated all day. The other half was the long tail, where dashboards were still useful.</p>
+        <p style={{margin:0}}>We built a command palette for the common tasks, kept dashboards for the long tail, and added one search that covers both.</p>
+      </Prose>
+      <BeforeAfter id="before-after"/>
+      <ProcessTimeline id="process"/>
+      <Prose id="reflection" kicker="[05]" heading="What I'd do differently">
+        <p style={{margin:0}}>We shipped the palette before it handled multi-step flows well. The first version made simple tasks instant and complex ones slightly slower. We fixed that in the next release with chained commands, but next time I'd plan for it from the start.</p>
+        <p style={{margin:0}}>Keyboard users took to it right away. Mouse users needed about three weeks. I'd support both ways of working from day one.</p>
+      </Prose>
+      <NextCase/>
+      <Footer/>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

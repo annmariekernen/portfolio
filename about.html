@@ -5,61 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Ann Marie Kernen</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-  <link rel="stylesheet" href="styles-v2.css" />
+  <link rel="stylesheet" href="styles-v3.css" />
 </head>
 <body>
 
-  <nav class="nb-nav">
-    <div class="nb-nav-inner">
-      <a href="work.html" class="nb-logo"><img src="assets/images/logotry.svg" alt="Ann Marie Designs" /></a>
-      <div class="nb-nav-links">
-        <a href="work.html" class="nb-nav-link">Case Studies</a>
-        <a href="about.html" class="nb-nav-link nb-nav-link--active">About</a>
-        <a href="contact.html" class="nb-nav-cta">Contact</a>
+  <nav class="top-nav">
+    <div class="top-nav-inner">
+      <a href="work.html" class="top-nav-logo">Ann Marie Kernen</a>
+      <div class="top-nav-links">
+        <a href="work.html">Work</a>
+        <a href="about.html" class="is-active">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
 
   <!-- Bio -->
-  <section class="nb-about-section">
-    <div class="nb-section-inner">
-      <div class="nb-section-marker">
-        <h2>About Me</h2>
+  <section class="band reveal">
+    <div class="band-inner" style="padding-top:48px;">
+      <div class="section-marker">
+        <h2>About me</h2>
       </div>
-      <div class="nb-about-inner">
-        <div class="nb-headshot-wrap">
-          <img src="assets/images/headshot.png" alt="Ann Marie Kernen" class="nb-headshot" />
-        </div>
-        <div class="nb-about-bio">
-          <p>💼 My name is <strong>Ann Marie Kernen</strong>, and I'm currently a Product Designer at <strong>Freddie Mac</strong> on the myOptigo platform. Before this I was at <strong>Wells Fargo</strong> on Small Business Banking Technology, and before that a boutique design agency called <strong>Futuresight</strong>. At all three, I've mainly worked on B2B and enterprise web applications.</p>
-          <p>📍 Originally hail from the Philly area — fun fact: if you've ever seen <a href="https://en.wikipedia.org/wiki/Mare_of_Easttown" target="_blank">Mare of Easttown</a>, that was filmed in my hometown! But I moved to DC for college, fell in love with the city and been here ever since.</p>
-          <p>💬 I've been passionate about digital design ever since I was a kid who spent hours designing her Myspace profile... then Tumblr after that... <a href="https://www.codecademy.com/resources/blog/myspace-and-the-coding-legacy/" target="_blank">Apparently there's an entire generation of us.</a></p>
-          <p>💜 And if you've made it this far — thank you for checking out my portfolio!</p>
-        </div>
+      <div class="prose">
+        <p>My name is <strong>Ann Marie Kernen</strong>, and I'm currently a Product Designer at <strong>Freddie Mac</strong> on the myOptigo platform. Before this I was at <strong>Wells Fargo</strong> on Small Business Banking Technology, and before that a boutique design agency called <strong>Futuresight</strong>. At all three, I've mainly worked on B2B and enterprise web applications.</p>
+        <p>Originally hail from the Philly area — fun fact: if you've ever seen <a href="https://en.wikipedia.org/wiki/Mare_of_Easttown" target="_blank">Mare of Easttown</a>, that was filmed in my hometown! But I moved to DC for college, fell in love with the city and been here ever since.</p>
+        <p>I've been passionate about digital design ever since I was a kid who spent hours designing her Myspace profile... then Tumblr after that... <a href="https://www.codecademy.com/resources/blog/myspace-and-the-coding-legacy/" target="_blank">Apparently there's an entire generation of us.</a></p>
+        <p>And if you've made it this far — thank you for checking out my portfolio!</p>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="nb-experience">
-    <div class="nb-experience-inner">
-
-      <div>
-        <h2 class="nb-experience-heading">Experience Overview_</h2>
-        <div class="nb-resume-btns">
-          <a href="assets/resumes/Ann-Marie-Kernen-Resume-Colorful.pdf" target="_blank" class="nb-btn nb-btn--lemon">Download resume ▸</a>
-          <a href="assets/resumes/Ann-Marie-Kernen-Resume-Plain-Text.pdf" target="_blank" class="nb-btn nb-btn--ghost">Text-only version</a>
-        </div>
+  <section class="band reveal">
+    <div class="band-inner band-inner--no-top">
+      <div class="section-marker" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+        <h2>Experience overview</h2>
+      </div>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; margin-top:20px;">
+        <a href="assets/resumes/Ann-Marie-Kernen-Resume.pdf" target="_blank" class="btn btn--ink">Download resume ▸</a>
+        <button class="text-link" onclick="toggleAccordion(this)" type="button">Expand all</button>
       </div>
 
-      <div>
-        <div class="nb-accordion-controls">
-          <button class="nb-accordion-toggle" onclick="toggleAccordion(this)">Expand all ▸</button>
-        </div>
-        <div class="nb-accordion">
+      <div class="accordion">
         <details>
           <summary>Product Designer @ Freddie Mac</summary>
-          <div class="nb-accordion-body">
+          <div class="accordion-body">
             <ul>
               <li>Digital Product Designer - Oct 2025 - Present</li>
             </ul>
@@ -67,17 +57,17 @@
         </details>
         <details>
           <summary>Product Designer @ Wells Fargo</summary>
-          <div class="nb-accordion-body">
-           <ul>
-            <li>Engineering Associate (XD) - Dec 2022 - Feb 2024</li>
-            <li>Product Designer - March 2024 - Present</li>
-            <li>Working as the sole UX designer on an enterprise transformation initiative. Spearheading all aspects of user experience including product design,  ADA compliance, and stakeholder management.</li>
+          <div class="accordion-body">
+            <ul>
+              <li>Engineering Associate (XD) - Dec 2022 - Feb 2024</li>
+              <li>Product Designer - March 2024 - Present</li>
+              <li>Working as the sole UX designer on an enterprise transformation initiative. Spearheading all aspects of user experience including product design, ADA compliance, and stakeholder management.</li>
             </ul>
           </div>
         </details>
         <details>
           <summary>UI/UX Designer @ Futuresight</summary>
-          <div class="nb-accordion-body">
+          <div class="accordion-body">
             <ul>
               <li>UX Design Intern - June 2022 - Sep 2022</li>
               <li>UX Designer - Sep 2022 - Nov 2022</li>
@@ -87,144 +77,110 @@
         </details>
         <details>
           <summary>Education</summary>
-          <div class="nb-accordion-body">
-          <ul>
-            <li>BA in Sociology, George Washington University (‘19)</li>
-            <li>UX/UI Design Bootcamp Certificate, Springboard (2021-2022)</li>
-          </ul>
+          <div class="accordion-body">
+            <ul>
+              <li>BA in Sociology, George Washington University ('19)</li>
+              <li>UX/UI Design Bootcamp Certificate, Springboard (2021-2022)</li>
+            </ul>
           </div>
         </details>
         <details>
           <summary>Certificates</summary>
-          <div class="nb-accordion-body">
+          <div class="accordion-body">
             <ul>
+              <li>UX Design for Agentic AI (2026) - Maven</li>
               <li>Master UX Design for AI Applications (2025) - Human Centered AI Institute</li>
               <li>Google Cloud Digital Leader Certificate (2024) Credential ID f21ac768dcfe4f2a9ce50eb8e99aef27</li>
             </ul>
           </div>
         </details>
-        </div>
       </div>
-
     </div>
   </section>
 
-  <footer class="nb-footer">
-    <div class="nb-footer-inner">
-      <div>
-        <a href="work.html" class="nb-footer-logo"><img src="assets/images/logotry-light.svg" alt="Ann Marie Designs" /></a>
-        <p class="nb-footer-tagline">Product/UX Designer based in Washington DC with 4 years experience.</p>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Site map</p>
-        <ul>
-          <li><a href="work.html">Case Studies</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-col">
-        <p class="nb-footer-col-title">Connect</p>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a></li>
-          <li><a href="https://www.instagram.com/annmariedzns" target="_blank">Instagram ↗</a></li>
-          <li><a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a></li>
-        </ul>
-      </div>
-      <div class="nb-footer-bottom">
-        <span>© 2026 · Ann Marie Kernen</span>
-        <span>Built with Claude Code &lt;3</span>
-      </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© 2026 Ann Marie Kernen</span>
+      <span class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://www.linkedin.com/in/annmariekernen" target="_blank">LinkedIn ↗</a>
+        <a href="https://github.com/annmariekernen" target="_blank">GitHub ↗</a>
+      </span>
     </div>
   </footer>
 
   <script>
     (function () {
       const DURATION = 240;
-      const details = document.querySelectorAll('.nb-accordion details');
+      const details = document.querySelectorAll('.accordion details');
       const anims = new WeakMap();
 
       function openItem(d) {
-        const body = d.querySelector('.nb-accordion-body');
+        const body = d.querySelector('.accordion-body');
         const prev = anims.get(d);
         if (prev) prev.cancel();
 
         d.setAttribute('open', '');
-        d.classList.add('is-open');
         body.style.overflow = 'hidden';
-        body.style.borderTopWidth = '1px';
 
-        // Clear inline padding so scrollHeight reads the natural CSS value,
-        // then immediately re-apply 0 so the animation starts from 0.
         body.style.paddingTop = '';
         body.style.paddingBottom = '';
         const targetH  = body.scrollHeight;
-        const targetPT = parseFloat(getComputedStyle(body).paddingTop)    || 16;
-        const targetPB = parseFloat(getComputedStyle(body).paddingBottom) || 22;
-        body.style.paddingTop    = '0px';
+        const targetPB = parseFloat(getComputedStyle(body).paddingBottom) || 20;
         body.style.paddingBottom = '0px';
 
         const a = body.animate(
           [
-            { maxHeight: '0px',         paddingTop: '0px',         paddingBottom: '0px',         opacity: '0' },
-            { maxHeight: targetH + 'px', paddingTop: targetPT + 'px', paddingBottom: targetPB + 'px', opacity: '1' }
+            { maxHeight: '0px',          paddingBottom: '0px',         opacity: '0' },
+            { maxHeight: targetH + 'px', paddingBottom: targetPB + 'px', opacity: '1' }
           ],
           { duration: DURATION, easing: 'ease-out' }
         );
         anims.set(d, a);
         a.onfinish = () => {
-          body.style.maxHeight    = '';
-          body.style.paddingTop   = '';
+          body.style.maxHeight = '';
           body.style.paddingBottom = '';
-          body.style.opacity      = '';
+          body.style.opacity = '';
           anims.delete(d);
         };
       }
 
       function closeItem(d) {
-        const body = d.querySelector('.nb-accordion-body');
+        const body = d.querySelector('.accordion-body');
         const prev = anims.get(d);
         if (prev) prev.cancel();
 
-        d.classList.remove('is-open');
-        body.style.borderTopWidth = '0';
         body.style.overflow = 'hidden';
-
         const startH  = body.getBoundingClientRect().height;
-        const startPT = parseFloat(getComputedStyle(body).paddingTop)    || 16;
-        const startPB = parseFloat(getComputedStyle(body).paddingBottom) || 22;
+        const startPB = parseFloat(getComputedStyle(body).paddingBottom) || 20;
 
         const a = body.animate(
           [
-            { maxHeight: startH + 'px', paddingTop: startPT + 'px', paddingBottom: startPB + 'px', opacity: '1' },
-            { maxHeight: '0px',         paddingTop: '0px',          paddingBottom: '0px',          opacity: '0' }
+            { maxHeight: startH + 'px', paddingBottom: startPB + 'px', opacity: '1' },
+            { maxHeight: '0px',         paddingBottom: '0px',          opacity: '0' }
           ],
           { duration: DURATION, easing: 'ease-in' }
         );
         anims.set(d, a);
         a.onfinish = () => {
-          body.style.maxHeight     = '0';
-          body.style.paddingTop    = '0';
+          body.style.maxHeight = '0';
           body.style.paddingBottom = '0';
-          body.style.opacity       = '0';
+          body.style.opacity = '0';
           d.removeAttribute('open');
           anims.delete(d);
         };
       }
 
       details.forEach(d => {
-        const body = d.querySelector('.nb-accordion-body');
+        const body = d.querySelector('.accordion-body');
         body.style.overflow = 'hidden';
-        if (d.open) {
-          d.classList.add('is-open');
-        } else {
-          body.style.maxHeight     = '0';
-          body.style.paddingTop    = '0';
+        if (!d.open) {
+          body.style.maxHeight = '0';
           body.style.paddingBottom = '0';
-          body.style.opacity       = '0';
-          body.style.borderTopWidth = '0';
+          body.style.opacity = '0';
         }
-
         d.querySelector('summary').addEventListener('click', e => {
           e.preventDefault();
           d.open ? closeItem(d) : openItem(d);
@@ -234,9 +190,11 @@
       window.toggleAccordion = function (btn) {
         const isExpanded = btn.textContent.startsWith('Collapse');
         details.forEach(d => isExpanded ? closeItem(d) : openItem(d));
-        btn.textContent = isExpanded ? 'Expand all ▸' : 'Collapse all ▸';
+        btn.textContent = isExpanded ? 'Expand all' : 'Collapse all';
       };
     })();
   </script>
+  <script src="site.js"></script>
+
 </body>
 </html>

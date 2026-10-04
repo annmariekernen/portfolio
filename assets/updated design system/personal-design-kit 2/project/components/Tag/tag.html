@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<!-- @dsCard group="Components" name="Tag" subtitle="Pill chips · the one exception to zero radius" viewport="700x160" -->
+<html lang="en"><head><meta charset="UTF-8"/><link rel="stylesheet" href="../../styles.css"/>
+<style>html,body{margin:0;background:var(--paper);width:700px;overflow:hidden}#root{padding:24px;box-sizing:border-box;width:700px}</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head><body><div id="root"></div>
+<script>
+const { Tag } = window.PersonalDesignKit_019deb;
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement('div', {style:{display:'flex',gap:10,flexWrap:'wrap',alignItems:'center'}},
+    ['default','blue','green','bluePale','greenPale','mist','rust','ink'].map(v =>
+      React.createElement(Tag, {key:v, variant:v}, v === 'default' ? 'Case study' : v)),
+    React.createElement(Tag, {variant:'green', dot:true}, 'Shipped')
+  ));
+</script>
+</body></html>
