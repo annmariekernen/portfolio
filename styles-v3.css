@@ -70,7 +70,7 @@
   --font-body:    'Archivo', system-ui, -apple-system, sans-serif;
   --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
-  --wdth-display: 82;
+  --wdth-display: 100;
   --wdth-body:    100;
 
   --caps-variant:  all-small-caps;
@@ -289,7 +289,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 /* Plain clickable text — no button chrome, for lightweight in-page toggles. */
 .text-link {
   background: none; border: none; padding: 0; cursor: pointer;
-  font-family: var(--font-body); font-weight: 600; font-size: var(--fs-base);
+  font-family: var(--font-body); font-weight: 400; font-size: var(--fs-base);
   color: var(--fg-2); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px;
 }
 .text-link:hover { color: var(--blue-deep); text-decoration-thickness: 2px; }
@@ -388,7 +388,6 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 .case-header-nav a { font-size: 14px; font-weight: 600; text-decoration: none; color: var(--fg-2); white-space: nowrap; }
 .case-header-nav a:hover { color: var(--blue-deep); }
 .case-position { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--fg-3); white-space: nowrap; }
-.case-position-dot { width: 7px; height: 7px; border-radius: var(--radius-full); background: var(--green-deep); display: inline-block; }
 
 .case-subnav { display: flex; gap: 4px; overflow-x: auto; padding: 6px 0 10px; }
 .case-subnav a {
