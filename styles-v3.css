@@ -300,7 +300,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 
 /* Numbered section heading over a structural rule. */
 .section-marker {
-  display: flex; align-items: baseline; gap: var(--space-5);
+  display: flex; align-items: center; gap: var(--space-5);
   padding-bottom: 12px; border-bottom: var(--border-default);
   margin-bottom: var(--space-6); flex-wrap: wrap;
 }
