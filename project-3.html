@@ -75,7 +75,7 @@
         </div>
         <div>
           <div class="metric-label">Format</div>
-          <div class="metric-value metric-value--ink">YAML</div>
+          <div class="metric-value metric-value--ink">Markdown</div>
           <div class="metric-note">human-readable, AI-queryable, maintainable</div>
         </div>
       </div>
@@ -89,8 +89,8 @@
         <h2>Problem</h2>
       </div>
       <div class="prose">
-        <p>When I joined Freddie Mac in late 2025, the team had a personas library. Technically.</p>
-        <p>In practice, it was a set of static graphic sheets created by a third-party consulting firm in 2020. Five years old, incomplete, and largely untouched. The kind of thing a new hire might scan on their first week, then never open again. Traditional personas in the classic sense: stock photo, name, age, job title, a little fictional vignette. Carly, 36, Underwriting Analyst. That sort of thing.</p>
+        <p>When I joined Freddie Mac in late 2025, the team technically had a personas library.</p>
+        <p>In practice, it was a set of static graphic sheets created by a third-party consulting firm in 2020 — five years old, incomplete, and largely untouched. The kind of thing a new hire might scan on their first week, then never open again. Traditional personas in the classic sense: a stock photo, a name, an age, a job title, and a short fictional vignette — for example, Carly, 36, Underwriting Analyst.</p>
         <p>The myOptigo platform serves Freddie Mac Multifamily and has more than 30 distinct user types. 30 personas is a lot to keep current, consistent, and actually used.</p>
         <p>When the team set their 2026 goals, updating the personas library was near the top of the list. The question was: update them into what?</p>
         <p><strong>The real problem wasn't that the personas were old. It was that the format itself made them almost impossible to actually use.</strong></p>
@@ -107,10 +107,10 @@
       <div class="prose">
         <p>A refreshed set of static sheets would have the same problem in another five years.</p>
         <p>I came to my manager with a different thesis: what if the personas weren't a designed artifact at all, but a structured data library — readable by a human, queryable by an AI, and maintainable over time without starting from scratch every few years?</p>
-        <p>The format I proposed was YAML. Plain text, structured enough for an AI to parse, simple enough for a designer to update. Each persona would live as its own README-style file following a standardized schema. Feed those files into a Copilot Notebook, and anyone on the team — designers, POs, developers, even business stakeholders — could query the library in plain language. "What are the main pain points for an Underwriting Analyst?" Done.</p>
+        <p>The format I proposed was Markdown with YAML frontmatter — plain text, structured enough for an AI to parse, simple enough for a designer to update. Each persona lives as its own file, with metadata like name, where they sit in the org, and last-updated date captured up top, all in a Bitbucket codebase so it's portable into any project. Feed those files into a Copilot Notebook, and anyone on the team — designers, POs, developers, even business stakeholders — can query the library in plain language, for example asking what the main pain points are for an Underwriting Analyst.</p>
         <p>My manager liked it. The design system manager liked it. They asked me to present it to the broader team.</p>
       </div>
-      <!-- YAML schema example — structured persona file -->
+      <!-- Markdown persona file example — YAML frontmatter + structured content -->
       <div class="placeholder-square"></div>
     </div>
   </section>
@@ -129,7 +129,7 @@
       <div class="placeholder-square"></div>
       <div class="prose" style="margin-top:24px;">
         <p>For the research itself, I used Microsoft Teams Copilot, which has access to internal documentation available across the organization. I used a consistent prompt for every persona — same structure, same questions — asking Copilot to generate a research report covering core responsibilities, pain points, goals, and role context. The persona list itself came from my manager through her own stakeholder conversations.</p>
-        <p>The Copilot reports were dense. The YAML files are not. That compression was intentional — the schema keeps only what someone would actually need when making a design or product decision.</p>
+        <p>The Copilot reports were dense. The persona files are not. That compression was intentional — the schema keeps only what someone would actually need when making a design or product decision.</p>
       </div>
     </div>
   </section>
@@ -141,8 +141,8 @@
         <h2>Build — the library in beta</h2>
       </div>
       <div class="prose">
-        <p>The library currently covers roughly half of the 30+ personas in the myOptigo ecosystem. Each lives as a structured YAML file, and together they're loaded into a Copilot Notebook that any team member can query today.</p>
-        <p>It's in beta. It works. People can use it.</p>
+        <p>The library currently covers roughly half of the 30+ personas in the myOptigo ecosystem. Each lives as a structured Markdown file in our Bitbucket codebase, and together they're loaded into a Copilot Notebook so any team member — in or out of an IDE — can query them today.</p>
+        <p>It's in beta, and it's already in use.</p>
         <p>The next phase is validation — user interviews with people from each represented role to verify that what Copilot surfaced actually reflects their day-to-day reality. The schemas will be updated based on what we learn.</p>
       </div>
     </div>

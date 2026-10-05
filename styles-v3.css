@@ -216,7 +216,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 /* Plain square placeholder — stands in for an image that isn't built yet.
    What it's meant to become lives in an HTML comment right above it in
    the markup, not rendered, so it's visible in source but not to visitors. */
-.placeholder-square { width: 100%; max-width: 320px; aspect-ratio: 1 / 1; border: var(--border-default); background: var(--paper-2); margin: 24px auto; }
+.placeholder-square { width: 100%; aspect-ratio: 1 / 1; border: var(--border-default); background: var(--paper-2); margin: 24px auto; }
 
 /* For sections that are predominantly image-paired (split rows, galleries),
    the whole section runs at breakout width rather than nesting .breakout
