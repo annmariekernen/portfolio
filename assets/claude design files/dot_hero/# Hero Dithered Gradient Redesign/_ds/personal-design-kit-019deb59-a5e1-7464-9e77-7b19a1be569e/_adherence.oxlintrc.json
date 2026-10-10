@@ -1,0 +1,315 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/Button/**",
+              "components/Card/**",
+              "components/MetaLine/**",
+              "components/SectionMarker/**",
+              "components/Tag/**",
+              "ui_kits/case_study/**",
+              "ui_kits/portfolio/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Archivo|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Archivo, JetBrains Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|as|href|disabled|onInk|onClick|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, as, href, disabled, onInk, onClick."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|secondary|ghost|ink)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'secondary' | 'ghost' | 'ink'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:button|a)$/]",
+        "message": "<Button> as must be one of 'button' | 'a'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|fill|ghost|hero|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: children, fill, ghost, hero, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='fill'] > Literal[value!=/^(?:bone|paper|quiet|bluePale|greenPale|ink)$/]",
+        "message": "<Card> fill must be one of 'bone' | 'paper' | 'quiet' | 'bluePale' | 'greenPale' | 'ink'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute[name.name='ghost'] > Literal[value!=/^(?:paper|alt|bright|none)$/]",
+        "message": "<Card> ghost must be one of 'paper' | 'alt' | 'bright' | 'none'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MetaLine'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|key|ref|className|style|children)$/]",
+        "message": "<MetaLine> doesn't accept that prop. Declared props: children, tone."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='MetaLine'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:muted|ink|inverse)$/]",
+        "message": "<MetaLine> tone must be one of 'muted' | 'ink' | 'inverse'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionMarker'] > JSXAttribute > JSXIdentifier[name!=/^(?:num|children|key|ref|className|style|children)$/]",
+        "message": "<SectionMarker> doesn't accept that prop. Declared props: num, children."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|dot|key|ref|className|style|children)$/]",
+        "message": "<Tag> doesn't accept that prop. Declared props: children, variant, dot."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tag'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:default|blue|green|bluePale|greenPale|mist|rust|ink)$/]",
+        "message": "<Tag> variant must be one of 'default' | 'blue' | 'green' | 'bluePale' | 'greenPale' | 'mist' | 'rust' | 'ink'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "MetaLine": {
+        "replaces": []
+      },
+      "SectionMarker": {
+        "replaces": []
+      },
+      "Tag": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--action",
+      "--action-fg",
+      "--action-hover",
+      "--bg",
+      "--bg-alt",
+      "--bg-bright",
+      "--bg-inverse",
+      "--blue",
+      "--blue-deep",
+      "--blue-deeper",
+      "--blue-pale",
+      "--bone",
+      "--border-color",
+      "--border-default",
+      "--border-divider",
+      "--border-hairline",
+      "--border-quiet",
+      "--caps-features",
+      "--caps-variant",
+      "--dur-base",
+      "--dur-fast",
+      "--ease-snap",
+      "--fg-1",
+      "--fg-2",
+      "--fg-3",
+      "--fg-inverse",
+      "--focus",
+      "--font-body",
+      "--font-display",
+      "--font-mono",
+      "--fs-2xl",
+      "--fs-3xl",
+      "--fs-4xl",
+      "--fs-base",
+      "--fs-h1",
+      "--fs-h2",
+      "--fs-h3",
+      "--fs-h4",
+      "--fs-lg",
+      "--fs-md",
+      "--fs-mono-sm",
+      "--fs-mono-xs",
+      "--fs-sm",
+      "--fs-xl",
+      "--fs-xs",
+      "--ghost",
+      "--ghost-alt",
+      "--ghost-bright",
+      "--ghost-none",
+      "--green",
+      "--green-deep",
+      "--green-deeper",
+      "--green-pale",
+      "--info",
+      "--ink",
+      "--ink-faint",
+      "--ink-soft",
+      "--lh-loose",
+      "--lh-normal",
+      "--lh-snug",
+      "--lh-tight",
+      "--link",
+      "--link-hover",
+      "--ls-allcaps",
+      "--ls-caps",
+      "--ls-normal",
+      "--ls-tight",
+      "--ls-wide",
+      "--mist",
+      "--mist-pale",
+      "--paper",
+      "--paper-2",
+      "--radius-0",
+      "--radius-full",
+      "--radius-sm",
+      "--rule",
+      "--rust",
+      "--space-0",
+      "--space-1",
+      "--space-10",
+      "--space-11",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--success",
+      "--warning",
+      "--wdth-body",
+      "--wdth-display"
+    ],
+    "tokenKinds": {
+      "--ink": "color",
+      "--ink-soft": "color",
+      "--ink-faint": "color",
+      "--rule": "color",
+      "--paper": "color",
+      "--paper-2": "color",
+      "--bone": "color",
+      "--blue": "color",
+      "--blue-deep": "color",
+      "--blue-deeper": "color",
+      "--blue-pale": "color",
+      "--green": "color",
+      "--green-deep": "color",
+      "--green-deeper": "color",
+      "--green-pale": "color",
+      "--mist": "color",
+      "--mist-pale": "color",
+      "--rust": "color",
+      "--bg": "color",
+      "--bg-alt": "color",
+      "--bg-bright": "color",
+      "--bg-inverse": "color",
+      "--fg-1": "color",
+      "--fg-2": "color",
+      "--fg-3": "color",
+      "--fg-inverse": "color",
+      "--border-color": "color",
+      "--border-quiet": "color",
+      "--action": "color",
+      "--action-hover": "color",
+      "--action-fg": "color",
+      "--link": "color",
+      "--link-hover": "color",
+      "--focus": "color",
+      "--success": "color",
+      "--warning": "color",
+      "--info": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--wdth-display": "font",
+      "--wdth-body": "font",
+      "--caps-variant": "font",
+      "--caps-features": "font",
+      "--ls-caps": "font",
+      "--fs-mono-xs": "spacing",
+      "--fs-mono-sm": "spacing",
+      "--fs-xs": "spacing",
+      "--fs-sm": "spacing",
+      "--fs-base": "spacing",
+      "--fs-md": "spacing",
+      "--fs-lg": "spacing",
+      "--fs-xl": "spacing",
+      "--fs-2xl": "spacing",
+      "--fs-3xl": "spacing",
+      "--fs-4xl": "spacing",
+      "--fs-h1": "spacing",
+      "--fs-h2": "spacing",
+      "--fs-h3": "spacing",
+      "--fs-h4": "spacing",
+      "--lh-tight": "font",
+      "--lh-snug": "font",
+      "--lh-normal": "font",
+      "--lh-loose": "font",
+      "--ls-tight": "spacing",
+      "--ls-normal": "font",
+      "--ls-wide": "spacing",
+      "--ls-allcaps": "spacing",
+      "--space-0": "spacing",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--space-11": "spacing",
+      "--border-hairline": "color",
+      "--border-default": "color",
+      "--border-divider": "color",
+      "--ghost": "color",
+      "--ghost-alt": "color",
+      "--ghost-bright": "color",
+      "--ghost-none": "shadow",
+      "--radius-0": "radius",
+      "--radius-sm": "radius",
+      "--radius-full": "radius",
+      "--ease-snap": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other"
+    },
+    "fontFamilies": [
+      "Archivo",
+      "JetBrains Mono"
+    ]
+  }
+}

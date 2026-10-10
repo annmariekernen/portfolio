@@ -19,7 +19,8 @@
         </div>
       </div>
       <nav class="case-subnav">
-        <a href="#problem-idea" class="is-active" data-section="problem-idea">Problem &amp; idea</a>
+        <a href="#overview" class="is-active" data-section="overview">Overview</a>
+        <a href="#idea" data-section="idea">Idea</a>
         <a href="#schema-structure" data-section="schema-structure">Schema &amp; structure</a>
         <a href="#research" data-section="research">Research</a>
         <a href="#status-next" data-section="status-next">Now &amp; next</a>
@@ -27,10 +28,10 @@
     </div>
   </header>
 
-  <!-- Hero + Problem + Idea -->
-  <section class="band reveal" id="problem-idea">
+  <!-- Overview: hero + problem -->
+  <section class="band reveal" id="overview">
     <div class="band-inner band-inner--breakout band-inner--tight">
-      <div class="hero-split" style="grid-template-columns: 0.85fr 1.15fr;">
+      <div class="hero-split hero-split--media-lead">
         <div>
           <h1 class="case-hero-title">Personas Context Library</h1>
           <div class="case-tags">
@@ -47,37 +48,32 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Problem -->
-  <section class="band reveal">
-    <div class="band-inner">
+    <div class="band-inner band-inner--breakout band-inner--no-top">
       <div class="section-marker">
         <h2>Problem</h2>
       </div>
+      <div class="highlight-block">
+        <p><strong>How can we make our personas AI-native?</strong></p>
+      </div>
       <div class="prose">
-        <p>Our team's personas were static image files made by a consultant in 2020, and nobody had touched them in five years. Each one had a stock photo, a name, a job title and a short story.</p>
-        <p>Our team now designs with AI, and these files couldn't be used there. AI doesn't know who our users are unless we tell it.</p>
+        <p>Our platform has a lot of different user types, each with a very specific job, like an underwriter, a producer or a surveillance manager. We call these our personas.</p>
+        <p>The documentation describing these personas sat in a SharePoint folder that nobody used, and hadn't been updated in over 5 years.</p>
+        <p>One of our goals this year was to turn those personas into something our team could actually use with AI.</p>
       </div>
     </div>
   </section>
 
   <!-- Idea -->
-  <section class="band reveal">
-    <div class="band-inner band-inner--no-top">
+  <section class="band reveal" id="idea">
+    <div class="band-inner band-inner--breakout band-inner--no-top">
       <div class="section-marker">
         <h2>The idea: personas as context</h2>
       </div>
+
       <div class="prose">
-        <p>I was asked to update the personas. I suggested we treat them as context instead, which meant two jobs: refresh the content and rebuild the format.</p>
-        <p>Each persona is now a Markdown file in a Bitbucket repo, as part of our team's context library. The files are also added to an internal SharePoint to supplement the Knowledge Graph, and linked to a Copilot Notebook so people who aren't set up in an IDE can query them.</p>
-        <p>Because the files are plain text, anyone can edit them. Version control means they won't go stale again.</p>
-      </div>
-
-      </div>
-
-      <!-- Fig. 1 — before/after persona comparison (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+          <p>While working on updating these personas, I realized the format was the bigger issue. A stock photo and a short story don't help AI design for an underwriter.</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="46" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="47" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="48" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="49" style="padding: 48px; display: grid; grid-template-columns: minmax(0px, 1fr) 48px minmax(0px, 1.25fr); gap: 16px; align-items: center; background: var(--paper);"><div data-dc-tpl="50" style="display: flex; flex-direction: column; gap: 10px;"><div data-dc-tpl="51" class="meta" style="font-size: 14px; color: var(--ink-faint);">Before · persona sheet, 2020</div><div data-dc-tpl="52" style="background: var(--bone); border: 1px solid var(--rule); padding: 24px; display: flex; flex-direction: column; gap: 16px; transform: rotate(-1.2deg);"><div data-dc-tpl="53" style="display: flex; gap: 16px; align-items: center;"><div data-dc-tpl="54" style="width: 84px; height: 84px; border-radius: 9999px; background: var(--mist-pale); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink-faint); text-align: center; line-height: 1.2;">stock<br data-dc-tpl="55">photo</div><div data-dc-tpl="56" style="display: flex; flex-direction: column; gap: 6px;"><div data-dc-tpl="57" style="width: 120px; height: 18px; background: var(--rule);"></div><div data-dc-tpl="58" style="font-size: 15px; color: var(--ink-soft);">Underwriting analyst</div></div></div><div data-dc-tpl="59" style="font-family: var(--font-display); font-variation-settings: &quot;wdth&quot; 82; font-weight: 600; font-size: 18px; line-height: 1.3; color: var(--ink-soft);">“I just want to get through my queue by Friday.”</div><div data-dc-tpl="60" style="display: flex; flex-direction: column; gap: 7px;"><div data-dc-tpl="61" style="height: 8px; background: var(--rule); width: 100%;"></div><div data-dc-tpl="62" style="height: 8px; background: var(--rule); width: 94%;"></div><div data-dc-tpl="63" style="height: 8px; background: var(--rule); width: 97%;"></div><div data-dc-tpl="64" style="height: 8px; background: var(--rule); width: 62%;"></div></div><div data-dc-tpl="65" style="display: flex; gap: 8px; flex-wrap: wrap;"><div class="sc-host-x" data-dc-tpl="66" style="display: contents;"><span style="display: inline-flex; align-items: center; gap: var(--space-3); font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body); font-size: var(--fs-xs); font-weight: 600; font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features); letter-spacing: var(--ls-caps); text-transform: none; padding: 3px 10px; border-radius: var(--radius-full); background: var(--paper-2); color: var(--fg-1);">persona_04.png</span></div><div class="sc-host-x" data-dc-tpl="67" style="display: contents;"><span style="display: inline-flex; align-items: center; gap: var(--space-3); font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body); font-size: var(--fs-xs); font-weight: 600; font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features); letter-spacing: var(--ls-caps); text-transform: none; padding: 3px 10px; border-radius: var(--radius-full); background: var(--mist-pale); color: var(--fg-1);">Last edited 2020</span></div></div></div></div><div data-dc-tpl="68" style="font-family: var(--font-display); font-variation-settings: &quot;wdth&quot; 82; font-weight: 700; font-size: 40px; color: var(--blue-deep); text-align: center;">→</div><div data-dc-tpl="69" style="display: flex; flex-direction: column; gap: 10px;"><div data-dc-tpl="70" class="meta" style="font-size: 14px; color: var(--green-deep);">After · Markdown file, 2026</div><div data-dc-tpl="71" style="background: var(--bone); border: 1px solid var(--rule); box-shadow: var(--ghost);"><div data-dc-tpl="72" style="display: flex; justify-content: space-between; align-items: center; padding: 8px 14px; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft);"><span data-dc-tpl="73">underwriting/credit/underwriting-analyst.md</span><span data-dc-tpl="74" style="color: var(--green-deep);">● main</span></div><pre data-dc-tpl="75" style="margin: 0px; padding: 14px 16px; font-family: var(--font-mono); font-size: 12.5px; line-height: 20px; color: var(--ink); white-space: pre-wrap;"><span data-dc-tpl="76" style="color: var(--ink-faint);">---
 </span><span data-dc-tpl="77" style="color: var(--blue-deep);">role:</span> Underwriting analyst
@@ -96,10 +92,10 @@
 </span><span data-dc-tpl="85" style="color: var(--green-deep); font-weight: 700;">## Vocabulary</span>
 DSCR, LTV, rent roll, T-12, conditions</pre></div></div></div></div></div></figure></template>
         </div>
-      </div>
 
-      <!-- Fig. 2 — annotated persona file (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+      <div class="prose">
+          <p>So I turned our user types into a <strong>context library</strong> instead: one Markdown file per persona, stored in a code repo. This way they're both human- and AI-readable, anyone can edit them, and version control is built in.</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="102" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="103" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="104" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="105" style="padding: 48px; display: grid; grid-template-columns: minmax(0px, 1.35fr) minmax(0px, 1fr); gap: 40px; align-items: start;"><div data-dc-tpl="106" style="background: var(--bone); border: 1px solid var(--rule); box-shadow: var(--ghost);"><div data-dc-tpl="107" style="padding: 8px 14px; border-bottom: 1px solid var(--rule); font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft);">underwriting-analyst.md</div><div data-dc-tpl="108" style="display: grid; grid-template-columns: 34px minmax(0px, 1fr) 28px; font-family: var(--font-mono); font-size: 12.5px; line-height: 20px; padding: 12px 0px;"><pre data-dc-tpl="109" style="margin: 0px; text-align: right; padding-right: 10px; color: var(--ink-faint); border-right: 1px solid var(--rule);">1
 2
@@ -159,23 +155,20 @@ and decides what moves on to approval.
 <span data-dc-tpl="125" style="color: var(--green-deep); font-weight: 700;">## Vocabulary</span>
 DSCR, LTV, rent roll, T-12, conditions</pre><div data-dc-tpl="126" style="position: relative; color: var(--bone); font-weight: 700; font-size: 11px;"><span data-dc-tpl="127" style="position: absolute; left: 4px; top: 3px; height: 14px; line-height: 14px; background: var(--blue-deep); padding: 0px 5px;">1</span><span data-dc-tpl="128" style="position: absolute; left: 4px; top: 183px; height: 14px; line-height: 14px; background: var(--green-deep); padding: 0px 5px;">2</span><span data-dc-tpl="129" style="position: absolute; left: 4px; top: 263px; height: 14px; line-height: 14px; background: var(--green-deep); padding: 0px 5px;">3</span><span data-dc-tpl="130" style="position: absolute; left: 4px; top: 423px; height: 14px; line-height: 14px; background: var(--green-deep); padding: 0px 5px;">4</span><span data-dc-tpl="131" style="position: absolute; left: 4px; top: 483px; height: 14px; line-height: 14px; background: var(--green-deep); padding: 0px 5px;">5</span><span data-dc-tpl="132" style="position: absolute; left: 4px; top: 543px; height: 14px; line-height: 14px; background: var(--green-deep); padding: 0px 5px;">6</span></div></div></div><div data-dc-tpl="133" style="display: flex; flex-direction: column;"><div data-dc-tpl="134" style="padding: 0px 0px 16px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="135" class="meta" style="font-size: 14px; color: var(--blue-deep); font-weight: 700;">1 · Frontmatter</div><div data-dc-tpl="136" style="font-size: 15px; line-height: 1.5; margin-top: 4px;">Structured fields a tool can filter on: block, division, status and the date it was last checked against real people.</div></div><div data-dc-tpl="137" style="padding: 16px 0px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="138" class="meta" style="font-size: 14px; color: var(--green-deep); font-weight: 700;">2 · Summary</div><div data-dc-tpl="139" style="font-size: 15px; line-height: 1.5; margin-top: 4px;">Two sentences on what the role does. No name, no photo.</div></div><div data-dc-tpl="140" style="padding: 16px 0px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="141" class="meta" style="font-size: 14px; color: var(--green-deep); font-weight: 700;">3 · Goals and daily work</div><div data-dc-tpl="142" style="font-size: 15px; line-height: 1.5; margin-top: 4px;">What they are trying to get done and what a normal day looks like.</div></div><div data-dc-tpl="143" style="padding: 16px 0px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="144" class="meta" style="font-size: 14px; color: var(--green-deep); font-weight: 700;">4 · Tools</div><div data-dc-tpl="145" style="font-size: 15px; line-height: 1.5; margin-top: 4px;">Everything open on their screen, including the spreadsheets.</div></div><div data-dc-tpl="146" style="padding: 16px 0px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="147" class="meta" style="font-size: 14px; color: var(--green-deep); font-weight: 700;">5 · Pain points</div><div data-dc-tpl="148" style="font-size: 15px; line-height: 1.5; margin-top: 4px;">Where the current workflow slows them down.</div></div><div data-dc-tpl="149" style="padding: 16px 0px 0px;"><div data-dc-tpl="150" class="meta" style="font-size: 14px; color: var(--green-deep); font-weight: 700;">6 · Vocabulary</div><div data-dc-tpl="151" style="font-size: 15px; line-height: 1.5; margin-top: 4px;">The terms they use, so prototypes use them too.</div></div></div></div></div></div></figure></template>
         </div>
-      </div>
+    </div>
   </section>
 
   <!-- Schema -->
   <section class="band reveal" id="schema-structure">
-    <div class="band-inner">
+    <div class="band-inner band-inner--breakout">
       <div class="section-marker">
         <h2>Designing the schema with the team</h2>
       </div>
+
       <div class="prose">
-        <p>I ran a FigJam session with the team around one question: what information would help you in a persona?</p>
-      </div>
-
-      </div>
-
-      <!-- Fig. 3 — FigJam stickies to schema fields (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+          <p>Our platform has over 30 user types, which is a lot of personas to keep current. I figured every persona should follow the same schema so they're easier to maintain, easier to read by AI, and the library can scale.</p>
+          <p>To design the schema, I ran a FigJam session with the team around one question: what information would help you in a persona?</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="162" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="163" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="164" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="165" style="padding: 48px; display: flex; flex-direction: column; gap: 0px;"><div data-dc-tpl="166" style="display: grid; grid-template-columns: 240px 64px minmax(0px, 1fr); gap: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="167" class="meta" style="font-size: 14px; color: var(--ink-faint);">FigJam sticky</div><div data-dc-tpl="168"></div><div data-dc-tpl="169" class="meta" style="font-size: 14px; color: var(--ink-faint);">Schema field</div></div><div data-dc-tpl="170" style="display: grid; grid-template-columns: 240px 64px minmax(0px, 1fr); gap: 16px; align-items: center; padding: 24px 0px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="171" style="background: var(--blue-pale); padding: 18px; height: 120px; font-size: 16px; line-height: 1.35; transform: rotate(-1.5deg); display: flex; align-items: flex-end;">What tools do they use every day?</div><div data-dc-tpl="172" style="font-size: 28px; color: var(--blue-deep); text-align: center;">→</div><div data-dc-tpl="173" style="display: flex; flex-direction: column; gap: 8px;"><pre data-dc-tpl="174" style="margin: 0px; background: var(--bone); border: 1px solid var(--rule); padding: 12px 14px; font-family: var(--font-mono); font-size: 13px; line-height: 20px;"><span data-dc-tpl="175" style="color: var(--green-deep); font-weight: 700;">## Tools</span>
 - myOptigo, Excel, internal credit model</pre></div></div><div data-dc-tpl="176" style="display: grid; grid-template-columns: 240px 64px minmax(0px, 1fr); gap: 16px; align-items: center; padding: 24px 0px; border-bottom: 1px solid var(--rule);"><div data-dc-tpl="177" style="background: var(--green-pale); padding: 18px; height: 120px; font-size: 16px; line-height: 1.35; transform: rotate(1deg); display: flex; align-items: flex-end;">What words do they use that we don't?</div><div data-dc-tpl="178" style="font-size: 28px; color: var(--blue-deep); text-align: center;">→</div><div data-dc-tpl="179" style="display: flex; flex-direction: column; gap: 8px;"><pre data-dc-tpl="180" style="margin: 0px; background: var(--bone); border: 1px solid var(--rule); padding: 12px 14px; font-family: var(--font-mono); font-size: 13px; line-height: 20px;"><span data-dc-tpl="181" style="color: var(--green-deep); font-weight: 700;">## Vocabulary</span>
@@ -183,96 +176,87 @@ DSCR, LTV, rent roll, T-12, conditions</pre><div data-dc-tpl="182" style="displa
 <span data-dc-tpl="191" style="color: var(--blue-deep);">last_validated:</span> 2026-08-21</pre></div></div><div data-dc-tpl="192" style="display: grid; grid-template-columns: 240px 64px minmax(0px, 1fr); gap: 16px; align-items: center; padding: 24px 0px 0px;"><div data-dc-tpl="193" style="background: var(--paper-2); border: 1px solid var(--rule); padding: 18px; height: 120px; font-size: 16px; line-height: 1.35; color: var(--ink-soft); transform: rotate(1.2deg); display: flex; align-items: flex-end;">Give each persona a name and a photo</div><div data-dc-tpl="194" style="font-size: 28px; color: var(--ink-faint); text-align: center;">×</div><div data-dc-tpl="195" style="display: flex; flex-direction: column; gap: 8px;"><pre data-dc-tpl="196" style="margin: 0px; background: var(--paper-2); padding: 12px 14px; font-family: var(--font-mono); font-size: 13px; line-height: 20px; color: var(--ink-faint); text-decoration: line-through;">name: "Ursula"
 photo: stock_04.jpg</pre><div data-dc-tpl="197" style="display: flex; gap: 8px; align-items: center;"><div class="sc-host-x" data-dc-tpl="198" style="display: contents;"><span style="display: inline-flex; align-items: center; gap: var(--space-3); font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body); font-size: var(--fs-xs); font-weight: 600; font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features); letter-spacing: var(--ls-caps); text-transform: none; padding: 3px 10px; border-radius: var(--radius-full); background: var(--ink); color: var(--paper);">Cut</span></div><span data-dc-tpl="199" style="font-size: 13px; color: var(--ink-soft);">Adds tokens, tells the AI nothing about the work</span></div></div></div></div></div></div></figure></template>
         </div>
-      </div>
+    </div>
   </section>
 
   <!-- Structure -->
   <section class="band reveal">
-    <div class="band-inner band-inner--no-top">
+    <div class="band-inner band-inner--breakout band-inner--no-top">
       <div class="section-marker">
         <h2>How it's organized</h2>
       </div>
+
       <div class="prose">
-        <p>myOptigo is built around 4 business blocks: Production &amp; Sales, Underwriting, Capital Markets, and Operations. The library follows the same structure, with one folder per block, and some blocks split further by division. Each persona is one Markdown file.</p>
-      </div>
-
-      </div>
-
-      <!-- Fig. 4 — repo file tree with status (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+          <p>myOptigo is built around 4 business blocks: Production &amp; Sales, Underwriting, Capital Markets, and Operations. The library follows the same structure, with one folder per block, and some blocks split further by division. Each persona is one Markdown file with the same standard schema.</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="208" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="209" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="210" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="211" style="padding: 48px; display: grid; grid-template-columns: minmax(0px, 1.2fr) minmax(0px, 1fr); gap: 40px; align-items: start;"><div data-dc-tpl="212" style="background: var(--bone); border: 1px solid var(--rule); box-shadow: var(--ghost);"><div data-dc-tpl="213" style="display: flex; justify-content: space-between; padding: 8px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="214" class="meta" style="font-size: 13px; color: var(--ink-soft); font-weight: 700;">Explorer</span><span data-dc-tpl="215" style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-faint);">context-library</span></div><pre data-dc-tpl="216" style="margin: 0px; padding: 14px 16px; font-family: var(--font-mono); font-size: 13px; line-height: 22px; color: var(--ink);"><span data-dc-tpl="217" style="color: var(--ink-faint);">▾</span> personas/
     README.md
     _schema.md
   <span data-dc-tpl="218" style="color: var(--ink-faint);">▾</span> production-and-sales/
-      <span data-dc-tpl="219" style="color: var(--green);">●</span> loan-originator.md
-      <span data-dc-tpl="220" style="color: var(--green);">●</span> relationship-manager.md
-      <span data-dc-tpl="221" style="color: var(--blue);">◐</span> sales-associate.md
+      <span data-dc-tpl="219" style="color: var(--green);">★</span> loan-originator.md
+      <span data-dc-tpl="220" style="color: var(--green);">★</span> relationship-manager.md
+      <span data-dc-tpl="221" style="color: var(--blue);">●</span> sales-associate.md
   <span data-dc-tpl="222" style="color: var(--ink-faint);">▾</span> underwriting/
     <span data-dc-tpl="223" style="color: var(--ink-faint);">▾</span> credit/
-        <span data-dc-tpl="224" style="color: var(--green);">●</span> underwriting-analyst.md
-        <span data-dc-tpl="225" style="color: var(--green);">●</span> credit-officer.md
+        <span data-dc-tpl="224" style="color: var(--green);">★</span> underwriting-analyst.md
+        <span data-dc-tpl="225" style="color: var(--green);">★</span> credit-officer.md
     <span data-dc-tpl="226" style="color: var(--ink-faint);">▾</span> valuation/
-        <span data-dc-tpl="227" style="color: var(--green);">●</span> appraisal-reviewer.md
+        <span data-dc-tpl="227" style="color: var(--green);">★</span> appraisal-reviewer.md
   <span data-dc-tpl="228" style="color: var(--ink-faint);">▾</span> capital-markets/
-      <span data-dc-tpl="229" style="color: var(--green);">●</span> pricing-analyst.md
-      <span data-dc-tpl="230" style="color: var(--blue);">◐</span> securitization-analyst.md
+      <span data-dc-tpl="229" style="color: var(--green);">★</span> pricing-analyst.md
+      <span data-dc-tpl="230" style="color: var(--blue);">●</span> securitization-analyst.md
   <span data-dc-tpl="231" style="color: var(--ink-faint);">▾</span> operations/
     <span data-dc-tpl="232" style="color: var(--ink-faint);">▾</span> servicing/
-        <span data-dc-tpl="233" style="color: var(--green);">●</span> asset-manager.md
-        <span data-dc-tpl="234" style="color: var(--mist);">○</span> servicing-analyst.md
-    <span data-dc-tpl="235" style="color: var(--ink-faint);">▸</span> loan-delivery/  <span data-dc-tpl="236" style="color: var(--ink-faint);">(6)</span></pre></div><div data-dc-tpl="237" style="display: flex; flex-direction: column; gap: 24px;"><div data-dc-tpl="238"><div data-dc-tpl="239" class="meta" style="font-size: 14px; color: var(--ink-faint);">One folder per business block</div><div data-dc-tpl="240" style="display: flex; flex-direction: column; margin-top: 8px;"><div data-dc-tpl="241" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="242">Production &amp; Sales</span><span data-dc-tpl="243" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">7 files</span></div><div data-dc-tpl="244" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="245">Underwriting</span><span data-dc-tpl="246" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">8 files</span></div><div data-dc-tpl="247" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="248">Capital Markets</span><span data-dc-tpl="249" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">6 files</span></div><div data-dc-tpl="250" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="251">Operations</span><span data-dc-tpl="252" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">11 files</span></div></div></div><div data-dc-tpl="253" style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--ink-soft);"><div data-dc-tpl="254" style="display: flex; gap: 10px; align-items: center;"><span data-dc-tpl="255" style="color: var(--green);">●</span>Validated with interviews</div><div data-dc-tpl="256" style="display: flex; gap: 10px; align-items: center;"><span data-dc-tpl="257" style="color: var(--blue);">◐</span>Drafted from internal docs</div><div data-dc-tpl="258" style="display: flex; gap: 10px; align-items: center;"><span data-dc-tpl="259" style="color: var(--mist);">○</span>Not started</div></div></div></div></div></div></figure></template>
+        <span data-dc-tpl="233" style="color: var(--green);">★</span> asset-manager.md
+        <span data-dc-tpl="234" style="color: var(--blue);">●</span> servicing-analyst.md
+    <span data-dc-tpl="235" style="color: var(--ink-faint);">▸</span> loan-delivery/  <span data-dc-tpl="236" style="color: var(--ink-faint);">(6)</span></pre></div><div data-dc-tpl="237" style="display: flex; flex-direction: column; gap: 24px;"><div data-dc-tpl="238"><div data-dc-tpl="239" class="meta" style="font-size: 14px; color: var(--ink-faint);">One folder per business block</div><div data-dc-tpl="240" style="display: flex; flex-direction: column; margin-top: 8px;"><div data-dc-tpl="241" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="242">Production &amp; Sales</span><span data-dc-tpl="243" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">7 files</span></div><div data-dc-tpl="244" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="245">Underwriting</span><span data-dc-tpl="246" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">8 files</span></div><div data-dc-tpl="247" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="248">Capital Markets</span><span data-dc-tpl="249" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">6 files</span></div><div data-dc-tpl="250" style="display: flex; justify-content: space-between; padding: 10px 0px; border-bottom: 1px solid var(--rule); font-size: 15px;"><span data-dc-tpl="251">Operations</span><span data-dc-tpl="252" style="font-family: var(--font-mono); font-size: 13px; color: var(--ink-soft);">11 files</span></div></div></div><div data-dc-tpl="253" style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--ink-soft);"><div data-dc-tpl="254" style="display: flex; gap: 10px; align-items: center;"><span data-dc-tpl="255" style="color: var(--green);">★</span>Key role (validated with interviews)</div><div data-dc-tpl="256" style="display: flex; gap: 10px; align-items: center;"><span data-dc-tpl="257" style="color: var(--blue);">●</span>Drafted (research filled in)</div><div data-dc-tpl="260" style="display: flex; gap: 10px; align-items: center;"><span data-dc-tpl="261" style="color: var(--ink-faint);">○</span>Shell (file and schema set up)</div></div></div></div></div></div></figure></template>
         </div>
-      </div>
+    </div>
   </section>
 
   <!-- Research -->
   <section class="band reveal" id="research">
-    <div class="band-inner">
+    <div class="band-inner band-inner--breakout">
       <div class="section-marker">
         <h2>Research and validation</h2>
       </div>
+
       <div class="prose">
-        <p>Every persona starts from the same prompt, run through Microsoft Copilot with access to internal docs. Copilot turns those reports into our standard schema, so each first draft has the same shape.</p>
-        <p>To validate the core personas, I'm interviewing 2 to 3 people per block. <em>[Add: one surprise from the interviews]</em></p>
-      </div>
-
-      </div>
-
-      <!-- Fig. 5 — draft vs. interview comparison (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+          <p>To start each persona, I run the same prompt through Microsoft Copilot, which has access to our knowledge graph and other internal documentation. Then I ask Copilot to turn its report into our standard schema, so each first draft has the same shape.</p>
+          <p>To validate, a few colleagues and I are interviewing 1 to 2 people for each block's "main characters," the core roles in each block.</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="270" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="271" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="272" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="273" style="padding: 48px; display: grid; grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr); gap: 0px; border-collapse: collapse;"><div data-dc-tpl="274" style="padding: 32px; border: 1px solid var(--rule); background: var(--paper-2); display: flex; flex-direction: column; gap: 20px;"><div data-dc-tpl="275" class="meta" style="font-size: 14px; color: var(--ink-faint);">What the draft said · from internal docs</div><div data-dc-tpl="276" style="font-family: var(--font-display); font-variation-settings: &quot;wdth&quot; 82; font-weight: 600; font-size: 26px; line-height: 1.25; color: var(--ink-soft); letter-spacing: -0.01em;">Underwriting analysts spend most of their day in myOptigo.</div></div><div data-dc-tpl="277" style="padding: 32px; border-top-color: ; border-top-style: ; border-top-width: ; border-right-color: ; border-right-style: ; border-right-width: ; border-bottom-color: ; border-bottom-style: ; border-bottom-width: ; border-left: 0px; border-image-source: ; border-image-slice: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; background: var(--bone); display: flex; flex-direction: column; gap: 20px;"><div data-dc-tpl="278" class="meta" style="font-size: 14px; color: var(--green-deep);">What we heard · 3 interviews</div><div data-dc-tpl="279" style="font-family: var(--font-display); font-variation-settings: &quot;wdth&quot; 82; font-weight: 600; font-size: 26px; line-height: 1.25; letter-spacing: -0.01em;"><span data-dc-tpl="280" style="color: var(--blue-deep);">“</span>I live in Excel. myOptigo is where I go to check a box once the numbers work.<span data-dc-tpl="281" style="color: var(--blue-deep);">”</span></div><div data-dc-tpl="282" class="meta" style="font-size: 13px; color: var(--ink-faint);">Underwriting analyst, credit</div></div></div></div></div></figure></template>
         </div>
-      </div>
+    </div>
   </section>
 
   <!-- Now & Next -->
   <section class="band reveal" id="status-next">
-    <div class="band-inner">
+    <div class="band-inner band-inner--breakout">
       <div class="section-marker">
-        <h2>Now &amp; Next</h2>
+        <h2>Now &amp; next</h2>
       </div>
-      <div class="prose">
-        <p>About two thirds of the personas are live. Today all of the files are loaded into a Copilot library, so anyone can ask questions about our users without opening the repo.</p>
-        <p><em>[Add: one real example of someone using it]</em></p>
-        <p>Next is a Kiro skill so designers can clone the repo and pull personas into vibe coding projects. The Copilot library and the Kiro skill read the same files, which is why the format mattered.</p>
-      </div>
-    </div>
 
-    <!-- Fig. 8 — pipeline diagram (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+      <div class="prose">
+          <p>Every persona has a file in the library, and I'm working through the research for the rest. The drafted files are loaded into a Copilot Notebook, so anyone can ask questions about our users without opening the repo.</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="403" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="404" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="405" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="406" style="padding: 48px; display: grid; grid-template-columns: 240px 56px minmax(0px, 1fr); gap: 0px; align-items: center;"><div data-dc-tpl="407" style="background: var(--bone); border: 1px solid var(--rule); box-shadow: var(--ghost); padding: 20px; display: flex; flex-direction: column; gap: 10px;"><div data-dc-tpl="408" class="meta" style="font-size: 13px; color: var(--ink-faint);">Source</div><div data-dc-tpl="409" style="font-family: var(--font-display); font-variation-settings: &quot;wdth&quot; 82; font-weight: 700; font-size: 24px; line-height: 1.1;">Bitbucket repo</div><div data-dc-tpl="410" style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); line-height: 1.5;">personas/<br data-dc-tpl="411">  4 blocks · 32 .md files</div></div><div data-dc-tpl="412" style="display: flex; flex-direction: column; justify-content: space-between; height: 300px; font-size: 24px; color: var(--ink-soft); padding: 38px 0px;"><div data-dc-tpl="413" style="text-align: center;">↗</div><div data-dc-tpl="414" style="text-align: center;">↘</div></div><div data-dc-tpl="415" style="display: flex; flex-direction: column; gap: 48px;"><div data-dc-tpl="416" style="display: grid; grid-template-columns: minmax(0px, 1fr) 40px minmax(0px, 1fr); align-items: center;"><div data-dc-tpl="417" style="background: var(--green-pale); padding: 18px; display: flex; flex-direction: column; gap: 8px;"><div class="sc-host-x" data-dc-tpl="418" style="display: contents;"><span style="display: inline-flex; align-items: center; gap: var(--space-3); font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body); font-size: var(--fs-xs); font-weight: 600; font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features); letter-spacing: var(--ls-caps); text-transform: none; padding: 3px 10px; border-radius: var(--radius-full); background: var(--green-deep); color: var(--bone);"><span style="width: 6px; height: 6px; background: currentcolor; border-radius: var(--radius-full); display: inline-block;"></span>Live</span></div><div data-dc-tpl="419" style="font-weight: 700; font-size: 17px;">Copilot notebook</div><div data-dc-tpl="420" style="font-size: 14px; color: var(--ink-soft); line-height: 1.45;">Files synced to SharePoint. Anyone can ask questions.</div></div><div data-dc-tpl="421" style="text-align: center; font-size: 22px; color: var(--ink-soft);">→</div><div data-dc-tpl="422" style="border: 1px solid var(--rule); padding: 18px; display: flex; flex-direction: column; gap: 6px;"><div data-dc-tpl="423" class="meta" style="font-size: 13px; color: var(--ink-faint);">For</div><div data-dc-tpl="424" style="font-size: 15px; line-height: 1.45;">PMs, BAs and anyone not set up in an IDE</div></div></div><div data-dc-tpl="425" style="display: grid; grid-template-columns: minmax(0px, 1fr) 40px minmax(0px, 1fr); align-items: center;"><div data-dc-tpl="426" style="background: var(--blue-pale); padding: 18px; display: flex; flex-direction: column; gap: 8px;"><div class="sc-host-x" data-dc-tpl="427" style="display: contents;"><span style="display: inline-flex; align-items: center; gap: var(--space-3); font-family: var(--font-body); font-variation-settings: 'wdth' var(--wdth-body); font-size: var(--fs-xs); font-weight: 600; font-variant-caps: var(--caps-variant); font-feature-settings: var(--caps-features); letter-spacing: var(--ls-caps); text-transform: none; padding: 3px 10px; border-radius: var(--radius-full); background: var(--blue-deep); color: var(--bone);">In progress</span></div><div data-dc-tpl="428" style="font-weight: 700; font-size: 17px;">Kiro skill</div><div data-dc-tpl="429" style="font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft);">clone → pull persona</div></div><div data-dc-tpl="430" style="text-align: center; font-size: 22px; color: var(--ink-soft);">→</div><div data-dc-tpl="431" style="border: 1px solid var(--rule); padding: 18px; display: flex; flex-direction: column; gap: 6px;"><div data-dc-tpl="432" class="meta" style="font-size: 13px; color: var(--ink-faint);">For</div><div data-dc-tpl="433" style="font-size: 15px; line-height: 1.45;">Designers vibe coding prototypes with the persona loaded</div></div></div></div></div></div></div></figure></template>
         </div>
-      </div>
-      <!-- Fig. 7 — vibe-coded screen comparison (exact reference reproduction, see assets/personas/User Personas Case Study.html) -->
-      <div class="breakout">
+
+      <div class="prose">
+          <p>Next, we're working on a Kiro skill so designers can reference a persona in their vibe coding projects. The Copilot Notebook and the Kiro skill read the same files, which are updated the same way through the repo.</p>
+        </div>
         <div class="exact-fig-host">
           <template><figure data-dc-tpl="333" style="margin: 0px; display: flex; flex-direction: column; gap: 12px; max-width: 960px; width: 100%;"><div data-dc-tpl="334" data-fig="1" style="overflow: hidden;"><div data-dc-tpl="335" style="width: 960px; background: var(--paper); border: 1px solid var(--rule); zoom: 1;"><div data-dc-tpl="336" style="padding: 48px; display: flex; flex-direction: column; gap: 20px;"><div data-dc-tpl="337" style="background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-size: 13px; padding: 12px 16px;"><span data-dc-tpl="338" style="color: var(--mist);">prompt &gt;</span> Build a screen where an underwriter reviews new deals.</div><div data-dc-tpl="339" style="display: grid; grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr); gap: 24px;"><div data-dc-tpl="340" style="display: flex; flex-direction: column; gap: 10px;"><div data-dc-tpl="341" class="meta" style="font-size: 14px; color: var(--ink-faint);">No context</div><div data-dc-tpl="342" style="border: 1px solid var(--rule); background: rgb(247, 247, 248); padding: 18px; height: 340px; display: flex; flex-direction: column; gap: 14px; font-family: system-ui, sans-serif;"><div data-dc-tpl="343" style="font-size: 17px; font-weight: 600; color: rgb(51, 51, 51);">Welcome back, John!</div><div data-dc-tpl="344" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;"><div data-dc-tpl="345" style="background: rgb(255, 255, 255); border-radius: 12px; padding: 10px; font-size: 11px; color: rgb(136, 136, 136);">Total deals<div data-dc-tpl="346" style="font-size: 20px; font-weight: 700; color: rgb(51, 51, 51);">128</div></div><div data-dc-tpl="347" style="background: rgb(255, 255, 255); border-radius: 12px; padding: 10px; font-size: 11px; color: rgb(136, 136, 136);">Revenue<div data-dc-tpl="348" style="font-size: 20px; font-weight: 700; color: rgb(51, 51, 51);">$2.4M</div></div><div data-dc-tpl="349" style="background: rgb(255, 255, 255); border-radius: 12px; padding: 10px; font-size: 11px; color: rgb(136, 136, 136);">Growth<div data-dc-tpl="350" style="font-size: 20px; font-weight: 700; color: rgb(51, 51, 51);">+12%</div></div></div><div data-dc-tpl="351" style="background: rgb(255, 255, 255); border-radius: 12px; flex: 1 1 0%; display: flex; align-items: flex-end; gap: 6px; padding: 14px;"><div data-dc-tpl="352" style="flex: 1 1 0%; height: 30%; background: rgb(228, 228, 231); border-radius: 4px;"></div><div data-dc-tpl="353" style="flex: 1 1 0%; height: 55%; background: rgb(228, 228, 231); border-radius: 4px;"></div><div data-dc-tpl="354" style="flex: 1 1 0%; height: 40%; background: rgb(228, 228, 231); border-radius: 4px;"></div><div data-dc-tpl="355" style="flex: 1 1 0%; height: 75%; background: rgb(228, 228, 231); border-radius: 4px;"></div><div data-dc-tpl="356" style="flex: 1 1 0%; height: 60%; background: rgb(228, 228, 231); border-radius: 4px;"></div><div data-dc-tpl="357" style="flex: 1 1 0%; height: 90%; background: rgb(228, 228, 231); border-radius: 4px;"></div></div><div data-dc-tpl="358" style="align-self: flex-start; background: rgb(51, 51, 51); color: rgb(255, 255, 255); border-radius: 999px; padding: 6px 14px; font-size: 12px;">View all deals</div></div></div><div data-dc-tpl="359" style="display: flex; flex-direction: column; gap: 10px;"><div data-dc-tpl="360" style="display: flex; justify-content: space-between; align-items: center;"><span data-dc-tpl="361" class="meta" style="font-size: 14px; color: var(--green-deep);">With persona loaded</span><span data-dc-tpl="362" style="font-family: var(--font-mono); font-size: 11.5px; color: var(--ink-soft);">+ underwriting-analyst.md</span></div><div data-dc-tpl="363" style="border: 1px solid var(--rule); background: var(--bone); height: 340px; display: flex; flex-direction: column; font-size: 12.5px;"><div data-dc-tpl="364" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="365" style="font-weight: 700; font-size: 14px;">My queue · 9</span><span data-dc-tpl="366" style="color: var(--rust); font-weight: 600;">3 missing docs</span></div><div data-dc-tpl="367" class="meta" style="display: grid; grid-template-columns: minmax(0px, 1.6fr) 48px 48px minmax(0px, 1.3fr); gap: 8px; padding: 8px 14px; border-bottom: 1px solid var(--rule); color: var(--ink-faint);"><span data-dc-tpl="368">Deal</span><span data-dc-tpl="369">DSCR</span><span data-dc-tpl="370">LTV</span><span data-dc-tpl="371">Package</span></div><div data-dc-tpl="372" style="display: grid; grid-template-columns: minmax(0px, 1.6fr) 48px 48px minmax(0px, 1.3fr); gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="373" style="background: var(--rule); height: 10px; margin-top: 4px;"></span><span data-dc-tpl="374">1.32</span><span data-dc-tpl="375">68%</span><span data-dc-tpl="376" style="color: var(--rust);">Need T-12</span></div><div data-dc-tpl="377" style="display: grid; grid-template-columns: minmax(0px, 1.6fr) 48px 48px minmax(0px, 1.3fr); gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="378" style="background: var(--rule); height: 10px; margin-top: 4px; width: 80%;"></span><span data-dc-tpl="379">1.25</span><span data-dc-tpl="380">74%</span><span data-dc-tpl="381" style="color: var(--rust);">Need rent roll</span></div><div data-dc-tpl="382" style="display: grid; grid-template-columns: minmax(0px, 1.6fr) 48px 48px minmax(0px, 1.3fr); gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="383" style="background: var(--rule); height: 10px; margin-top: 4px; width: 90%;"></span><span data-dc-tpl="384">1.41</span><span data-dc-tpl="385">62%</span><span data-dc-tpl="386" style="color: var(--green-deep);">Complete</span></div><div data-dc-tpl="387" style="display: grid; grid-template-columns: minmax(0px, 1.6fr) 48px 48px minmax(0px, 1.3fr); gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="388" style="background: var(--rule); height: 10px; margin-top: 4px; width: 70%;"></span><span data-dc-tpl="389">1.18</span><span data-dc-tpl="390">79%</span><span data-dc-tpl="391" style="color: var(--rust);">Need T-12</span></div><div data-dc-tpl="392" style="display: grid; grid-template-columns: minmax(0px, 1.6fr) 48px 48px minmax(0px, 1.3fr); gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--rule);"><span data-dc-tpl="393" style="background: var(--rule); height: 10px; margin-top: 4px; width: 85%;"></span><span data-dc-tpl="394">1.36</span><span data-dc-tpl="395">65%</span><span data-dc-tpl="396" style="color: var(--green-deep);">Complete</span></div><div data-dc-tpl="397" style="margin-top: auto; padding: 12px 14px; border-top: 1px solid var(--rule); display: flex; gap: 8px;"><span data-dc-tpl="398" class="meta" style="background: var(--blue-deep); color: var(--bone); padding: 4px 12px; border-radius: 4px; font-weight: 600;">Request docs</span><span data-dc-tpl="399" class="meta" style="border: 1px solid var(--ink-soft); padding: 4px 12px; border-radius: 4px; font-weight: 600; color: var(--ink);">Export to Excel</span></div></div></div></div></div></div></div></figure></template>
         </div>
-      </div>
 
+      <div class="highlight-block">
+        <p>This project is an ongoing initiative &amp; work in progress. More updates to come!</p>
+      </div>
+    </div>
   </section>
 
   <!-- Next case -->

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/personal-design-kit-019deb59-a5e1-7464-9e77-7b19a1be569e/tokens_v2.css">
+<link rel="stylesheet" href="_ds/personal-design-kit-019deb59-a5e1-7464-9e77-7b19a1be569e/styles.css">
+<script src="_ds/personal-design-kit-019deb59-a5e1-7464-9e77-7b19a1be569e/_ds_bundle.js"></script>
+<script src="dots.js"></script>
+<style>body{margin:0;background:var(--paper)}a{color:var(--link)}a:hover{color:var(--link-hover)}</style>
+</helmet>
+<div style="background:var(--paper);color:var(--fg-1);min-height:100vh">
+
+<nav style="position:sticky;top:0;z-index:10;background:var(--paper);padding:0 24px">
+  <div style="max-width:608px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <a href="#home" style="text-decoration:none;color:var(--fg-1);white-space:nowrap;font-family:var(--font-body);font-variation-settings:'wdth' 100;font-weight:400;font-size:12px;letter-spacing:0.28em;text-transform:uppercase">Ann Marie Kernen</a>
+    <div style="display:flex;align-items:center;gap:20px">
+      <a href="#work" style="font-family:var(--font-body);font-variation-settings:'wdth' var(--wdth-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);font-size:14px;font-weight:600;text-decoration:none;color:var(--fg-1)">Work</a>
+      <a href="#side" style="font-family:var(--font-body);font-variation-settings:'wdth' var(--wdth-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);font-size:14px;font-weight:600;text-decoration:none;color:var(--fg-3)">Side projects</a>
+      <a href="#about" style="font-family:var(--font-body);font-variation-settings:'wdth' var(--wdth-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);font-size:14px;font-weight:600;text-decoration:none;color:var(--fg-3)">About</a>
+      <a href="#contact" style="font-family:var(--font-body);font-variation-settings:'wdth' var(--wdth-body);font-variant-caps:var(--caps-variant);font-feature-settings:var(--caps-features);letter-spacing:var(--ls-caps);font-size:14px;font-weight:600;text-decoration:none;color:var(--fg-3)">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<sc-if value="{{ showSide }}" hint-placeholder-val="{{ true }}">
+<section data-screen-label="Hero 1 · dots right" style="min-height:calc(86vh - 64px);display:grid;grid-template-columns:minmax(0, 384px) minmax(0, 1fr);gap:24px;padding-left:max(24px, calc((100% - 608px) / 2))">
+  <div style="align-self:center;padding:40px 0">
+    <h1 style="margin:0;font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:clamp(32px, 7vw, var(--fs-3xl));line-height:1.05;letter-spacing:-0.025em;text-wrap:balance">Simple interfaces for complicated things.</h1>
+    <p style="margin:20px 0 0;font-size:17px;line-height:1.6;color:var(--fg-2);text-wrap:pretty">I’m Ann Marie, a product designer with 4+ years of experience, mostly in fintech &amp; b2b apps.</p>
+    <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+      <x-import component-from-global-scope="PersonalDesignKit_019deb.Button" as="a" href="#work" hint-size="140px,34px">See my work ▸</x-import>
+      <x-import component-from-global-scope="PersonalDesignKit_019deb.Button" as="a" href="#contact" variant="ghost" hint-size="120px,34px">Say hello ▸</x-import>
+    </div>
+  </div>
+  <div style="position:relative;min-height:360px">
+    <canvas ref="{{ refSide }}" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ showBehind }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Hero 2 · dots behind" style="position:relative;min-height:calc(86vh - 64px);overflow:hidden;padding:0 24px;display:flex;align-items:center">
+  <canvas ref="{{ refBehind }}" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+  <div style="position:relative;max-width:608px;width:100%;margin:0 auto;padding:48px 0">
+    <div ref="{{ refMask }}">
+      <h1 style="margin:0;font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:clamp(32px, 7vw, var(--fs-3xl));line-height:1.05;letter-spacing:-0.025em;text-wrap:balance">Simple interfaces for complicated things.</h1>
+      <p style="margin:20px 0 0;font-size:17px;line-height:1.6;color:var(--fg-2);text-wrap:pretty">I’m Ann Marie, a product designer with 4+ years of experience, mostly in fintech &amp; b2b apps.</p>
+      <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+        <x-import component-from-global-scope="PersonalDesignKit_019deb.Button" as="a" href="#work" hint-size="140px,34px">See my work ▸</x-import>
+        <x-import component-from-global-scope="PersonalDesignKit_019deb.Button" as="a" href="#contact" variant="ghost" hint-size="120px,34px">Say hello ▸</x-import>
+      </div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<sc-if value="{{ showMobile }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Hero · mobile band" style="min-height:calc(86vh - 64px);display:flex;flex-direction:column">
+  <div style="flex:1;display:flex;align-items:center;padding:32px 24px">
+    <div>
+      <h1 style="margin:0;font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:700;font-size:clamp(32px, 7vw, var(--fs-3xl));line-height:1.05;letter-spacing:-0.025em;text-wrap:balance">Simple interfaces for complicated things.</h1>
+      <p style="margin:20px 0 0;font-size:17px;line-height:1.6;color:var(--fg-2);text-wrap:pretty">I’m Ann Marie, a product designer with 4+ years of experience, mostly in fintech &amp; b2b apps.</p>
+      <div style="display:flex;gap:12px;margin-top:28px;flex-wrap:wrap">
+        <x-import component-from-global-scope="PersonalDesignKit_019deb.Button" as="a" href="#work" hint-size="140px,34px">See my work ▸</x-import>
+        <x-import component-from-global-scope="PersonalDesignKit_019deb.Button" as="a" href="#contact" variant="ghost" hint-size="120px,34px">Say hello ▸</x-import>
+      </div>
+    </div>
+  </div>
+  <canvas ref="{{ refMobile }}" aria-hidden="true" style="display:block;flex:none;width:100%;height:clamp(160px, 26vh, 220px)"></canvas>
+</section>
+</sc-if>
+
+<section id="work" data-screen-label="Selected work" style="padding:0 24px;scroll-margin-top:112px">
+  <div style="max-width:608px;margin:0 auto;padding:56px 0">
+    <x-import component-from-global-scope="PersonalDesignKit_019deb.SectionMarker" num="[01]" hint-size="100%,48px">Selected work</x-import>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ work }}" as="it" hint-placeholder-count="3">
+        <a href="#work" onClick="{{ it.onClick }}" onMouseEnter="{{ it.onEnter }}" onMouseLeave="{{ it.onLeave }}" style="text-decoration:none;color:inherit;display:grid;gap:6px;padding:16px 0">
+          <x-import component-from-global-scope="PersonalDesignKit_019deb.MetaLine" hint-size="200px,20px">{{ it.meta }}</x-import>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+            <h3 style="margin:0;font-family:var(--font-display);font-variation-settings:'wdth' var(--wdth-display);font-weight:600;font-size:var(--fs-h3);line-height:1.2;letter-spacing:var(--ls-tight);color:{{ it.color }};transition:color var(--dur-fast) var(--ease-snap)">{{ it.label }}</h3>
+            <sc-if value="{{ it.status }}" hint-placeholder-val="{{ false }}">
+              <x-import component-from-global-scope="PersonalDesignKit_019deb.Tag" variant="ink" hint-size="70px,22px">{{ it.status }}</x-import>
+            </sc-if>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;1 · Right side&quot;,&quot;2 · Behind text&quot;],&quot;default&quot;:&quot;1 · Right side&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Hero&quot;},&quot;spacing&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:12,&quot;max&quot;:28,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;default&quot;:16,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Dots&quot;},&quot;dotSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:2,&quot;max&quot;:5,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;px&quot;,&quot;default&quot;:3,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Dots&quot;},&quot;settleSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:2.5,&quot;max&quot;:5,&quot;step&quot;:0.1,&quot;unit&quot;:&quot;s&quot;,&quot;default&quot;:3.6,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;stagger&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;min&quot;:0,&quot;max&quot;:1.5,&quot;step&quot;:0.1,&quot;default&quot;:1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;shimmer&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;previewReducedMotion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { w: window.innerWidth, hover: null };
+  pending = {};
+  sigs = {};
+  maskEl = null;
+  q = new URLSearchParams(location.search);
+
+  refSide = el => this.attach('side', el);
+  refBehind = el => this.attach('behind', el);
+  refMobile = el => this.attach('mobile', el);
+  refMask = el => { this.maskEl = el; const c = this.pending.behind; if (c && c.__dots) c.__dots.set({ maskEl: el }); };
+
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    window.addEventListener('resize', this.onResize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onResize);
+    Object.values(this.pending).forEach(el => this.release(el));
+  }
+  componentDidUpdate() {
+    Object.keys(this.pending).forEach(k => {
+      const el = this.pending[k];
+      if (!el || !el.__dots) return;
+      const o = this.optsFor(k), sig = JSON.stringify({ ...o, maskEl: !!o.maskEl });
+      if (sig !== this.sigs[k]) { this.sigs[k] = sig; el.__dots.set(o); }
+    });
+  }
+
+  variant() { return (this.q.get('variant') || String(this.props.variant ?? '1')).trim().charAt(0); }
+  optsFor(k) {
+    const p = this.props;
+    const sp = Number(p.spacing ?? 16);
+    const common = {
+      size: Number(p.dotSize ?? 3),
+      settle: Number(p.settleSeconds ?? 3.6),
+      stagger: Number(p.stagger ?? 1),
+      shimmer: p.shimmer === false ? 0 : 0.2,
+      still: this.q.get('motion') === 'reduce' || !!p.previewReducedMotion,
+    };
+    if (k === 'behind') return { ...common, spacing: sp + 2, inset: 24, colors: ['#8FA5C4', '#D2CCC2'], mix: 0.3, maskEl: this.maskEl, maskPad: 36, maskFeather: 140 };
+    if (k === 'mobile') return { ...common, spacing: sp + 4, inset: 24, colors: ['#1E86EE', '#756D62'], mix: 0.2, maskEl: null };
+    return { ...common, spacing: sp, inset: 48, colors: ['#1E86EE', '#756D62'], mix: 0.2, maskEl: null };
+  }
+  release(el) {
+    setTimeout(() => { if (el && !el.isConnected && el.__dots) { el.__dots.destroy(); el.__dots = null; } }, 0);
+  }
+  attach(k, el) {
+    if (!el) { const old = this.pending[k]; this.pending[k] = null; delete this.sigs[k]; this.release(old); return; }
+    this.pending[k] = el;
+    const go = () => {
+      if (this.pending[k] !== el) return;
+      if (!window.DotGrid) { setTimeout(go, 40); return; }
+      const o = this.optsFor(k);
+      if (el.__dots && !el.__dots.dead) el.__dots.set(o);
+      else el.__dots = new window.DotGrid(el, o);
+      this.sigs[k] = JSON.stringify({ ...o, maskEl: !!o.maskEl });
+    };
+    go();
+  }
+
+  renderVals() {
+    const v = this.variant(), mobile = this.state.w < 860;
+    const items = [
+      { id: 'personas', year: '2025', client: 'Freddie Mac', title: 'The Personas Library', status: 'Ongoing' },
+      { id: 'procedures', year: '2024', client: 'Wells Fargo', title: 'Procedures Updater' },
+      { id: 'planr', year: '2023', client: 'Springboard', title: 'PLANR: Transit Planning App' },
+    ];
+    const work = items.map(it => {
+      const h = this.state.hover === it.id;
+      return {
+        ...it,
+        meta: it.year + ' · ' + it.client,
+        color: h ? 'var(--blue-deep)' : 'var(--fg-1)',
+        label: it.title + ' ' + (h ? '▸▸' : '▸'),
+        onEnter: () => this.setState({ hover: it.id }),
+        onLeave: () => this.setState({ hover: null }),
+        onClick: e => e.preventDefault(),
+      };
+    });
+    return {
+      showSide: v !== '2' && !mobile,
+      showBehind: v === '2' && !mobile,
+      showMobile: mobile,
+      refSide: this.refSide, refBehind: this.refBehind, refMobile: this.refMobile, refMask: this.refMask,
+      work,
+    };
+  }
+}
+</script>
+</body>
+</html>

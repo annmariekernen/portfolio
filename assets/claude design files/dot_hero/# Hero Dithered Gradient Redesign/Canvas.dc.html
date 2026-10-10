@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><meta name="design_doc_mode" content="canvas"><style>body{margin:0;background:#f0eee9;font-family:system-ui,sans-serif}a{color:#0B6BD6}a:hover{color:#1E86EE}</style></helmet>
+<section id="t1" style="padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08)">
+  <div style="display:flex;align-items:baseline;gap:10px;margin:0 0 20px">
+    <a href="#t1" style="font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none">1</a>
+    <span style="font:600 13px/1.2 system-ui,sans-serif;color:#1a1a1a">Chaos to order · dot field</span>
+  </div>
+  <p style="margin:0 0 28px;max-width:760px;font:13px/1.55 system-ui,sans-serif;color:rgba(0,0,0,.62)">Live page at 1280×800 and 390×844. Dots start scattered and drifting at half strength, then ease out (quartic) into a pixel-snapped grid over about 3.6s. Arrival order is part random and part centre-out. Once settled, a slow diagonal wave changes opacity by up to 20% on a 10s cycle. Reduced motion shows the settled grid. Below 860px both options become a band under the copy with wider spacing, which gives about 200 dots. Use Replay to watch the settle again.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:56px;align-items:flex-start">
+    <div id="1a" style="flex:none;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:center;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">
+        <a href="#1a" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none">1a</a>
+        <span>Dot field on the right, text on the left</span>
+        <button onClick="{{ replayA }}" style="margin-left:8px;font:600 10.5px system-ui,sans-serif;padding:3px 8px;border:1px solid rgba(0,0,0,.2);background:#fff;border-radius:5px;cursor:pointer">Replay</button>
+      </div>
+      <div ref="{{ refA }}" style="display:flex;gap:24px;align-items:flex-start">
+        <div style="width:1280px;height:800px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;overflow:hidden"><iframe src="Dot%20Grid%20Hero.dc.html?variant=1" title="1a desktop" style="width:1280px;height:800px;border:0;display:block"></iframe></div>
+        <div style="width:390px;height:844px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;overflow:hidden"><iframe src="Dot%20Grid%20Hero.dc.html?variant=1" title="1a mobile" style="width:390px;height:844px;border:0;display:block"></iframe></div>
+      </div>
+    </div>
+    <div id="1b" style="flex:none;display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;align-items:center;gap:8px;font:400 11px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.55)">
+        <a href="#1b" style="font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none">1b</a>
+        <span>Full-hero field at low contrast (mist and rule), clear behind the copy</span>
+        <button onClick="{{ replayB }}" style="margin-left:8px;font:600 10.5px system-ui,sans-serif;padding:3px 8px;border:1px solid rgba(0,0,0,.2);background:#fff;border-radius:5px;cursor:pointer">Replay</button>
+      </div>
+      <div ref="{{ refB }}" style="display:flex;gap:24px;align-items:flex-start">
+        <div style="width:1280px;height:800px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;overflow:hidden"><iframe src="Dot%20Grid%20Hero.dc.html?variant=2" title="1b desktop" style="width:1280px;height:800px;border:0;display:block"></iframe></div>
+        <div style="width:390px;height:844px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:8px;overflow:hidden"><iframe src="Dot%20Grid%20Hero.dc.html?variant=2" title="1b mobile" style="width:390px;height:844px;border:0;display:block"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  a = null; b = null;
+  refA = el => { this.a = el; };
+  refB = el => { this.b = el; };
+  replay(root) {
+    if (!root) return;
+    root.querySelectorAll('iframe').forEach(f => {
+      try { const c = f.contentDocument.querySelector('canvas'); if (c && c.__dots) { f.contentDocument.querySelectorAll('canvas').forEach(x => x.__dots && x.__dots.replay()); return; } } catch (e) {}
+      f.src = f.src;
+    });
+  }
+  renderVals() {
+    return { refA: this.refA, refB: this.refB, replayA: () => this.replay(this.a), replayB: () => this.replay(this.b) };
+  }
+}
+</script>
+</body>
+</html>
