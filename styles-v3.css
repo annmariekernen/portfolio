@@ -228,8 +228,9 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
    HERO SPLIT (image-forward case studies, e.g. PLANR)
    ============================================================ */
 .hero-split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
-.hero-split-media { display: flex; justify-content: center; }
+.hero-split-media { display: flex; justify-content: center; min-width: 0; }
 .hero-split-media img { width: 100%; max-width: 260px; }
+.hero-split-media .exact-fig-host { min-width: 0; width: 100%; max-width: 680px; }
 @media (max-width: 860px) {
   .hero-split { grid-template-columns: 1fr; gap: 28px; }
   .hero-split-media { order: -1; }
@@ -346,6 +347,21 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 }
 .hero-intro { margin: 16px 0 0; font-size: 17px; line-height: 1.6; color: var(--fg-2); max-width: 62ch; }
 
+/* NOT CURRENTLY LIVE — homepage hero shell for the dithered horizon band.
+   The live homepage (index.html) uses the plain hero instead; this variant
+   is parked at archived/index-dither-hero.html + archived/dither.js.
+   Kept here (rather than deleted) so that archived page keeps rendering
+   correctly. Ported from assets/claude design files/design_handoff_dithered_hero/. */
+.home-hero { min-height: calc(68vh - 64px); display: flex; flex-direction: column; }
+.home-hero-copy { flex: 1; display: flex; align-items: center; padding: 0 24px; }
+.home-hero-col { max-width: var(--col); width: 100%; margin: 0 auto; padding: 40px 0; }
+.home-hero-canvas-wrap { flex: none; padding: 0 24px; margin-bottom: var(--space-8); }
+.home-hero-canvas {
+  display: block; width: 100%; max-width: var(--col); margin: 0 auto;
+  height: clamp(120px, 22vh, 220px);
+  image-rendering: pixelated; background: var(--paper);
+}
+
 /* ============================================================
    WORK LIST (homepage) — plain text rows, no thumbnails
    ============================================================ */
@@ -404,7 +420,7 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 /* ============================================================
    CASE HERO + METRIC ROW
    ============================================================ */
-.case-tags { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.case-tags { display: flex; gap: 8px; margin-top: 16px; margin-bottom: 20px; flex-wrap: wrap; }
 .case-hero-title { font-weight: 700; font-size: clamp(32px, 7vw, var(--fs-3xl)); line-height: 1.05; letter-spacing: -0.025em; }
 .case-hero-sub { margin: 18px 0 0; font-size: 17px; line-height: 1.6; color: var(--fg-2); max-width: 62ch; }
 
@@ -498,6 +514,16 @@ a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
 }
 .icon-link svg { flex-shrink: 0; }
 .icon-link:hover { color: var(--blue-deep); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+
+/* ============================================================
+   EXACT-REFERENCE FIGURES (Personas case study)
+   Figures are embedded verbatim from the original Claude Design
+   handoff and rendered inside a shadow root for full style
+   isolation — see the inline <script> in casestudy/persona-library.html
+   and assets/personas/User Personas Case Study.html for the source.
+   ============================================================ */
+.exact-fig-host { display: block; }
+.exact-fig-host template { display: none; }
 
 @media (max-width: 640px) {
   .case-header-row { height: auto; padding: 12px 0; flex-wrap: wrap; row-gap: 8px; }

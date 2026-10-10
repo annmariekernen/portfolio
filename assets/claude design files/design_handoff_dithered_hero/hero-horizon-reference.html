@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Standalone, framework-free reference for the chosen hero: "Horizon band".
+     Open directly in a browser (keep dither.js next to this file). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hero · horizon band reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FBF9F6; --ink:#221F1C; --ink-soft:#494339; --rule:#D2CCC2;
+    --blue-deep:#0B6BD6; --blue-deeper:#0854A9; --green-deep:#08815A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:Archivo,sans-serif;font-variation-settings:'wdth' 100}
+  .caps{font-variant-caps:all-small-caps;letter-spacing:.06em;font-weight:600;font-size:14px}
+  nav{position:sticky;top:0;z-index:10;background:var(--paper);padding:0 24px}
+  nav .in{max-width:608px;margin:0 auto;height:64px;display:flex;align-items:center;justify-content:space-between}
+  .hero{min-height:calc(86vh - 64px);display:flex;flex-direction:column}
+  .hero .copy{flex:1;display:flex;align-items:center;padding:0 24px}
+  .hero .col{max-width:608px;width:100%;margin:0 auto;padding:40px 0}
+  .avail{display:flex;align-items:center;gap:10px;margin-bottom:24px;color:var(--ink-soft)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--green-deep)}
+  h1{margin:0;font-variation-settings:'wdth' 82;font-weight:700;font-size:clamp(32px,7vw,44px);line-height:1.05;letter-spacing:-.025em;text-wrap:balance}
+  p{margin:20px 0 0;font-size:17px;line-height:1.6;color:var(--ink-soft);text-wrap:pretty}
+  .btns{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .btn{padding:5px 16px;border-radius:4px;text-decoration:none;border:1px solid var(--blue-deep);transition:background 100ms cubic-bezier(.2,0,0,1)}
+  .btn.primary{background:var(--blue-deep);color:#FFFEFC}
+  .btn.primary:hover{background:var(--blue-deeper);border-color:var(--blue-deeper)}
+  .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+  /* The visual */
+  .horizon{display:block;flex:none;width:100%;height:clamp(120px,27vh,240px);image-rendering:pixelated}
+  .work{max-width:608px;margin:0 auto;padding:56px 24px}
+</style>
+</head>
+<body>
+<nav><div class="in"><span>Ann Marie Kernen</span><span class="caps">Work · Side projects · About · Contact</span></div></nav>
+<section class="hero">
+  <div class="copy"><div class="col">
+    <div class="avail caps"><span class="dot"></span>I'm taking on new work for Q3, in San Francisco or remote.</div>
+    <h1>I design tools for complex work.</h1>
+    <p>I'm a UX designer for complex products: admin tools, design tooling, and anything with a real workflow behind it. I'd be glad to show you what I've been working on.</p>
+    <div class="btns"><a class="btn primary caps" href="#work">See my work ▸</a><a class="btn ghost caps" href="#contact">Say hello ▸</a></div>
+  </div></div>
+  <canvas class="horizon" id="horizon" aria-hidden="true"></canvas>
+</section>
+<section id="work" class="work"><strong>[01] Selected work</strong> — existing list goes here, unchanged.</section>
+<script src="dither.js"></script>
+<script>
+  new DitherField(document.getElementById('horizon'), { mode: 1, cell: 2, loop: 16, palette: 'four' });
+</script>
+</body>
+</html>

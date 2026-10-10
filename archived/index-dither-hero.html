@@ -1,3 +1,13 @@
+<!--
+  NOT CURRENTLY LIVE — a homepage variant with the dithered-horizon hero
+  (see dither.js in this same folder). Parked here, not linked anywhere
+  on the live site, and force-blocked (404) via _redirects. The live
+  homepage (index.html, repo root) currently uses the plain hero instead.
+  Revive by copying this file back to index.html and its <script src>
+  from "/archived/dither.js" back to "/dither.js". Depends on the
+  .home-hero* rules in the live styles-v3.css, which are kept there
+  even though nothing on the live site currently uses them.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,13 +31,18 @@
   </nav>
 
   <!-- Hero -->
-  <section class="band reveal">
-    <div class="band-inner" style="padding-top:48px;">
-      <p class="hero-intro">Hi, I'm Ann Marie. I'm a Product Designer with ~4 years experience in the financial technology space. I love turning complex workflows into tools that feel intuitive...and maybe, hopefully, users even enjoy using them!</p>
-      <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
-        <a href="#work" class="btn">See my work</a>
-        <a href="/contact.html" class="btn btn--ghost">Contact</a>
+  <section class="home-hero reveal">
+    <div class="home-hero-copy">
+      <div class="home-hero-col">
+        <p class="hero-intro">Hi, I'm Ann Marie. I'm a Product Designer with ~4 years experience in the financial technology space. I love turning complex workflows into tools that feel intuitive...and maybe, hopefully, users even enjoy using them!</p>
+        <div style="display:flex; gap:12px; margin-top:28px; flex-wrap:wrap;">
+          <a href="#work" class="btn">See my work</a>
+          <a href="/contact.html" class="btn btn--ghost">Contact</a>
+        </div>
       </div>
+    </div>
+    <div class="home-hero-canvas-wrap">
+      <canvas class="home-hero-canvas" id="heroHorizon" aria-hidden="true"></canvas>
     </div>
   </section>
 
@@ -42,7 +57,7 @@
         <a href="/casestudy/persona-library.html" class="work-row">
           <div class="meta caps">2025 · Freddie Mac</div>
           <div class="work-row-title">
-            <h3>User Personas Context Library ▸</h3>
+            <h3>The Personas Library ▸</h3>
           </div>
         </a>
 
@@ -161,6 +176,12 @@
     </div>
   </footer>
 
+  <script src="/archived/dither.js"></script>
+  <script>
+    if (window.DitherField) {
+      new DitherField(document.getElementById('heroHorizon'), { mode: 1, cell: 2, loop: 16, palette: 'four' });
+    }
+  </script>
   <script src="/site.js"></script>
 
 </body>
