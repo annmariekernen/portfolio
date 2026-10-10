@@ -33,37 +33,34 @@ Substitute the placeholder name (`STUDIO //`) and tagline with your real handle 
 ## CONTENT FUNDAMENTALS
 
 ### Voice & tone
-- **First person, lowercase-friendly, generous.** "hi! i build systems that hold up under pressure — come see what we've been up to."
-- **Warm and welcoming, never cold.** Speak to one person, like you're handing them a coffee. "so glad you're here." "pull up a chair."
+- **First person, conversational, generous.** "Hi! I build systems that hold up under pressure. Come see what we've been up to!"
+- **Warm and welcoming, never cold.** Speak to one person, like you're handing them a coffee. 
 - **Plain words over jargon.** "ships fast" beats "rapid iterative deployment."
 - **Concrete numbers and verbs.** "cut signup time from 47s to 12s" beats "improved onboarding."
 - **Sunny optimism, not snark.** Curious about hard problems, delighted when they click into place. A wink, not a wall of jokes.
-- **Mediterranean hospitality.** The reader is a guest, not a lead. We invite, we host, we share.
 
 ### Casing rules
-- **Headings:** sentence case.
+- **Headings:** Sentence case.
 - **Every label is small caps** — buttons, tags, metadata, section markers, form labels, table headers, nav. One voice, set in the body face: `font-variant-caps: all-small-caps` plus `--ls-caps` tracking.
 - **Always write label source text in sentence case.** The font renders the caps. Typing ALL CAPS defeats the effect and reads as shouting.
-- **Body copy:** sentence case. Lowercase i/you is fine for personal voice.
-- **Section markers:** `[01]`, `▸ Now playing`, `// Field notes` — the glyph prefix survives, the uppercase source does not.
+- **Body copy:** sentence case, use proper case and punctuation.
 
 ### Words we use
-✅ ship · system · craft · prototype · figure out · tinker · field notes · in progress · v0.1 · come see · pull up a chair · hello · welcome · cheers · lovely · sunny · happy to · thanks for stopping by · receipts inside
+✅ Ship · System · Craft · Prototype · Figure out · Tinker · Field notes · In progress · v0.1 · Come see · Pull up a chair · Hello · Welcome · Cheers · Lovely · Sunny · Happy to · Thanks for stopping by · Receipts inside
 
 ### Words we avoid
-❌ delight (overused) · seamless · synergy · revolutionary · disrupt · journey · ecosystem · best-in-class · solution · empower · unlock · no-bs · hustle · grindset · game-changing
+❌ Delight (overused) · Seamless · Synergy · Revolutionary · Disrupt · Journey · Ecosystem · Best-in-class · Solution · Empower · Unlock · No-BS · Hustle · Grindset · Game-changing
 
 ### Examples
-- ✅ "case study: we rebuilt the checkout. 38% lift. come see what we learned."
+- ✅ "Case study: we rebuilt the checkout. 38% lift. Come see what we learned."
 - ❌ "Embark on a delightful journey through our award-winning checkout transformation."
-- ❌ "checkout: cut the bs. shipped a lift." *(too cold/swaggery)*
-- ✅ "resume [.pdf, 84kb] — grab a copy, no email needed."
-- ✅ "thanks for stopping by. tea's on, ask me anything."
+- ❌ "Checkout: cut the bs. Shipped a lift." *(too cold/swaggery)*
+- ✅ "Resume [.pdf, 84kb] — grab a copy, no email needed."
+- ✅ "Thanks for stopping by. Tea's on, ask me anything."
 
 ### Emoji & special chars
 - **No emoji.** They soften the structure.
-- **Unicode glyphs are encouraged** as structural devices: `▸ ▾ ◆ ◇ ★ ✦ ✱ ⌗ ↗ ↘ → //`
-- These act as iconography, dividers, list bullets, and section markers. Use them like punctuation.
+- **Unicode glyphs are used sparingly and functionally, not as decoration.** In practice: `▸` / `◂` for next/prev navigation and work-list links, `↗` for external links, `▾` for an expand affordance. A one-off emphasis mark (`◆`, `✦`) is fine for a single note or confirmation message. Don't scatter them as bullets, dividers, or general punctuation through body copy.
 
 ---
 
@@ -75,8 +72,8 @@ Warm neutrals, cool accents. Two accent families, both flat, never gradients and
 **Neutrals — warm, because the paper is warm**
 - **Ink (`#221F1C`)** — borders, primary text, the darkest value in the system by a clear margin.
 - **Ink soft (`#494339`)** — secondary text. **Ink faint (`#756D62`)** — metadata.
-- **Rule (`#D2CCC2`)** — quiet internal dividers.
-- **Bone (`#FFFEFC`) · Paper (`#FBF9F6`) · Paper 2 (`#F4F1EB`)** — the surfaces. Never pure white.
+- **Rule (`#DFDAD1`)** — quiet internal dividers.
+- **Bone (`#FFFEFC`) · Paper (`#FFFFFF`) · Paper 2 (`#F4F1EB`)** — the surfaces. Paper is deliberately pure white (an intentional exception to the warm-paper rule); Bone and Paper 2 stay warm off-white.
 
 **Blue — primary action, links, data**
 - **Blue deep (`#0B6BD6`)** — primary buttons and links. **Blue deeper (`#0854A9`)** — hover/pressed.
@@ -93,9 +90,9 @@ Warm neutrals, cool accents. Two accent families, both flat, never gradients and
 **One accent family leads per screen.** Blue *or* green out front; the other supports.
 
 ### Type
-**Archivo**, one family, two proportions — it's variable on the width axis.
-- **Display (`--wdth-display`, 82):** headings, hero type, oversized figures. Narrow and tall.
-- **Body (`--wdth-body`, 100):** body copy, buttons, UI labels. Wide and comfortable.
+**Archivo**, one family, variable on the width axis. The kit's original direction paired a narrow display cut (`--wdth-display`) with a wide body cut (`--wdth-body`) for contrast; the live site now sets both to the same wide, comfortable proportion.
+- **Display (`--wdth-display`, 100):** headings, hero type, oversized figures.
+- **Body (`--wdth-body`, 100):** body copy, buttons, UI labels.
 **Small caps carry every label.** One voice for buttons, tags, metadata, section markers, form labels and nav — Archivo at body width with `font-variant-caps: all-small-caps` and `--ls-caps` tracking. Three weights make the ladder: **700 / 16px** for section markers, table headers and `h5`; **600 / 16px** for buttons and tags; **500 / 14px** for metadata and form hints.
 
 **Mono is for code only.** **JetBrains Mono** survives for code, hex values, token names, version strings, and genuine machine output (the terminal mock in the case-study template). Nothing that is merely a label. If you're reaching for mono to make something look technical, use small caps instead.
@@ -127,7 +124,7 @@ Two flat copies of the shape — a background-coloured one at 2px over a rule-co
 
 ### Backgrounds & motifs
 - **Paper** is the default canvas; **Paper 2** for alternating bands; **Ink** for one inverse band per page.
-- **No background patterns.** Surfaces are flat colour; structure comes from borders and rules. `pattern-rules.svg` remains in `assets/` as an option for long content, unused by default.
+- **No background patterns.** Surfaces are flat colour; structure comes from borders and rules.
 - **No photographic backgrounds.** If we need an image, it's a screenshot, diagram, or chart — content, not vibes.
 
 ### Animation
@@ -171,7 +168,7 @@ Page-level compositions (nav, hero, work grid, case-study sections) are not libr
 
 - **Primary icon set:** **Lucide** (via CDN). Clean line icons, `1.5px` stroke to match the border vocabulary, sized 16/20/24/32px.
 - **Decorative glyphs:** unicode geometric chars — `▸ ▾ ◆ ◇ ★ ✦ ✱ ⌗ ↗ → //`. Bullets, separators, status markers.
-- **Logo / wordmark:** `assets/logo.svg` — Archivo at display width, ink, with a deep-blue `//`. Icon-only mark in `assets/logo-mark.svg`.
+- **Logo / wordmark:** plain text, not an SVG asset — Epilogue, 16px, lowercase, -5% letter-spacing, regular weight.
 - **No emoji. No icon fonts.** Inline SVG or Lucide only.
 - **Custom illustrations:** flat, 1–2 colour, `1.5px` ink stroke. Never gradient-filled, never soft-shadowed.
 
@@ -187,12 +184,7 @@ Page-level compositions (nav, hero, work grid, case-study sections) are not libr
 ├── SKILL.md                   ← agent skill manifest (works as Claude Code skill)
 ├── styles.css                 ← ENTRY POINT. link this one file
 ├── tokens_v2.css              ← all current tokens
-├── thumbnail.html             ← homepage tile
 ├── Design Kit v2.html         ← whole system in situ
-├── assets/
-│   ├── logo.svg               ← primary wordmark
-│   ├── logo-mark.svg          ← icon-only mark
-│   └── pattern-rules.svg      ← faint horizontal rules
 ├── components/                ← library components (exported via the bundle)
 │   ├── Button/                ← Button.jsx · Button.d.ts · button.html
 │   ├── Card/
