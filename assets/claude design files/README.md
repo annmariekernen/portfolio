@@ -13,7 +13,7 @@ A quiet neobrutalist design system for a UX designer who lives at the intersecti
 This is a **personal design kit**, not a recreation of an external product.
 - No codebase, Figma file, or deck was provided.
 - The direction was specified as: *"more readable, less distracting, more mature and professional. Sleek with a quirky neubrutalist touch — but not so much that it takes away from the content."*
-- The personality brief was: *"warm, jovial, optimistic, loves complex systems, mediterranean hospitality, future oriented."*
+- The personality brief was: *"warm, jovial, optimistic, loves complex systems, future oriented."*
 
 Substitute the placeholder name (`STUDIO //`) and tagline with your real handle when you're ready.
 

@@ -1,5 +1,10 @@
 /work.html  /  301
 /project-1.html  /casestudy/planr.html  301
-/project-1-full.html  /casestudy/planr-full.html  301
 /project-2.html  /casestudy/procedure-updater.html  301
 /project-3.html  /casestudy/persona-library.html  301
+
+# Retired extended PLANR write-up — kept in the repo for reference,
+# not published. Force-404 even though the file still exists on disk.
+/project-1-full.html  /  404!
+/casestudy/planr-full.html  /  404!
+/archived/*  /  404!
